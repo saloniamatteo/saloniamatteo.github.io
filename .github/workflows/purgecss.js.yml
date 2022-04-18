@@ -1,0 +1,44 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, and run PurgeCSS
+name: Run PurgeCSS
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: Check last commit author
+      if: github.event.pusher.name == 'github-actions'
+      run: echo "Commit loop detected! Exiting." && exit 1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: "Build"
+      run: |
+        npm ci
+        npm run start
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions@users.noreply.github.com"
+        git config --local user.name "github-actions"
+        git commit -am "Commit PostCSS files"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.WEBSITE_TOKEN }}
+        branch: ${{ github.ref }}
