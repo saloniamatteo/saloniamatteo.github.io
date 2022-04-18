@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Donazioni - Salonia Matteo</title>
+
+	<!-- Optimize page loading on some devices -->
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<meta name="description" content="Interessato nei miei progetti? Inviami una donazione.">
+
+	<!-- Social media preview -->
+	<meta property="og:title"	content="Salonia Matteo">
+	<meta property="og:url"		content="https://saloniamatteo.top/it/donate.html">
+	<meta property="og:description"	content="Interessato nei miei progetti? Inviami una donazione.">
+	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
+
+	<!-- Twitter-specific -->
+	<meta property="twitter:title"		content="Salonia Matteo">
+	<meta property="twitter:card"		content="summary_large_image">
+	<meta property="twitter:description"	content="Interessato nei miei progetti? Inviami una donazione.">
+	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="../favicon.png">
+
+	<!-- Speed-up requests to CDNs -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Beer CSS -->
+	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="../js/beer.min.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+</head>
+
+<script>
+ui();
+
+function toggle_light() {
+	/* Change body class */
+	var l = document.body.className;
+	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	l = document.body.className;
+}
+</script>
+
+<body class="is-light">
+	<!-- Header -->
+	<header class="fixed padding indigo white-text">
+	<div class="row no-wrap middle-align">
+		<div class="col min no-margin no-padding">
+			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+		</div>
+		<div class="col center-align">
+			<a href="https://saloniamatteo.top" class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
+		</div>
+		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
+			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
+		</div>
+	</div>
+	</header>
+
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
+
+	<div class="margin">
+	<div>
+		<h5>Donazioni</h5>
+
+		<p class="large-text">
+		Se volete supportare me e/o il mio lavoro, potete aiutarmi inviandomi una donazione;
+		in questa pagina sono elencati alcuni modi per inviarmi donazioni.
+		</p>
+
+		<p class="large-text">
+		Vai a:<br>
+
+		<a class="button border small-margin indigo white-text" href="#crypto">Crypto</a>
+		<a class="button border small-margin indigo white-text" href="#paypal">Paypal</a>
+		</p>
+	</div>
+
+	<div class="small-space"></div>
+
+	<!-- Crypto -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="crypto" class="left-align medium-padding indigo white-text">
+		<a href="#crypto">Criptovalute</a>
+		</h5>
+
+		<!-- Monero -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+				<h6>Monero</h6>
+				<p style="word-break: break-all">
+				Indirizzo:<br>
+				<b>43cgqumPkUAXhL4cx5bn24aZQkg7dUGQtaugoCxNEg1c2kbUY14y5jJMBwju2vqqZDeCJvSsn3SC7cDLuv5ZSeth4CV71cz</b>
+				</p>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<p>
+			In alternativa, &egrave; possibile usare
+			<a href="https://openalias.org" class="button border tiny indigo white-text">OpenAlias&nbsp;<i>arrow_forward</i></a>
+			Al momento di invio dei fondi, &egrave; possibile scrivere <label class="bold medium-text underline">saloniamatteo.top</label>
+			al posto dell'indirizzo, in modo tale che il vostro client vada a sostituire automaticamente il testo
+			con l'indirizzo Monero sopra indicato.
+			</p>
+			</div>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- PayPal -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="paypal" class="left-align medium-padding indigo white-text">
+		<a href="#paypal">PayPal</a>
+		</h5>
+
+		<!-- PayPal -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+				<p>
+				Link: <a class="button border tiny indigo white-text" href="https://paypal.me/saloniamatteo">
+				https://paypal.me/saloniamatteo&nbsp;<i>arrow_forward</i></a><br>
+				Username Paypal.me: <b>saloniamatteo</b>
+				</p>
+			</div>
+		</div>
+	</article>
+	</div>
+	</div>
+
+	<div class="medium-space"></div>
+</body>
+</html>

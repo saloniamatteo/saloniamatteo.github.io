@@ -1,0 +1,11 @@
+# saloniamatteo.top/robots.txt
+# Tell Google not to crawl these URLs because
+# they won't be useful in search results.
+User-agent: *
+Disallow: /CNAME
+Disallow: /LICENSE
+Disallow: /README.md
+Disallow: /favicon.png
+Disallow: matteo.asc
+Disallow: matteo-pm.asc
+Disallow: /pics/

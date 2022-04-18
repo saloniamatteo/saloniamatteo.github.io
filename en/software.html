@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Software - Salonia Matteo</title>
+
+	<!-- Optimize page loading on some devices -->
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<meta name="description" content="Programs created by Salonia Matteo.">
+
+	<!-- Social media preview -->
+	<meta property="og:title"	content="Salonia Matteo">
+	<meta property="og:url"		content="https://saloniamatteo.top/en/software.html">
+	<meta property="og:description"	content="Programs created by Salonia Matteo.">
+	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
+
+	<!-- Twitter-specific -->
+	<meta property="twitter:title"		content="Salonia Matteo">
+	<meta property="twitter:card"		content="summary_large_image">
+	<meta property="twitter:description"	content="Programs created by Salonia Matteo.">
+	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="../favicon.png">
+
+	<!-- Speed-up requests to CDNs -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Beer CSS -->
+	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="../js/beer.min.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+</head>
+
+<script>
+ui();
+
+function toggle_light() {
+	/* Change body class */
+	var l = document.body.className;
+	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	l = document.body.className;
+}
+</script>
+
+<body class="is-light">
+	<!-- Header -->
+	<header class="fixed padding indigo white-text">
+	<div class="row no-wrap middle-align">
+		<div class="col min no-margin no-padding">
+			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+		</div>
+		<div class="col center-align">
+			<a href="https://saloniamatteo.top"
+			   class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
+		</div>
+		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
+			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
+		</div>
+	</div>
+	</header>
+
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
+	
+	<div class="margin">
+	<div>
+		<h5>Programs created by Salonia Matteo</h5>
+
+		<p class="large-text">
+		On this page you'll find some programs created exclusively
+		in C (C99) by me, with preferential support for GNU/Linux.
+		</p>
+
+		<p class="large-text">
+		Note: all of these programs use
+		<a href="https://en.wikipedia.org/wiki/GNU_Autotools"
+		   class="button border indigo white-text tiny">GNU AutoTools&nbsp;<i>arrow_forward</i></a>
+		for the configuring and compilation process, to extend portability.
+		</p>
+
+		<p class="large-text">
+		Also, all of these programs use one or more components of my library
+		<a href="https://github.com/saloniamatteo/smclib"
+		   class="button border indigo white-text tiny">SMClib&nbsp;<i>arrow_forward</i></a>
+		</p>
+	</div>
+
+	<div class="space"></div>
+
+	<!-- Software -->
+	<div>
+	<article class="border no-padding">
+		<h5 class="left-align medium-padding indigo white-text">Software</h5>
+
+		<!-- Hire me -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col min small-margin">
+				<a href="contact.html"><i class="bold indigo-text">!</i></a>
+			</div>
+
+			<div class="col small-margin">
+			If you're interested to hire me to create you a Website, or you're interested
+			in a PC or Android program, click the button below to open the page that contains
+			my contact information, to contact me and ask for a quotation.<br>
+
+			<div class="right-align">
+				<a href="contact.html" class="button border indigo white-text small-margin">Contact information</a>
+			</div>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- TP-XFan -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col min small-margin">
+				<a href="https://github.com/saloniamatteo/tp-xfan"><i class="bold indigo-text">arrow_forward</i></a>
+			</div>
+
+			<div class="col small-margin">
+			<div>
+				<a href="https://github.com/saloniamatteo/tp-xfan"><b><u>TP-XFan (ThinkPad XForms Fan)</u></b></a>
+				<br>
+				<label class="grey-text medium-text">(external link)</label>
+			</div>
+
+			<p>
+			Program used to modify the fan speed of any ThinkPad.
+			It has a graphical user interface (created with
+			<a href="http://savannah.nongnu.org/projects/xforms"
+			class="button border tiny indigo white-text">XForms&nbsp;<i>arrow_forward</i></a>),
+			and the Automatic Fan Speed Management mode (AFSM).
+			</p>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Csnake -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col min small-margin">
+				<a href="https://github.com/saloniamatteo/csnake"><i class="bold indigo-text">arrow_forward</i></a>
+			</div>
+
+			<div class="col small-margin">
+			<div>
+				<a href="https://github.com/saloniamatteo/csnake"><b><u>Csnake</u></b></a>
+				<br>
+				<label class="grey-text medium-text">(external link)</label>
+			</div>
+
+			<p>
+			A Snake clone that has a terminal user interface made with
+			<a href="https://invisible-island.net/ncurses/announce.html"
+			class="button border tiny indigo white-text">ncurses&nbsp;<i>arrow_forward</i></a>.
+			You can save the game scores with a custom name, in any file;
+			also, you can modify the speed/difficulty, and you can show the screen borders.
+			</p>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Quiz -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col min small-margin">
+				<a href="https://github.com/saloniamatteo/quiz"><i class="bold indigo-text">arrow_forward</i></a>
+			</div>
+
+			<div class="col small-margin">
+			<div>
+				<a href="https://github.com/saloniamatteo/quiz"><b><u>Quiz</u></b></a>
+				<br>
+				<label class="grey-text medium-text">(external link)</label>
+			</div>
+
+			<p>
+			Program used to create small Quizzes and/or take a Quiz. It does not have a graphical user interface,
+			nor does it have a terminal user interface; it only has a text-based interface.
+			You can save the game scores with a custom name, in any file; also,
+			it contains a simple-to-use quiz creator.
+			</p>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Calc -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col min small-margin">
+				<a href="https://github.com/saloniamatteo/calc"><i class="bold indigo-text">arrow_forward</i></a>
+			</div>
+
+			<div class="col small-margin">
+			<div>
+				<a href="https://github.com/saloniamatteo/calc"><b><u>Calc</u></b></a>
+				<br>
+				<label class="grey-text medium-text">(external link)</label>
+			</div>
+
+			<p>
+			A simple calculator, with support for bit-shifting, Reverse Polish Notation (RPN),
+			and other special values. It has a text-based interface, like Quiz.
+			</p>
+			</div>
+		</div>
+	</article>
+	</div>
+	</div>
+
+	<div class="medium-space"></div>
+</body>
+</html>

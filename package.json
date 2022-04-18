@@ -1,0 +1,43 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Salonia Matteo's website",
+  "main": "purgecss.config.js",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "balanced-match": "^1.0.2",
+    "brace-expansion": "^1.1.11",
+    "commander": "^8.3.0",
+    "concat-map": "^0.0.1",
+    "cssesc": "^3.0.0",
+    "fs.realpath": "^1.0.0",
+    "glob": "^7.2.0",
+    "inflight": "^1.0.6",
+    "inherits": "^2.0.4",
+    "minimatch": "^3.1.2",
+    "nanoid": "^3.3.3",
+    "once": "^1.4.0",
+    "path-is-absolute": "^1.0.1",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.12",
+    "postcss-selector-parser": "^6.0.10",
+    "purgecss": "^4.1.3",
+    "source-map-js": "^1.0.2",
+    "util-deprecate": "^1.0.2",
+    "wrappy": "^1.0.2"
+  },
+  "scripts": {
+    "start": "node node_modules/purgecss/bin/purgecss.js -c purgecss.config.js && echo Success! || echo Failure!",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com/saloniamatteo/saloniamatteo.github.io.git"
+  },
+  "author": "Salonia Matteo",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/saloniamatteo/saloniamatteo.github.io/issues"
+  },
+  "homepage": "https://saloniamatteo.top"
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contacts - Salonia Matteo</title>
+
+	<!-- Optimize page loading on some devices -->
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<meta name="description" content="Contact Salonia Matteo.">
+
+	<!-- Social media preview -->
+	<meta property="og:title"	content="Salonia Matteo">
+	<meta property="og:url"		content="https://saloniamatteo.top/en/contact.html">
+	<meta property="og:description"	content="Contact Salonia Matteo">
+	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
+
+	<!-- Twitter-specific -->
+	<meta property="twitter:title"		content="Salonia Matteo">
+	<meta property="twitter:card"		content="summary_large_image">
+	<meta property="twitter:description"	content="Contact Salonia Matteo">
+	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="../favicon.png">
+
+	<!-- Speed-up requests to CDNs -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Beer CSS -->
+	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="../js/beer.min.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+</head>
+
+<script>
+ui();
+
+function toggle_light() {
+	/* Change body class */
+	var l = document.body.className;
+	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	l = document.body.className;
+}
+</script>
+
+<body class="is-light">
+	<!-- Header -->
+	<header class="fixed padding indigo white-text">
+	<div class="row no-wrap middle-align">
+		<div class="col min no-margin no-padding">
+			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+		</div>
+		<div class="col center-align">
+			<a class="button center-align large-text no-margin indigo-text white" href="https://saloniamatteo.top">Salonia Matteo</a>
+		</div>
+		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
+			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
+		</div>
+	</div>
+	</header>
+
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
+	
+	<div class="margin">
+	<div>
+		<h5>Contacts</h5>
+
+		<p class="large-text">
+		On this page are listed some ways to contact me in a private way, via email.
+		I ask you to specify why you're contacting me in the email subject.
+		</p>
+
+		<p class="large-text">
+		You're welcome to encrypt the email content with
+		<a href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard"
+		class="button border tiny indigo white-text">GPG&nbsp;<i>arrow_forward</i></a>,
+		using the key relative to the email that you'll choose to contact me.
+		</p>
+	</div>
+
+	<div class="small-space"></div>
+
+	<!-- Email -->
+	<div>
+	<article class="border no-padding">
+		<h5 class="left-align medium-padding indigo white-text">Email</h5>
+
+		<!-- Personal Server -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<h6>Personal Server</h6>
+			matteo@mail.saloniamatteo.top
+
+			<div class="right-align">
+			<a href="../matteo.asc" class="button border indigo white-text">GPG key</a>
+			</div>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Protonmail -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<h6>Protonmail</h6>
+			saloniamatteo@pm.me
+
+			<div class="right-align">
+			<a href="../matteo-pm.asc" class="button border indigo white-text">GPG key</a>
+			</div>
+			</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="medium-space"></div>
+</body>
+</html>

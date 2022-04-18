@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kernel - Salonia Matteo</title>
+
+	<!-- Optimize page loading on some devices -->
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<meta name="description" content="Salonia Matteo's Custom Kernel">
+
+	<!-- Social media preview -->
+	<meta property="og:title"	content="Salonia Matteo">
+	<meta property="og:url"		content="https://saloniamatteo.top/en/kernel.html">
+	<meta property="og:description"	content="Salonia Matteo's Custom Kernel">
+	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
+
+	<!-- Twitter-specific -->
+	<meta property="twitter:title"		content="Salonia Matteo">
+	<meta property="twitter:card"		content="summary_large_image">
+	<meta property="twitter:description"	content="Salonia Matteo's Custom Kernel">
+	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="../favicon.png">
+
+	<!-- Speed-up requests to CDNs -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Beer CSS -->
+	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="../js/beer.min.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+</head>
+
+<script>
+ui();
+
+function toggle_light() {
+	/* Change body class */
+	var l = document.body.className;
+	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	l = document.body.className;
+}
+</script>
+
+<body class="is-light">
+	<!-- Header -->
+	<header class="fixed padding indigo white-text">
+	<div class="row no-wrap middle-align">
+		<div class="col min no-margin no-padding">
+			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+		</div>
+		<div class="col center-align">
+			<a class="button center-align large-text no-margin indigo-text white"
+			   href="https://saloniamatteo.top">Salonia Matteo</a>
+		</div>
+		<div class="col min no-margin no-padding right-align"
+		     style="margin-right: 0.5em !important">
+			<img class="responsive" src="../pics/logo_rec.png"
+			     style="min-width: 100rem !important">
+		</div>
+	</div>
+	</header>
+
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
+	
+	<div class="margin">
+	<div>
+		<h5>Custom Kernel</h5>
+
+		<p class="large-text">
+		If you use a GNU/Linux distro, and you're capable of compiling your own Kernel, on this page
+		you'll find some modifications I made to my Kernel, and a script to
+		make Kernel configuration and compilation easier.
+		</p>
+
+		<p class="large-text">
+		Go to:<br>
+
+		<a class="button border small-margin indigo white-text" href="#intro">Introduction</a>
+		<a class="button border small-margin indigo white-text" href="#support">Default config support</a>
+		<a class="button border small-margin indigo white-text" href="#script">Script usage</a>
+		<a class="button border small-margin indigo white-text" href="#perf">Performance</a>
+		<a class="button border small-margin indigo white-text" href="#source">Source code</a>
+		</p>
+	</div>
+
+	<div class="small-space"></div>
+
+	<!-- Introduzione -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="intro" class="left-align medium-padding indigo white-text">
+		<a href="#intro">Introduction</a>
+		</h5>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<p class="small-space">
+			I'll start off by saying I use <a href="https://gentoo.org"
+			class="button border tiny indigo white-text">Gentoo Linux&nbsp;<i>arrow_forward</i></a>: it's a
+			GNU/Linux distro where all packages are compiled from source code,
+			rather than using non-configurable binary packages pre-compiled by third-parties.
+			This approach lets the user choose which components of his own system compile,
+			and which specific packages to install, so that configurations which use very few resources
+			(even <b>less than 100MB of RAM</b>!) can be made, which are totally functioning and very efficient.
+			</p>
+
+			<p class="small-space">
+			It's also possible to configure your own Kernel to then compile it later on, like you would've guessed.
+			On my laptop <b>ThinkPad T440p</b>, I use the Kernel
+			<a href="https://packages.gentoo.org/packages/sys-kernel/pf-sources"
+			class="button border tiny indigo white-text">sys-kernel/pf-sources&nbsp;<i>arrow_forward</i></a>,
+			which includes the patches found in Gentoo's Kernel (genpatches), and many other patches
+			that allow the Kernel to operate in a faster manner.
+			</p>
+
+			<div class="right-align">
+			<a href="https://gitlab.com/post-factum/pf-kernel/-/wikis/README#ok-whats-there-in-your-patchset"
+			class="button border indigo white-text small-margin">Complete patch list&nbsp;<i>arrow_forward</i></a>
+
+			<a href="https://gitlab.com/post-factum/pf-kernel/-/tags"
+			class="button border indigo white-text small-margin">Kernel Versions&nbsp;<i>arrow_forward</i></a>
+			</div>
+			</div>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- Default config support -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="support" class="left-align medium-padding indigo white-text">
+		<a href="#support">Default config support</a>
+		</h5>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<p class="small-space">
+			This Kernel is updated regularly, with continuous support for my laptop, <b>ThinkPad T440p</b>,
+			removing then functionalities which are not needed, such as <b>NUMA</b>, <b>NVIDIA</b>, <b>AMD</b>,
+			and so on.
+			In this guide you'll see that <u>you have to modify some settings</u>, such as the directory
+			that contains scripts and the patches used, and so on. Also, if you use different configs from
+			mine (example: you use a computer different from my ThinkPad), <u>you'll have to revisit the
+			Kernel config</u>, especially the max number of CPUs (set to 8), the max number of GPUs (set to 2), etc.
+			</p>
+			</div>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- Script usage -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="script" class="left-align medium-padding indigo white-text">
+			<a href="#script">Script usage</a>
+		</h5>
+
+		<!-- Clone repository -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-1" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-1">1. Clone repository</a></h6>
+			</div>
+
+			<p class="small-space">
+			Make sure you clone the repository:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="orange-text">git</span>
+				<span class="yellow-text">clone</span>
+				<span class="cyan-text">"https://github.com/saloniamatteo/kernel"</span>
+				<span class="red-text">usr-kernel</span><br>
+
+				<span class="orange-text">cd</span> <span class="red-text">usr-kernel</span>
+			</div></div>
+			</div>
+		</div>
+
+		<!-- Version Selection -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-2" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-2">2. Version Selection</a></h6>
+			</div>
+
+			<p class="small-space">
+			Select which Kernel version to compile, based on the available versions.
+			For example, I'll compile Kernel version <b>5.17_p2-pf</b>:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="orange-text">cd</span> <span class="red-text">5.17_p2-pf</span>
+			</div></div>
+			</div>
+		</div>
+
+		<!-- Custom Version -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-2.1" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-2.1">2.1. Custom Version</a></h6>
+			</div>
+
+			<p class="small-space">
+			Even if you don't have the exact same version, you can modify the script to include
+			the exact version; note that here I'm using the vim text editor, but you can use whichever you want:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="orange-text">vim</span> <span class="blue-text">build.sh</span>
+			</div></div>
+
+			<p class="small-space">
+			To modify the version, find the following variables:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="white-text">KVER=</span><span class="cyan-text">"5.17"</span>
+				<br>
+
+				<span class="white-text">PVER=</span><span class="cyan-text">"_p2-pf"</span>
+			</div></div>
+
+			<p class="small-space">
+			<b>KVER</b> contains the primary version of the Kernel (5.17), meanwhile <b>PVER</b> contains
+			the patch version (_p2-pf). Together they form <b>KERNVER</b>, the complete Kernel version
+			(which is 5.17_p2-pf).
+			</p>
+
+			<p class="small-space">
+			For example, if your custom version has the same primary Kernel version (5.17), but a different
+			patch version, for example "<em>_mykernel </em>", then you'd set the variables like this:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="white-text">KVER=</span><span class="cyan-text">"5.17"</span>
+				<br>
+
+				<span class="white-text">PVER=</span><span class="cyan-text">"_mykernel"</span>
+			</div></div>
+			</div>
+		</div>
+
+		<!-- CPU Optimizations -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-2.2" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-2.2">2.2. CPU Optimizations</a></h6>
+			</div>
+
+			<p class="small-space">
+			In the script, <u>build.sh</u>, there's a variable, <b>ARCHVER</b>.
+			This variable contains a number from <b>1</b> to <b>41</b>; each number represents
+			a different CPU. In the same file, there's a list which explains which number to use,
+			based on the CPU that will then use the Kernel.
+			</p>
+
+			<p class="small-space">
+			In my config, this variable is set in the following way:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="white-text">ARCHVER=</span><span class="cyan-text">24</span>
+			</div></div>
+
+			<p class="small-space">
+			<b>ARCHVER</b> is set to <b>24</b> because 24 represents the Intel Haswell CPU family:
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="grey-text"># Note: ARCHVER is the sub-architecture number,</span><br>
+				<span class="grey-text"># which will be used to apply optimizations for your specific CPU.</span><br>
+				<span class="grey-text"># Down below is a list of numbers and their corresponding CPU.</span><br>
+				<span class="grey-text">[ ... ]</span><br>
+				<span class="indigo white-text">#  24. Intel Haswell (MHASWELL)</span>
+			</div></div>
+
+			<p class="small-space">
+			I recommend you change this number, because the performance impact is notable.
+			Here's the full list:
+			</p>
+
+			<div class="card small-padding small-text" style="background-color: #313033"><div class="margin">
+				<span class="grey-text">#   1. AMD Opteron/Athlon64/Hammer/K8 (MK8)</span><br>
+				<span class="grey-text">#   2. AMD Opteron/Athlon64/Hammer/K8 with SSE3 (MK8SSE3)</span><br>
+				<span class="grey-text">#   3. AMD 61xx/7x50/PhenomX3/X4/II/K10 (MK10)</span><br>
+				<span class="grey-text">#   4. AMD Barcelona (MBARCELONA)</span><br>
+				<span class="grey-text">#   5. AMD Bobcat (MBOBCAT)</span><br>
+				<span class="grey-text">#   6. AMD Jaguar (MJAGUAR)</span><br>
+				<span class="grey-text">#   7. AMD Bulldozer (MBULLDOZER)</span><br>
+				<span class="grey-text">#   8. AMD Piledriver (MPILEDRIVER)</span><br>
+				<span class="grey-text">#   9. AMD Steamroller (MSTEAMROLLER)</span><br>
+				<span class="grey-text">#  10. AMD Excavator (MEXCAVATOR)</span><br>
+				<span class="grey-text">#  11. AMD Zen (MZEN)</span><br>
+				<span class="grey-text">#  12. AMD Zen 2 (MZEN2)</span><br>
+				<span class="grey-text">#  13. AMD Zen 3 (MZEN3)</span><br>
+				<span class="grey-text">#  14. Intel P4 / older Netburst based Xeon (MPSC)</span><br>
+				<span class="grey-text">#  15. Intel Core 2 (MCORE2)</span><br>
+				<span class="grey-text">#  16. Intel Atom (MATOM)</span><br>
+				<span class="grey-text">#  17. Intel Nehalem (MNEHALEM)</span><br>
+				<span class="grey-text">#  18. Intel Westmere (MWESTMERE)</span><br>
+				<span class="grey-text">#  19. Intel Silvermont (MSILVERMONT)</span><br>
+				<span class="grey-text">#  20. Intel Goldmont (MGOLDMONT)</span><br>
+				<span class="grey-text">#  21. Intel Goldmont Plus (MGOLDMONTPLUS)</span><br>
+				<span class="grey-text">#  22. Intel Sandy Bridge (MSANDYBRIDGE)</span><br>
+				<span class="grey-text">#  23. Intel Ivy Bridge (MIVYBRIDGE)</span><br>
+				<span class="grey-text">#  24. Intel Haswell (MHASWELL)</span><br>
+				<span class="grey-text">#  25. Intel Broadwell (MBROADWELL)</span><br>
+				<span class="grey-text">#  26. Intel Skylake (MSKYLAKE)</span><br>
+				<span class="grey-text">#  27. Intel Skylake X (MSKYLAKEX)</span><br>
+				<span class="grey-text">#  28. Intel Cannon Lake (MCANNONLAKE)</span><br>
+				<span class="grey-text">#  29. Intel Ice Lake (MICELAKE)</span><br>
+				<span class="grey-text">#  30. Intel Cascade Lake (MCASCADELAKE)</span><br>
+				<span class="grey-text">#  31. Intel Cooper Lake (MCOOPERLAKE)</span><br>
+				<span class="grey-text">#  32. Intel Tiger Lake (MTIGERLAKE)</span><br>
+				<span class="grey-text">#  33. Intel Sapphire Rapids (MSAPPHIRERAPIDS)</span><br>
+				<span class="grey-text">#  34. Intel Rocket Lake (MROCKETLAKE)</span><br>
+				<span class="grey-text">#  35. Intel Alder Lake (MALDERLAKE)</span><br>
+				<span class="grey-text">#  36. Generic-x86-64 (GENERIC_CPU)</span><br>
+				<span class="grey-text">#  37. Generic-x86-64-v2 (GENERIC_CPU2)</span><br>
+				<span class="grey-text">#  38. Generic-x86-64-v3 (GENERIC_CPU3)</span><br>
+				<span class="grey-text">#  39. Generic-x86-64-v4 (GENERIC_CPU4)</span><br>
+				<span class="grey-text">#  40. Intel-Native optimizations autodetected by GCC (MNATIVE_INTEL)</span><br>
+				<span class="grey-text">#  41. AMD-Native optimizations autodetected by GCC (MNATIVE_AMD)</span>
+			</div></div>
+			</div>
+		</div>
+
+		<!-- Kernel Configuration -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-3" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-3">3. Kernel Configuration</a></h6>
+			</div>
+
+			<p class="small-space">
+			It's a good practice to check the Kernel config before compiling it.
+			To do so, the script <u>build.sh</u> makes config modification possible, by running
+			<u>make menuconfig</u> inside the Kernel directory, with the option to copy the
+			default config, or to not copy it, to use your own config.
+			</p>
+
+			<p class="small-space">
+			Make sure you have administrator privileges before running this command;
+			if you're not admins, put <b>sudo</b> or <b>doas</b> before the command, depending on which you use.
+			</p>
+
+			<p class="card small-space red white-text">
+			If you did not understand the text above, <b><u>stop immediately the Kernel configuration process,
+			and stop reading this page </u></b>, to not risk making your system unusable (aka to not break it).
+			Even if the risk is not high, it's better to prevent further problems.
+			<b><u>Continue to your own risk, you have been advised.</u></b>
+			</p>
+
+			<p class="card small-space yellow black-text">
+			Remember to save/copy the <b>.config</b> file at the end of configuration!
+			</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="grey-text"># Open the configuration menu, copying the default config</span><br>
+				<span class="orange-text">./build.sh</span> <span class="yellow-text">-m</span><br><br>
+
+				<span class="grey-text"># Open the configuration menu, without copying the default config</span><br>
+				<span class="orange-text">./build.sh</span> <span class="yellow-text">-c -m</span><br>
+			</div></div>
+			</div>
+		</div>
+
+		<!-- Kernel Compilation -->
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<div class="row min">
+				<h6 id="script-4" class="col s11 card bold left-align indigo white-text small-margin">
+				<a href="#script-4">4. Kernel Compilation</a></h6>
+			</div>
+
+			<p class="small-space">
+			After having <a href="#script-2.2" class="indigo-text underline">applied CPU optimizations</a>
+			and having double checked the <a href="#script-3" class="indigo-text underline">Kernel config</a>,
+			it's time to choose the settings which will further increase Kernel performance. Here's the option list:
+			</p>
+			</div>
+		</div>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin scroll" style="margin-right: 1.5em !important">
+			<table class="small-margin">
+			<thead>
+			<tr class="row medium-width no-wrap">
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150">Short flag</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col w-150">Long flag</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150">Description</th>
+			</tr>
+			</thead>
+
+			<tbody class="small-margin">
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Use&nbsp;<b>ccache</b>&nbsp;to speed up compilation. I recommend using this option
+				if you compile the Kernel at least two times, to speed up further compilations.
+				(<a href="https://ccache.dev/performance.html" class="indigo-text underline">See article</a>)
+				</p></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-f</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--fastmath</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Compile the Kernel using <b>Unsafe Fast Math</b>.
+				Typically it has no side effects and the performance is better
+				compared to Safe Fast Math.
+				</p></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-F</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--fastmath-s</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Compile the Kernel using <b>Safe Fast Math</b>.
+				Use if Unsafe Fast Math creates any issues, in rare cases.
+				</p></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-g</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--graphite</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Compile the Kernel using <b>Graphite</b>. Typically this option reduces slightly the performance.
+				</p></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-l</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--clearl-ps</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Compile the Kernel applying <b>Clear Linux patches</b>.
+				These patches are geared towards further performance increase, and are
+				applied directly from the Clear Linux repository.
+				Highly recommended for Intel CPUs.
+				</p></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--patches</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				Compile Kernel applying the <b>included patches</b>.
+				These patches are also geared towards a further performance increase,
+				and are a mix of patches collected from internet.
+				</p></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+		</div>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin scroll" style="margin-right: 1.5em !important">
+				<p class="card yellow black-text">
+				Be careful to apply <u>only one flag</u> for <b>Fast Math</b>:
+				if there are two or more, only the last one will be chosen.<br><br>
+
+				Example:<br>
+				<em>-f -F </em>    -> <b>Safe Fast Math</b><br>
+				<em>-f -F -f </em> -> <b>Unsafe Fast Math</b>
+				</p>
+
+				<div class="small-space"></div>
+
+				<p class="small-margin">
+				After choosing which flags to apply, and after choosing whether to copy the <b>.config</b> file
+				with the "-c" flag, you're ready to compile the Kernel.
+				</p>
+
+			<div class="card small-padding" style="background-color: #313033"><div class="margin">
+				<span class="grey-text"># Example 1: compile Kernel, copying the default config file,</span><br>
+				<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+				<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
+
+				<span class="orange-text">./build.sh</span> <span class="yellow-text">-f -l -p</span><br><br>
+
+				<span class="grey-text"># Example 2: compile Kernel, copying the default config file,</span><br>
+				<span class="grey-text"># using ccache to speed up complation,</span><br>
+				<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+				<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
+
+				<span class="orange-text">./build.sh</span> <span class="yellow-text">-e -f -l -p</span><br><br>
+
+				<span class="grey-text"># Example 3: compile Kernel, without copying the config file,</span><br>
+				<span class="grey-text"># as the custom file is already present in /usr/src/linux/.config,</span><br>
+				<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+				<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
+
+				<span class="orange-text">./build.sh</span> <span class="yellow-text">-c -f -l -p</span>
+			</div>
+			</div>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- Performance -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="perf" class="left-align medium-padding indigo white-text">
+		<a href="#perf">Performance</a>
+		</h5>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<p class="small-space">
+			To establish which Kernel is the fastest, I ran <b>4 compilations</b> with
+			<u>different flags</u>, using the <u>same Kernel config</u>.
+			</p>
+
+			<p class="small-space">
+			These tests were ran on my laptop, <b>ThinkPad T440p</b>, with CPU
+			<b>Intel Core i7-4700MQ</b>, 8GB RAM, Kernel Gentoo Linux <b>5.16.0-pf2</b>.
+			</p>
+
+			<p class="small-space">
+			To get the most-performing Kernel, I used each single Kernel with the program <b>XMRig</b>,
+			running it for 5 minutes, and seeing the max hashrate.
+			</p>
+
+			<p class="small-space">
+			List of compilations, from the best to worst performing:
+			</p>
+			</div>
+		</div>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin scroll" style="margin-right: 1.5em !important">
+			<table class="small-margin">
+			<thead>
+			<tr class="row medium-width no-wrap">
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 min-h-34">Optimizations</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 max-w-180 min-h-34">Compilation time</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Max H/s</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Command line</th>
+			</tr>
+			</thead>
+
+			<tbody class="small-margin">
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				<b>Unsafe Fast Math</b> + <b>Clear Linux patches</b> + <b>Included patches</b>
+				</p></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m 7s</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1570</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -f -l -p</b></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				<b>Unsafe Fast Math</b> + <b>Graphite</b> +
+				<b>Clear Linux patches</b> + <b>Included patches</b>
+				</p></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m 3s</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1500</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -f -g -l -p</b></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<p>
+				<b>Clear Linux patches</b> + <b>Included patches</b>
+				</p></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1463</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -l -p</b></td>
+			</tr>
+
+			<tr class="row medium-width no-wrap small-mbot no-mtop">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 min-h-40"><b>Included patches</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180 min-h-40">7m</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150 min-h-40">1460</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150 min-h-40"><b>./build.sh -l -p</b></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- Source Code -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="source" class="left-align medium-padding indigo white-text">
+		<a href="#source">Source Code</a>
+		</h5>
+
+		<div class="small-margin row no-wrap middle-align">
+			<div class="col small-margin">
+			<p class="small-space middle-align">
+			The source code of this Kernel is available on the 
+			<a href="https://github.com/saloniamatteo/kernel" class="button small indigo white-text">
+			GitHub&nbsp;<i>arrow_forward</i></a> repository.
+			</p>
+			</div>
+		</div>
+	</article>
+	</div>
+	</div>
+
+	<div class="medium-space"></div>
+</body>
+</html>

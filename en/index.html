@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Salonia Matteo</title>
+
+	<!-- Optimize page loading on some devices -->
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<meta name="description" content="Welcome to Salonia Matteo's website!">
+
+	<!-- Social media preview -->
+	<meta property="og:title"	content="Salonia Matteo">
+	<meta property="og:url"		content="https://saloniamatteo.top/en/index.html">
+	<meta property="og:description"	content="Welcome to Salonia Matteo's website!">
+	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
+
+	<!-- Twitter-specific -->
+	<meta property="twitter:title"		content="Salonia Matteo">
+	<meta property="twitter:card"		content="summary_large_image">
+	<meta property="twitter:description"	content="Welcome to Salonia Matteo's website!">
+	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="../favicon.png">
+
+	<!-- Speed-up requests to CDNs -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Beer CSS -->
+	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="../js/beer.min.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+</head>
+
+<script>
+ui();
+
+function toggle_light() {
+	/* Change body class */
+	var l = document.body.className;
+	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	l = document.body.className;
+
+	/* Change GitHub icon color */
+	var g1 = document.getElementById("github-1");
+	var g2 = document.getElementById("github-2");
+	let gp = "../pics/github-";
+	g1.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
+	g2.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
+}
+</script>
+
+<body class="is-light">
+	<!-- Header -->
+	<header class="fixed padding indigo white-text">
+	<div class="row no-wrap middle-align">
+		<div class="col min no-margin no-padding">
+			<a href="../index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+		</div>
+		<div class="col center-align">
+			<a class="button center-align large-text no-margin indigo-text white" href="https://saloniamatteo.top">Salonia Matteo</a>
+		</div>
+		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
+			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
+		</div>
+	</div>
+	</header>
+
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
+	
+	<div class="margin">
+	<div>
+		<h5>Welcome to Salonia Matteo's website!</h5>
+
+		<p class="large-text">
+		Here you'll find various resources that may help you,
+		such as Packages for Gentoo Linux, Software created
+		in C99, various Tools, how to contact me, and so on.
+
+		The various sections have permanent links that
+		can be shared, to make navigation easier.
+		</p>
+
+		<p class="large-text">
+		Go to:<br>
+
+		<a class="button border small-margin indigo white-text" href="#linux-soft">Linux &amp; Software</a>
+		<a class="button border small-margin indigo white-text" href="#about">About Me</a>
+		<a class="button border small-margin indigo white-text" href="#tools-links">Tools &amp; Links</a>
+		</p>
+	</div>
+
+	<div class="small-space"></div>
+
+	<!-- Linux & Software -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="linux-soft" class="left-align medium-padding indigo white-text">
+		<a href="#linux-soft">Linux & Software</a>
+		</h5>
+
+		<!-- Arch Linux -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="https://saloniamatteo.top/Arch">
+			<div class="col min small-margin">
+					<img src="../pics/arch.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>Arch Linux installation instructions</b></p>
+				<label class="grey-text medium-text">(external link)</label><br>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Dotfiles -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="https://saloniamatteo.top/dotfiles">
+			<div class="col min small-margin">
+					<img src="../pics/gnu.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>My dotfiles (My GNU/Linux config)</b></p>
+				<label class="grey-text medium-text">(external link)</label><br>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Kernel -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="kernel.html">
+			<div class="col min small-margin">
+					<img src="../pics/linux.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>My Kernel</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Packages -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="packages.html">
+			<div class="col min small-margin">
+					<img src="../pics/box.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>My packages for Gentoo Linux</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+		
+		<!-- Software -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="software.html">
+			<div class="col min small-margin">
+					<img src="../pics/c.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>My software</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- About -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="about" class="left-align medium-padding indigo white-text">
+		<a href="#about">About Me</a>
+		</h5>
+
+		<!-- About -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="info.html">
+			<div class="col min small-margin">
+					<img src="../pics/about.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>About Me</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Contact -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="contact.html">
+			<div class="col min small-margin">
+					<img src="../pics/contact.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>Contact Me</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Donate -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="donate.html">
+			<div class="col min small-margin">
+					<img src="../pics/cash.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>Donations</b></p>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+	</article>
+	</div>
+
+	<div class="medium-space"></div>
+
+	<!-- Tools & Links -->
+	<div>
+	<article class="border no-padding">
+		<h5 id="tools-links" class="left-align medium-padding indigo white-text">
+		<a href="#tools-links">Tools & Links</a>
+		</h5>
+
+		<!-- OpenAlias -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="https://oa.saloniamatteo.top">
+			<div class="col min small-margin">
+					<img src="../pics/oa.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>OpenAlias</b></p>
+				<label class="grey-text medium-text">(external link)</label><br>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- GitHub -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="https://github.com/saloniamatteo">
+			<div class="col min small-margin">
+					<img id="github-1" src="../pics/github-dark.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>GitHub profile</b></p>
+				<label class="grey-text medium-text">(external link)</label><br>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Source code -->
+		<div class="small-margin row no-wrap middle-align">
+			<a href="https://github.com/saloniamatteo/saloniamatteo.github.io">
+			<div class="col min small-margin">
+					<img id="github-2" src="../pics/github-dark.png" class="small"></img>
+			</div>
+
+			<div class="col small-margin">
+				<p><b>Source code</b></p>
+				<label class="grey-text medium-text">(external link)</label><br>
+				<i class="indigo-text">arrow_forward</i>
+			</div>
+			</a>
+		</div>
+	</article>
+	</div>
+	</div>
+
+	<div class="medium-space"></div>
+</body>
+</html>
