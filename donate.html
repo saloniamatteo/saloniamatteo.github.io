@@ -25,64 +25,94 @@
 	<meta property="twitter:image"		content="https://saloniamatteo.top/favicon.png">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="https://saloniamatteo.top/favicon.png">
+	<link rel="shortcut icon" href="favicon.png">
 
-	<!-- Speed-up requests to CDN-js -->
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-	
-	<!-- CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-icons.min.css">
-
-	<!-- Montserrat font -->
+	<!-- Speed-up requests to CDNs -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+	<!-- Beer CSS -->
+	<link href="css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="css/beer.min.css" rel="stylesheet"></noscript>
+	<script src="js/beer.min.js" type="text/javascript"></script>
+	<script src="js/light.js" type="text/javascript"></script>
+
+	<!-- Montserrat font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+
+	<!-- CSS overrides -->
+	<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="css/style.css" rel="stylesheet"></noscript>
 </head>
 
-<style>
-* {
-	font-family: 'Montserrat', sans-serif;
+<script>
+ui();
+
+document.onreadystatechange = function() { wrap(); document.body.onresize = function() { wrap() }}
+
+function wrap() {
+	/* Fix wrap */
+	var w = document.body.clientWidth;
+	var flags = document.getElementById("flags");
+	var fit = document.getElementById("f-it");
+	var fen = document.getElementById("f-en");
+
+	/* Check width */
+	if (w >= 690) {
+		flags.classList.replace("wrap", "no-wrap");
+		fit.classList = fit.classList.toString().replace("center-align", "col left-align").split(",");
+		fen.classList = fen.classList.toString().replace("center-align", "col right-align").split(",");;
+	} else {
+		flags.classList.replace("no-wrap", "wrap");
+		fit.classList = fit.classList.toString().replace("col left-align", "center-align").split(",");
+		fen.classList = fen.classList.toString().replace("col right-align", "center-align").split(",");
+	}
 }
-</style>
+</script>
 
-<body>
-	<div class="column col-6 col-xs-12 col-md-10 col-lg-8 col-xl-7 p-centered" style="margin-top: 30px">
-		<div class="card">
-		<div class="card-image p-centered">
-			<figure class="avatar" data-initial="MS" style="background-color: #5755d9; width: 5em; height: 5em">
-				<img src="pics/logo_cir.png" alt="Matteo Salonia">
-			</figure>
-		</div>
+<body class="is-light">
+	<!-- FAB -->
+	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
+		<i>light_mode</i>
+	</button>
 
-		<div class="card-header">
-			<div class="card-title">
-				<h5 class="text-center">Scegli una lingua -- Choose a language</h5>
-			</div>
-		</div>
-
-		<div class="card-body">
-			<div class="columns">
-			<div class="column">
-				<a href="it/donate.html">
-				<img class="column col-10 p-centered" loading="lazy" src="pics/it.png" alt="Italiano">
-				</a>
+	<div class="small-margin">
+		<article class="center middle small-margin" style="margin-top: 20rem!important">
+			<div class="margin no-wrap">
+				<h6 class="card border center-align bold indigo white-text small-padding">Scegli una lingua &mdash; Choose a language</h6>
 			</div>
 
-			<div class="column">
-				<a href="en/donate.html">
-				<img class="column col-12 p-centered" loading="lazy" src="pics/en.png" alt="English">
-				</a>
-			</div>
-			</div>
-		</div>
+			<div id="flags" class="row no-wrap">
+				<div id="f-it" class="col left-align large-margin">
+					<article class="center-align no-padding">
+					<a href="it/donate.html">
+					<img src="pics/it.png" class="responsive medium"
+					style="max-height: 700rem!important; max-width: 1000rem!important">
+					</a>
+					<div class="center-align padding">
+						<a href="it/donate.html" class="button border indigo white-text middle-align"
+						style="min-height: 40px!important"><h5>Italiano</h5></a>
+					</div>
+					</article>
+				</div>
 
-		<div class="card-footer columns">
-				<div class="column"><a class="btn btn-primary p-centered text-large" href="it/donate.html">Italiano</a></div>
-				<div class="column"><a class="btn btn-primary p-centered text-large" href="en/donate.html">English</a></div>
-		</div>
+				<div id="f-en" class="col right-align large-margin">
+					<article class="center-align no-padding">
+					<a href="en/donate.html">
+					<img src="pics/en.png" class="responsive medium"
+					style="max-height: 700rem!important; max-width: 1000rem!important">
+					</a>
+					<div class="center-align padding">
+						<a href="en/donate.html" class="button border indigo white-text middle-align"
+						style="min-height: 40px!important"><h5>English</h5></a>
+					</div>
+					</article>
+				</div>
+			</div>
+		</article>
 	</div>
-	</div>
+
+	<div class="medium-space"></div>
 </body>
 </html>

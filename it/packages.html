@@ -31,6 +31,7 @@
 	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
 	<script src="../js/beer.min.js" type="text/javascript"></script>
+	<script src="../js/light.js" type="text/javascript"></script>
 
 	<!-- Montserrat font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -43,13 +44,6 @@
 
 <script>
 ui();
-
-function toggle_light() {
-	/* Change body class */
-	var l = document.body.className;
-	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
-	l = document.body.className;
-}
 </script>
 
 <body class="is-light">
