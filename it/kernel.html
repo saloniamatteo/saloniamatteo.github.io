@@ -38,7 +38,8 @@
 
 	<!-- CSS overrides -->
 	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+	<link rel="preload" href="../css/kernel.style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"><link href="../css/kernel.style.css" rel="stylesheet"></noscript>
 </head>
 
 <script>
@@ -569,7 +570,7 @@ function toggle_light() {
 			<thead>
 			<tr class="row medium-width no-wrap">
 				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 min-h-34">Impostazioni</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 max-w-170 min-h-34">Tempo compilazione</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 min-h-34" style="max-width:170px!important">Tempo compilazione</th>
 				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Max H/s</th>
 				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Riga di comando</th>
 			</tr>

@@ -38,7 +38,8 @@
 
 	<!-- CSS overrides -->
 	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link href="../css/style.css" rel="stylesheet"></noscript>
+	<link rel="preload" href="../css/kernel.style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/style.css" rel="stylesheet"><link href="../css/kernel.style.css" rel="stylesheet"></noscript>
 </head>
 
 <script>
@@ -607,10 +608,10 @@ function toggle_light() {
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 min-h-40"><b>Included patches</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180 min-h-40">7m</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150 min-h-40">1460</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150 min-h-40"><b>./build.sh -l -p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150" style="min-height:40px!important"><b>Included patches</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180" style="min-height:40px!important">7m</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150" style="min-height:40px!important">1460</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150" style="min-height:40px!important"><b>./build.sh -l -p</b></td>
 			</tr>
 			</tbody>
 			</table>
