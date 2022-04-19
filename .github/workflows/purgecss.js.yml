@@ -1,4 +1,10 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, and run PurgeCSS
+# This workflow will:
+#  - Check last commit author to prevent commit loop
+#  - Setup Node
+#  - Setup Node dependencies
+#  - Run PurgeCSS
+#  - Commit build files, even if no new changes were made
+#  - Push changes
 name: Run PurgeCSS
 
 on:
