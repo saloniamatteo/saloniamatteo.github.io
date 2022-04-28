@@ -34,8 +34,8 @@
 	<script src="../js/light.js" type="text/javascript"></script>
 
 	<!-- Montserrat font -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></noscript>
+	<link href="../css/montserrat.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="../css/montserrat.css" rel="stylesheet"></noscript>
 
 	<!-- CSS overrides -->
 	<link rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -172,7 +172,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-1" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-1" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-1">1. Clone repository</a></h6>
 			</div>
 
@@ -195,7 +195,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-2" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-2" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-2">2. Version Selection</a></h6>
 			</div>
 
@@ -214,7 +214,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-2.1" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-2.1" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-2.1">2.1. Custom Version</a></h6>
 			</div>
 
@@ -262,7 +262,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-2.2" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-2.2" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-2.2">2.2. CPU Optimizations</a></h6>
 			</div>
 
@@ -348,7 +348,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-3" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-3" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-3">3. Kernel Configuration</a></h6>
 			</div>
 
@@ -389,7 +389,7 @@ ui();
 		<div class="small-margin row no-wrap middle-align">
 			<div class="col small-margin">
 			<div class="row min">
-				<h6 id="script-4" class="col s11 card bold left-align indigo white-text small-margin">
+				<h6 id="script-4" class="card border center-align bold indigo white-text small-padding small-margin">
 				<a href="#script-4">4. Kernel Compilation</a></h6>
 			</div>
 
@@ -406,17 +406,17 @@ ui();
 			<table class="small-margin">
 			<thead>
 			<tr class="row medium-width no-wrap">
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150">Short flag</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col w-150">Long flag</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150">Description</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-90 max-w-170">Short flag</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-110 max-w-300">Long flag</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-250">Description</th>
 			</tr>
 			</thead>
 
 			<tbody class="small-margin">
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-e</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--ccache</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Use&nbsp;<b>ccache</b>&nbsp;to speed up compilation. I recommend using this option
 				if you compile the Kernel at least two times, to speed up further compilations.
@@ -425,9 +425,9 @@ ui();
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-f</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--fastmath</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Compile the Kernel using <b>Unsafe Fast Math</b>.
 				Typically it has no side effects and the performance is better
@@ -436,9 +436,9 @@ ui();
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-F</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--fastmath-s</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Compile the Kernel using <b>Safe Fast Math</b>.
 				Use if Unsafe Fast Math creates any issues, in rare cases.
@@ -446,18 +446,18 @@ ui();
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-g</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--graphite</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Compile the Kernel using <b>Graphite</b>. Typically this option reduces slightly the performance.
 				</p></td>
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-l</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--clearl-ps</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Compile the Kernel applying <b>Clear Linux patches</b>.
 				These patches are geared towards further performance increase, and are
@@ -467,9 +467,9 @@ ui();
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>-p</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot w-150"><b>--patches</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-90 max-w-170"><b>-e</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-110 max-w-300"><b>--ccache</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-250">
 				<p>
 				Compile Kernel applying the <b>included patches</b>.
 				These patches are also geared towards a further performance increase,
@@ -562,50 +562,53 @@ ui();
 			<table class="small-margin">
 			<thead>
 			<tr class="row medium-width no-wrap">
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 min-h-34">Optimizations</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-150 max-w-180 min-h-34">Compilation time</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Max H/s</th>
-				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-150 min-h-34">Command line</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-200 max-w-700">Optimizations</th>
+				<th id="comp" class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-130 max-w-300">Compile time</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-100 max-w-300">Max H/s</th>
+				<th class="card indigo white-text bold small-margin medium-space small-padding middle-align col min-w-170 max-w-300">Command line</th>
 			</tr>
 			</thead>
 
 			<tbody class="small-margin">
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-200 max-w-700">
 				<p>
 				<b>Unsafe Fast Math</b> + <b>Clear Linux patches</b> + <b>Included patches</b>
 				</p></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m 7s</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1570</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -f -l -p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-130 max-w-300">7m 7s</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-300">1570</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-170 max-w-300"><b>./build.sh -f -l -p</b></td>
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-200 max-w-700">
 				<p>
 				<b>Unsafe Fast Math</b> + <b>Graphite</b> +
 				<b>Clear Linux patches</b> + <b>Included patches</b>
 				</p></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m 3s</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1500</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -f -g -l -p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-130 max-w-300">7m 3s</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-300">1500</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-170 max-w-300"><b>./build.sh -f -g -l -p</b></td>
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150">
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-200 max-w-700">
 				<p>
 				<b>Clear Linux patches</b> + <b>Included patches</b>
 				</p></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180">7m</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150">1463</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150"><b>./build.sh -l -p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-130 max-w-300">7m</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-300">1463</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-170 max-w-300"><b>./build.sh -l -p</b></td>
 			</tr>
 
 			<tr class="row medium-width no-wrap small-mbot no-mtop">
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150" style="min-height:40px!important"><b>Included patches</b></td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-150 max-w-180" style="min-height:40px!important">7m</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150" style="min-height:40px!important">1460</td>
-				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-150" style="min-height:40px!important"><b>./build.sh -l -p</b></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-200 max-w-700">
+				<p>
+				<b>Included patches</b>
+				</p></td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-130 max-w-300">7m</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-100 max-w-300">1460</td>
+				<td class="card small-margin middle-align col no-mtop small-mbot min-w-170 max-w-300"><b>./build.sh -l -p</b></td>
 			</tr>
 			</tbody>
 			</table>
