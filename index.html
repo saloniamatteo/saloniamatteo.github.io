@@ -45,7 +45,9 @@
 <script>
 ui();
 
-document.onreadystatechange = function() { wrap(); document.body.onresize = function() { wrap() }}
+document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
+
+function load() { wrap(); remember_prefs(); }
 
 function wrap() {
 	/* Fix wrap */
@@ -73,15 +75,15 @@ function wrap() {
 		<i>light_mode</i>
 	</button>
 
-	<div class="large-margin">
-		<article class="center middle large-margin" style="margin-top: 20rem!important">
+	<div class="small-margin">
+		<article class="center small-margin" style="margin-top: 20rem!important">
 			<div class="margin no-wrap">
 				<h6 class="card border center-align bold indigo white-text small-padding">
 				Scegli una lingua &mdash; Choose a language</h6>
 			</div>
 
-			<div id="flags" class="center-align row no-wrap">
-				<div id="f-it" class="col large-margin">
+			<div id="flags" class="row no-wrap">
+				<div id="f-it" class="col left-align large-margin">
 					<article class="center-align no-padding">
 					<a href="it/index.html">
 					<img src="pics/it.png" class="responsive medium"
@@ -94,7 +96,7 @@ function wrap() {
 					</article>
 				</div>
 
-				<div id="f-en" class="col large-margin">
+				<div id="f-en" class="col right-align large-margin">
 					<article class="center-align no-padding">
 					<a href="en/index.html">
 					<img src="pics/en.png" class="responsive medium"
