@@ -10,7 +10,7 @@ function update_cookie() {
 	document.cookie="theme=;path='/';SameSite=Lax;expires="+(new Date(0)).toUTCString();
 
 	// Set new cookie
-	document.cookie="theme="+document.body.className.replace("is-","")+";path='/';SameSite=Lax";
+	document.cookie="theme="+document.body.className.replace("is-","")+";path=/;SameSite=Lax";
 }
 
 function getCookie(cname) {
