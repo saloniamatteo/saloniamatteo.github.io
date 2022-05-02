@@ -7,10 +7,10 @@ function toggle_light() {
 
 function update_cookie() {
 	// Delete pre-existing cookie
-	document.cookie="theme=;SameSite=Lax;expires="+(new Date(0)).toUTCString();
+	document.cookie="theme=;path='/';SameSite=Lax;expires="+(new Date(0)).toUTCString();
 
 	// Set new cookie
-	document.cookie="theme="+document.body.className.replace("is-","")+";SameSite=Lax";
+	document.cookie="theme="+document.body.className.replace("is-","")+";path='/';SameSite=Lax";
 }
 
 function getCookie(cname) {
