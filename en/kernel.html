@@ -23,10 +23,6 @@
 	<!--Favicon-->
 	<link rel="shortcut icon" href="../favicon.png">
 
-	<!-- Speed-up requests to CDNs -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 	<!-- Beer CSS -->
 	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
@@ -45,6 +41,8 @@
 
 <script>
 ui();
+
+document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
 </script>
 
 <body class="is-light">

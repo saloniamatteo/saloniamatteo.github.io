@@ -45,6 +45,8 @@
 <script>
 ui();
 
+document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
+
 function toggle_light() {
 	/* Change body class */
 	var l = document.body.className;
@@ -60,8 +62,6 @@ function toggle_light() {
 
 	update_cookie();
 }
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
 </script>
 
 <body class="is-light">

@@ -31,6 +31,7 @@
 	<link href="../css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link href="../css/beer.min.css" rel="stylesheet"></noscript>
 	<script src="../js/beer.min.js" type="text/javascript"></script>
+	<script src="../js/light.js" type="text/javascript"></script>
 
 	<!-- Montserrat font -->
 	<link href="../css/montserrat.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -44,6 +45,8 @@
 <script>
 ui();
 
+document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
+
 function toggle_light() {
 	/* Change body class */
 	var l = document.body.className;
@@ -56,6 +59,8 @@ function toggle_light() {
 	let gp = "../pics/github-";
 	g1.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
 	g2.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
+
+	update_cookie()
 }
 </script>
 
