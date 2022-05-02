@@ -27,10 +27,6 @@
 	<!--Favicon-->
 	<link rel="shortcut icon" href="favicon.png">
 
-	<!-- Speed-up requests to CDNs -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 	<!-- Beer CSS -->
 	<link href="css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link href="css/beer.min.css" rel="stylesheet"></noscript>
@@ -49,7 +45,9 @@
 <script>
 ui();
 
-document.onreadystatechange = function() { wrap(); document.body.onresize = function() { wrap() }}
+document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
+
+function load() { wrap(); remember_prefs() }
 
 function wrap() {
 	/* Fix wrap */
@@ -78,7 +76,7 @@ function wrap() {
 	</button>
 
 	<div class="small-margin">
-		<article class="center middle small-margin" style="margin-top: 20rem!important">
+		<article class="center small-margin" style="margin-top: 20rem!important">
 			<div class="margin no-wrap">
 				<h6 class="card border center-align bold indigo white-text small-padding">Scegli una lingua &mdash; Choose a language</h6>
 			</div>

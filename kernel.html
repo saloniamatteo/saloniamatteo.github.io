@@ -4,8 +4,8 @@
 	<title>Kernel - Salonia Matteo</title>
 
 	<!-- Tell browser to redirect to Italian & English pages -->
-	<link rel="alternate" href="https://saloniamatteo.top/it/info.html" hreflang="it" />
-	<link rel="alternate" href="https://saloniamatteo.top/en/info.html" hreflang="en" />
+	<link rel="alternate" href="https://saloniamatteo.top/it/kernel.html" hreflang="it" />
+	<link rel="alternate" href="https://saloniamatteo.top/en/kernel.html" hreflang="en" />
 
 	<!-- Optimize page loading on some devices -->
 	<meta charset="utf-8">
@@ -14,7 +14,7 @@
 
 	<!-- Social media preview -->
 	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://saloniamatteo.top/info.html">
+	<meta property="og:url"		content="https://saloniamatteo.top/kernel.html">
 	<meta property="og:description"	content="Kernel">
 	<meta property="og:image"	content="https://saloniamatteo.top/favicon.png">
 
@@ -26,10 +26,6 @@
 
 	<!--Favicon-->
 	<link rel="shortcut icon" href="favicon.png">
-
-	<!-- Speed-up requests to CDNs -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<!-- Beer CSS -->
 	<link href="css/beer.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -49,7 +45,9 @@
 <script>
 ui();
 
-document.onreadystatechange = function() { wrap(); document.body.onresize = function() { wrap() }}
+document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
+
+function load() { wrap(); remember_prefs() }
 
 function wrap() {
 	/* Fix wrap */
@@ -78,7 +76,7 @@ function wrap() {
 	</button>
 
 	<div class="small-margin">
-		<article class="center middle small-margin" style="margin-top: 20rem!important">
+		<article class="center small-margin" style="margin-top: 20rem!important">
 			<div class="margin no-wrap">
 				<h6 class="card border center-align bold indigo white-text small-padding">Scegli una lingua &mdash; Choose a language</h6>
 			</div>
@@ -86,12 +84,12 @@ function wrap() {
 			<div id="flags" class="row no-wrap">
 				<div id="f-it" class="col left-align large-margin">
 					<article class="center-align no-padding">
-					<a href="it/info.html">
+					<a href="it/kernel.html">
 					<img src="pics/it.png" class="responsive medium"
 					style="max-height: 700rem!important; max-width: 1000rem!important">
 					</a>
 					<div class="center-align padding">
-						<a href="it/info.html" class="button border indigo white-text middle-align"
+						<a href="it/kernel.html" class="button border indigo white-text middle-align"
 						style="min-height: 40px!important"><h5>Italiano</h5></a>
 					</div>
 					</article>
@@ -99,12 +97,12 @@ function wrap() {
 
 				<div id="f-en" class="col right-align large-margin">
 					<article class="center-align no-padding">
-					<a href="en/info.html">
+					<a href="en/kernel.html">
 					<img src="pics/en.png" class="responsive medium"
 					style="max-height: 700rem!important; max-width: 1000rem!important">
 					</a>
 					<div class="center-align padding">
-						<a href="en/info.html" class="button border indigo white-text middle-align"
+						<a href="en/kernel.html" class="button border indigo white-text middle-align"
 						style="min-height: 40px!important"><h5>English</h5></a>
 					</div>
 					</article>
