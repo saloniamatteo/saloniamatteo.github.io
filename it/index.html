@@ -41,8 +41,18 @@ ui();
 document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
 
 function load() {
-	toggle_light();
 	remember_prefs();
+	invert_img();
+}
+
+function invert_img() {
+	/* Change GitHub icon color */
+	var l = document.body.className;
+	var g1 = document.getElementById("github-1");
+	var g2 = document.getElementById("github-2");
+	let gp = "../pics/github-";
+	g1.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
+	g2.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
 }
 
 function toggle_light() {
@@ -51,13 +61,7 @@ function toggle_light() {
 	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
 	l = document.body.className;
 
-	/* Change GitHub icon color */
-	var g1 = document.getElementById("github-1");
-	var g2 = document.getElementById("github-2");
-	let gp = "../pics/github-";
-	g1.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
-	g2.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
-
+	invert_img();
 	update_cookie();
 }
 </script>
