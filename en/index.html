@@ -38,7 +38,12 @@
 <script>
 ui();
 
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
+document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
+
+function load() {
+	remember_prefs();
+	toggle_light();
+}
 
 function toggle_light() {
 	/* Change body class */
