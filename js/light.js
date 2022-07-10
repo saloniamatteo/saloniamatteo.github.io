@@ -1,6 +1,6 @@
 function toggle_light() {
     var l = document.body.className;
-    document.body.className = "is-dark" == l ? "is-light" : "is-dark";
+    document.body.className = "dark" == l ? "light" : "dark";
 	l = document.body.className;
 	update_cookie();
 }
@@ -38,5 +38,5 @@ function remember_prefs() {
 		document.body.className = "is-" + getCookie("theme");
 	else
 		// Change accordingly
-		document.body.className = dm_user == true ? "is-dark" : "is-light";
+		document.body.className = dm_user == true ? "dark" : "light";
 }

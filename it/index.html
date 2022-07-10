@@ -51,14 +51,14 @@ function invert_img() {
 	var g1 = document.getElementById("github-1");
 	var g2 = document.getElementById("github-2");
 	let gp = "../pics/github-";
-	g1.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
-	g2.src = (l == "is-dark" ? gp + "light.png" : gp + "dark.png");
+	g1.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
+	g2.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
 }
 
 function toggle_light() {
 	/* Change body class */
 	var l = document.body.className;
-	document.body.className = (l == "is-dark" ? "is-light" : "is-dark");
+	document.body.className = (l == "dark" ? "light" : "dark");
 	l = document.body.className;
 
 	invert_img();
@@ -66,7 +66,7 @@ function toggle_light() {
 }
 </script>
 
-<body class="is-light">
+<body class="light">
 	<!-- Header -->
 	<header class="fixed padding indigo white-text">
 	<div class="row no-wrap middle-align">
