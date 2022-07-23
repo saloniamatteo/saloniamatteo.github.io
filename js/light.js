@@ -10,7 +10,7 @@ function update_cookie() {
 	document.cookie="theme=;path='/';SameSite=Lax;expires="+(new Date(0)).toUTCString();
 
 	// Set new cookie
-	document.cookie="theme="+document.body.className.replace("is-","")+";path=/;SameSite=Lax";
+	document.cookie="theme="+document.body.className+";path=/;SameSite=Lax";
 }
 
 function getCookie(cname) {
@@ -35,7 +35,7 @@ function remember_prefs() {
 
 	// Check cookie state, if set
 	if (document.cookie != "")
-		document.body.className = "is-" + getCookie("theme");
+		document.body.className = getCookie("theme");
 	else
 		// Change accordingly
 		document.body.className = dm_user == true ? "dark" : "light";
