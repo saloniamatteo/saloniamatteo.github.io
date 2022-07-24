@@ -1,6 +1,6 @@
 function toggle_light() {
-    var l = document.body.className;
-    document.body.className = "dark" == l ? "light" : "dark";
+	var l = document.body.className;
+	document.body.className = "dark" == l ? "light" : "dark";
 	l = document.body.className;
 	update_cookie();
 }
