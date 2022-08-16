@@ -36,55 +36,34 @@
 </head>
 
 <script>
-ui();
-
-document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
-
-function load() {
-	remember_prefs();
-	invert_img();
-}
-
-function invert_img() {
-	/* Change GitHub icon color */
-	var l = document.body.className;
-	var g1 = document.getElementById("github-1");
-	var g2 = document.getElementById("github-2");
-	let gp = "../pics/github-";
-	g1.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
-	g2.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
-}
-
-function toggle_light() {
-	/* Change body class */
-	var l = document.body.className;
-	document.body.className = (l == "dark" ? "light" : "dark");
-	l = document.body.className;
-
-	invert_img();
-	update_cookie();
-}
+document.onreadystatechange = () => remember_prefs();
 </script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="../index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s4">
+				<a class="button circle white indigo-text" href="../index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s4">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
 	
 	<div class="margin">
@@ -115,90 +94,101 @@ function toggle_light() {
 
 	<!-- Linux & Software -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="linux-soft" class="left-align medium-padding indigo white-text">
-		<a href="#linux-soft">Linux & Software</a>
-		</h5>
+	<article class="indigo no-padding">
+		<h5 id="linux-soft" class="white-text padding"><a href="#linux-soft">Linux &amp; Software</a></h5>
+	</article>
 
-		<!-- Arch Linux -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://salonia.it/Arch">
-			<div class="col min small-margin">
-					<img src="../pics/arch.png" class="small"></img>
-			</div>
+	<!-- Arch Linux -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/arch.png" alt="Arch Linux logo">
 
-			<div class="col small-margin">
-				<p><b>Istruzioni per installare Arch Linux</b></p>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label><br>
-				<i class="indigo-text">arrow_forward</i>
+			<div class="max">
+			<h6><a href="https://salonia.it/Arch">Istruzioni per installare Arch Linux</a></h6>
+			<p>Tutorial online che spiega come installare Arch Linux.</p>
+			<p class="grey-text">Ultimo aggiornamento tutorial: 20 Settembre 2021 &mdash; Pagina in Inglese</p>
 			</div>
-			</a>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Dotfiles -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://salonia.it/dotfiles">
-			<div class="col min small-margin">
-					<img src="../pics/gnu.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>I miei dotfiles (La mia configurazione GNU/Linux)</b></p>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label><br>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://salonia.it/Arch">
+				<i>arrow_forward</i> Vai
 			</a>
+		</nav>
+	</article>
+	</div>
+
+	<!-- Dotfiles -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/gnu.png" alt="GNU logo">
+
+			<div class="max">
+			<h6><a href="https://salonia.it/dotfiles">I miei dotfiles (la mia configurazione GNU/Linux)</a></h6>
+			<p>Tutti i file necessari per replicare la mia configurazione GNU/Linux. Include uno script per copiare la configurazione, e non solo. (Disponibile per distro basate su Gentoo o Arch Linux)</p>
+			<p class="grey-text">Pagina in Inglese</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Kernel -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="kernel.html">
-			<div class="col min small-margin">
-					<img src="../pics/linux.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>Il mio Kernel</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://salonia.it/dotfiles">
+				<i>arrow_forward</i> Vai
 			</a>
+		</nav>
+	</article>
+
+	<!-- Kernel -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/linux.png" alt="Linux logo">
+
+			<div class="max">
+			<h6><a href="kernel.html">Il mio Kernel</a></h6>
+			<p>Tutte le modifiche che ho apportato al Kernel, basato su <a class="link" href="https://codeberg.org/pf-kernel/linux/wiki/README">pf-sources</a>.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Packages -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="packages.html">
-			<div class="col min small-margin">
-					<img src="../pics/box.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>I miei pacchetti per Gentoo Linux</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="kernel.html">
+				<i>arrow_forward</i> Vai
 			</a>
+		</nav>
+	</article>
+
+	<!-- Packages -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/box.png" alt="Box">
+
+			<div class="max">
+			<h6><a href="packages.html">I miei pacchetti</a></h6>
+			<p>I miei pacchetti per Gentoo Linux.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-		
-		<!-- Software -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="software.html">
-			<div class="col min small-margin">
-					<img src="../pics/c.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>Il mio software</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="packages.html">
+				<i>arrow_forward</i> Vai
 			</a>
+		</nav>
+	</article>
+
+	<!-- Software -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/c.png" alt="C">
+
+			<div class="max">
+			<h6><a href="software.html">Il mio software</a></h6>
+			<p>Tutti i programmi che ho creato in C, compatibili con Linux, e non solo.</p>
+			</div>
 		</div>
+
+		<nav>
+			<a class="button round" href="packages.html">
+				<i>arrow_forward</i> Vai
+			</a>
+		</nav>
 	</article>
 	</div>
 
