@@ -25,7 +25,7 @@ article,header {
     box-shadow: var(--elevate1)!important
 }
 
-button,.button,h6.card {
+button.fixed,.button,h6.card {
     box-shadow: var(--elevate2)!important
 }
 
