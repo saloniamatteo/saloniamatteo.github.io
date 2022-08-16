@@ -37,77 +37,98 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Load theme preferences -->
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
-
-function load() { wrap(); remember_prefs() }
-
-function wrap() {
-	/* Fix wrap */
-	var w = document.body.clientWidth;
-	var flags = document.getElementById("flags");
-	var fit = document.getElementById("f-it");
-	var fen = document.getElementById("f-en");
-
-	/* Check width */
-	if (w >= 690) {
-		flags.classList.replace("wrap", "no-wrap");
-		fit.classList = fit.classList.toString().replace("center-align", "col left-align").split(",");
-		fen.classList = fen.classList.toString().replace("center-align", "col right-align").split(",");;
-	} else {
-		flags.classList.replace("no-wrap", "wrap");
-		fit.classList = fit.classList.toString().replace("col left-align", "center-align").split(",");
-		fen.classList = fen.classList.toString().replace("col right-align", "center-align").split(",");
-	}
-}
-</script>
 
 <body class="light">
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
 
-	<div class="small-margin">
-		<article class="center small-margin" style="margin-top: 20rem!important">
-			<div class="margin no-wrap">
-				<h6 class="card border center-align bold indigo white-text small-padding">Scegli una lingua &mdash; Choose a language</h6>
-			</div>
-
-			<div id="flags" class="row no-wrap">
-				<div id="f-it" class="col left-align large-margin">
-					<article class="center-align no-padding">
-					<a href="it/contact.html">
-					<img src="pics/it.png" class="responsive"
-					style="max-height: 300rem!important; max-width: 500rem!important">
-					</a>
-					<div class="center-align padding">
-						<a href="it/contact.html" class="button border indigo white-text middle-align"
-						style="min-height: 40px!important"><h5>Italiano</h5></a>
-					</div>
-					</article>
-				</div>
-
-				<div id="f-en" class="col right-align large-margin">
-					<article class="center-align no-padding">
-					<a href="en/contact.html">
-					<img src="pics/en.png" class="responsive"
-					style="max-height: 300rem!important; max-width: 500rem!important">
-					</a>
-					<div class="center-align padding">
-						<a href="en/contact.html" class="button border indigo white-text middle-align"
-						style="min-height: 40px!important"><h5>English</h5></a>
-					</div>
-					</article>
-				</div>
-			</div>
+	<article class="margin">
+		<article class="indigo no-padding">
+			<h5 class="center-align white-text small-padding">Scegli una lingua &mdash; Choose a language</h5>
 		</article>
-	</div>
 
-	<div class="medium-space"></div>
+		<!-- Small screens -->
+		<div class="s">
+		<div class="grid">
+			<div class="s12 center-align">
+				<a href="it/contact.html">
+					<img class="responsive square medium" src="pics/it.png" alt="Bandiera Italiana">
+				</a>
+
+				<a class="button mtop-small" href="it/contact.html">
+					<p class="large-text">Italiano</p>
+				</a>
+			</div>
+
+			<div class="s12 center-align">
+				<a href="en/contact.html">
+					<img class="responsive square medium" src="pics/en.png" alt="English Flag">
+				</a>
+
+				<a class="button mtop-small" href="en/contact.html">
+					<p class="large-text">English</p>
+				</a>
+			</div>
+		</div>
+		</div>
+
+		<!-- Medium screens -->
+		<div class="m">
+		<div class="grid">
+			<div class="s6 small-margin center-align">
+				<a href="it/contact.html">
+					<img class="responsive square medium" src="pics/it.png" alt="Bandiera Italiana">
+				</a>
+
+				<a class="button mtop-small" href="it/contact.html">
+					<p class="large-text">Italiano</p>
+				</a>
+			</div>
+
+			<div class="s6 small-margin center-align">
+				<a href="en/contact.html">
+					<img class="responsive square medium" src="pics/en.png" alt="English Flag">
+				</a>
+
+				<a class="button mtop-small" href="en/contact.html">
+					<p class="large-text">English</p>
+				</a>
+			</div>
+		</div>
+		</div>
+
+		<!-- Large screens -->
+		<div class="l">
+		<div class="grid">
+			<div class="s6 small-margin center-align">
+				<a href="it/contact.html">
+					<img class="responsive square medium" src="pics/it.png" alt="Bandiera Italiana">
+				</a>
+				<br>
+				<a class="button mtop-small" href="it/contact.html">
+					<p class="large-text">Italiano</p>
+				</a>
+			</div>
+
+			<div class="s6 small-margin center-align">
+				<a href="en/contact.html">
+					<img class="responsive square medium" src="pics/en.png" alt="English Flag">
+				</a>
+				<br>
+				<a class="button mtop-small" href="en/contact.html">
+					<p class="large-text">English</p>
+				</a>
+			</div>
+		</div>
+		</div>
+	</article>
 </body>
 </html>
