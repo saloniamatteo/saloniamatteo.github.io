@@ -1,63 +1,74 @@
 * {
-    font-family:"Montserrat",sans-serif
+	font-family:"Montserrat",sans-serif
 }
 
 .light,:root {
-    --black: #000000;
-    --indigo: #3F51B5;
-    --white: #FFFFFF;
-    --primary: var(--indigo)!important;
-    --on-primary: var(--white)!important;
-    --on-surface-variant: var(--black)!important
+	--black: #000000;
+	--indigo: #3F51B5;
+	--white: #FFFFFF;
+	--primary: var(--indigo)!important;
+	--on-primary: var(--white)!important;
+	--on-surface-variant: var(--black)!important
 }
 
 .dark {
-    --primary: var(--white)!important;
-    --on-primary: var(--indigo)!important;
-    --on-surface-variant: var(--white)!important
+	--primary: var(--white)!important;
+	--on-primary: var(--indigo)!important;
+	--on-surface-variant: var(--white)!important
 }
 
 .mtop-small {
 	margin-top: 10px!important
 }
 
-article,header {
-    box-shadow: var(--elevate1)!important
+article,header,.card {
+	box-shadow: var(--elevate1)!important
 }
 
 button.fixed,.button,h6.card {
-    box-shadow: var(--elevate2)!important
+	box-shadow: var(--elevate2)!important
+}
+
+.button,button {
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+i {
+    border-radius: 0!important
+}
+
+p {
+	height: auto!important
+}
+
+a,button,.button,b,em,strong,u {
+	line-height: normal;
+	vertical-align: unset
+}
+
+.grid {
+	row-gap: 10rem!important
+}
+
+.grid > article .tiny-padding {
+	padding: 1rem!important
+}
+
+.min {
+	max-width: fit-content!important
+}
+
+.top-round {
+    border-radius: 16rem 16rem 0 0 !important
 }
 
 /*
-p{
-    height:auto!important
-}
-
 p.small-space,p.space{
-    line-height:24rem
+	line-height:24rem
 }
 
 p.medium-space{
-    line-height:32rem
-}
-
-.button.tiny,.chip.tiny,button.tiny{
-    height:24rem;
-    min-height:24rem;
-    font-size:inherit;
-    font-weight:inherit;
-    line-height:normal;
-    padding:0 8rem;
-    vertical-align:unset
-}
-.circle.tiny,.square.tiny{
-    min-width:16rem;
-    min-height:16rem;
-    max-width:16rem;
-    max-height:16rem;
-    height:16rem;
-    padding:0;
-    vertical-align:text-bottom
+	line-height:32rem
 }
 */
