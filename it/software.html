@@ -33,58 +33,45 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a href="https://salonia.it"
-			   class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
-	
+
 	<div class="margin">
 	<div>
 		<h5>Programmi creati da Salonia Matteo</h5>
 
 		<p class="large-text">
-		In questa pagina potete trovare alcuni
-		programmi creati esclusivamente in C (C99) da me,
-		con supporto preferenziale per GNU/Linux.
-		</p>
-
-		<p class="large-text">
-		Nota: tutti questi programmi usano
-		<a href="https://en.wikipedia.org/wiki/GNU_Autotools"
-		   class="button border indigo white-text tiny">GNU AutoTools&nbsp;<i>arrow_forward</i></a>
-		per il processo di configurazione e compilazione,
-		in modo tale da estendere la portabilit&agrave;.
-		</p>
-
-		<p class="large-text">
-		Inoltre, tutti questi programmi usano una o pi&ugrave; parti della mia libreria
-		<a href="https://github.com/saloniamatteo/smclib"
-		   class="button border indigo white-text tiny">SMClib&nbsp;<i>arrow_forward</i></a>
+		In questa pagina potete trovare alcuni programmi creati esclusivamente in C (C99) da me, con supporto preferenziale per GNU/Linux. Nota: tutti questi programmi usano <a class="button round small no-margin" href="https://en.wikipedia.org/wiki/GNU_Autotools">GNU AutoTools&nbsp;<i>arrow_forward</i></a> per il processo di configurazione e compilazione, in modo tale da estendere la portabilit&agrave;. Inoltre, tutti questi programmi usano una o pi&ugrave; parti della mia libreria <a class="button round small no-margin" href="https://github.com/saloniamatteo/smclib">SMClib&nbsp;<i>arrow_forward</i></a>
 		</p>
 	</div>
 
@@ -92,125 +79,84 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- Software -->
 	<div>
-	<article class="border no-padding">
-		<h5 class="left-align medium-padding indigo white-text">Software</h5>
-
-		<!-- Hire me -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="contact.html"><i class="bold indigo-text">!</i></a>
-			</div>
-
-			<div class="col small-margin">
-			Se siete interessati ad assumermi per crearvi un Sito Web, o vi interessa un&apos;Applicazione per PC o Android,
-			cliccate il pulsante sotto per aprire la pagina contanente i miei recapiti,
-			per contattarmi e richiedere un preventivo.<br>
-
-			<div class="right-align">
-				<a href="contact.html" class="button border indigo white-text small-margin">Recapiti</a>
-			</div>
-			</div>
-			</a>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- TP-XFan -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/tp-xfan"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/tp-xfan"><b><u>TP-XFan (ThinkPad XForms Fan)</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			</div>
-
-			<p>
-			Programma per modificare la velocit&agrave; della ventola di qualsiasi ThinkPad.
-			Presenta un' interfaccia grafica (creata con
-			<a href="http://savannah.nongnu.org/projects/xforms"
-			class="button border tiny indigo white-text">XForms&nbsp;<i>arrow_forward</i></a>),
-			e la modalit&agrave; di controllo temperatura automatica (AFSM).
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Csnake -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/csnake"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/csnake"><b><u>Csnake</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			</div>
-
-			<p>
-			Un clone di Snake che presenta una pseudo-interfaccia grafica da terminale usando
-			<a href="https://invisible-island.net/ncurses/announce.html"
-			class="button border tiny indigo white-text">ncurses&nbsp;<i>arrow_forward</i></a>.
-		   	&Egrave; possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi;
-			inoltre, &egrave; possibile modificare la velocit&agrave;/difficolt&agrave;, e di mostrare i bordi dello schermo.
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Quiz -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/quiz"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/quiz"><b><u>Quiz</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			</div>
-
-			<p>
-			Programma con cui si possono creare dei piccoli Quiz e/o risolvere Quiz. Non presenta un interfaccia grafica;
-			va usato da terminale, seguendo il testo sullo schermo. &Egrave; possibile salvare i punteggi con un nome personalizzato,
-			in un file qualsiasi; inoltre, un creatore di quiz &egrave; incluso, ed &egrave; facile da usare.
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Calc -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/calc"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/calc"><b><u>Calc</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			</div>
-
-			<p>
-			Una semplice calcolatrice, con supporto per bit-shifting, Notazione Polacca Inversa (Reverse Polish Notation; RPN),
-			e altri valori speciali. Non presenta un'interfaccia grafica (come Quiz).
-			</p>
-			</div>
-		</div>
+	<article class="indigo no-padding">
+		<h5 id="software" class="left-align medium-padding indigo white-text">
+			<a href="#software">Software</a>
+		</h5>
 	</article>
-	</div>
-	</div>
 
-	<div class="medium-space"></div>
+	<article>
+		<p>Se siete interessati ad assumermi per crearvi un Sito Web moderno, o vi interessa un&apos;Applicazione per PC o Android, cliccate il pulsante sotto per aprire la pagina contanente i miei recapiti, per contattarmi, discutere del vostro progetto, e richiedere un preventivo.</p>
+
+		<nav class="right-align small-margin">
+			<a class="button round" href="contact.html">Recapiti <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- TP-XFan -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/tp-xfan.png" alt="TP-XFan logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/tp-xfan">TP-XFan (ThinkPad XForms Fan)</a></h6>
+				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
+				<p>
+				Programma per modificare la velocit&agrave; della ventola di qualsiasi ThinkPad. Presenta un' interfaccia grafica (creata con <a class="button round small no-margin" href="http://savannah.nongnu.org/projects/xforms">XForms&nbsp;<i>arrow_forward</i></a>), e la modalit&agrave; di controllo temperatura automatica (AFSM).
+				</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/tp-xfan">Vai <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Csnake -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/csnake.png" alt="Csnake logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/csnake">Csnake</a></h6>
+				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
+				<p>Un clone di Snake che presenta una preudo-interfaccia grafica da terminale usando <a class="button round small no-margin" href="https://invisible-island.net/ncurses/announce.html">ncurses <i>arrow_forward</i></a>. &Egrave; possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi; inoltre, &egrave; possibile modificare la velocit&agrave;/difficolt&agrave;, e di mostrare i bordi dello schermo.</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/csnake">Vai <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Quiz -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/quiz.png" alt="Quiz logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/quiz">Quiz</a></h6>
+				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
+			<p>Programma con cui si possono creare dei piccoli Quiz e/o risolvere Quiz. Non presenta un interfaccia grafica; va usato da terminale, seguendo il testo sullo schermo. &Egrave; possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi; inoltre, un creatore di quiz &egrave; incluso, ed &egrave; facile da usare.</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/quiz">Vai <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Calc -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/calc.png" alt="Calc logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/calc">Calc</a></h6>
+				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
+			<p>Una semplice calcolatrice, con supporto per bit-shifting, Notazione Polacca Inversa (Reverse Polish Notation; RPN), e altri valori speciali. Non presenta un'interfaccia grafica (come Quiz).</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/calc">Vai <i>arrow_forward</i></a>
+		</nav>
+	</article>
 </body>
 </html>
