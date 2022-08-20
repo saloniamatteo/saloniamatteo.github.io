@@ -33,33 +33,37 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a href="https://salonia.it" class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
 
 	<div class="margin">
@@ -74,8 +78,8 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 		<p class="large-text">
 		Vai a:<br>
 
-		<a class="button border small-margin indigo white-text" href="#crypto">Crypto</a>
-		<a class="button border small-margin indigo white-text" href="#paypal">Paypal</a>
+		<a class="button round border small-margin indigo white-text" href="#crypto">Crypto</a>
+		<a class="button round border small-margin indigo white-text" href="#paypal">Paypal</a>
 		</p>
 	</div>
 
@@ -83,35 +87,23 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- Crypto -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="crypto" class="left-align medium-padding indigo white-text">
+	<article class="indigo no-padding">
+		<h5 id="crypto" class="white-text padding">
 		<a href="#crypto">Criptovalute</a>
 		</h5>
+	</article>
 
-		<!-- Monero -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Monero</h6>
-				<p style="word-break: break-all">
-				Indirizzo:<br>
-				<b>43cgqumPkUAXhL4cx5bn24aZQkg7dUGQtaugoCxNEg1c2kbUY14y5jJMBwju2vqqZDeCJvSsn3SC7cDLuv5ZSeth4CV71cz</b>
-				</p>
-			</div>
-		</div>
+	<!-- Monero -->
+	<article>
+		<h6>Monero</h6>
+		<p style="word-break: break-all">
+		Indirizzo:
+		<b>43cgqumPkUAXhL4cx5bn24aZQkg7dUGQtaugoCxNEg1c2kbUY14y5jJMBwju2vqqZDeCJvSsn3SC7cDLuv5ZSeth4CV71cz</b>
+		</p>
 
-		<div class="divider"></div>
-
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-			<p>
-			In alternativa, &egrave; possibile usare
-			<a href="https://openalias.org" class="button border tiny indigo white-text">OpenAlias&nbsp;<i>arrow_forward</i></a>
-			Al momento di invio dei fondi, &egrave; possibile scrivere <label class="bold medium-text underline">salonia.it</label>
-			al posto dell'indirizzo, in modo tale che il vostro client vada a sostituire automaticamente il testo
-			con l'indirizzo Monero sopra indicato.
-			</p>
-			</div>
-		</div>
+		<p>
+		In alternativa all'indirizzo, &egrave; possibile usare <a class="button round small no-margin" href="https://openalias.org">OpenAlias <i>arrow_forward</i></a> &mdash; Al momento di invio dei fondi, &egrave; possibile scrivere <b><u>salonia.it</u></b> al posto dell'indirizzo, in modo tale che il vostro client/wallet vada a sostituire automaticamente il testo con l'indirizzo Monero sopra indicato. Inoltre, potete anche usare questo strumento per controllare tutti i record OpenAlias di un dominio: <a class="button round small no-margin" href="https://oa.salonia.it">OpenAlias API Web Form <i>arrow_forward</i></a>
+		</p>
 	</article>
 	</div>
 
@@ -119,25 +111,21 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- PayPal -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="paypal" class="left-align medium-padding indigo white-text">
+	<article class="indigo no-padding">
+		<h5 id="paypal" class="white-text padding">
 		<a href="#paypal">PayPal</a>
 		</h5>
+	</article>
 
-		<!-- PayPal -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<p>
-				Link: <a class="button border tiny indigo white-text" href="https://paypal.me/saloniamatteo">
-				https://paypal.me/saloniamatteo&nbsp;<i>arrow_forward</i></a><br>
-				Username Paypal.me: <b>saloniamatteo</b>
-				</p>
-			</div>
-		</div>
+	<article>
+		<p>
+		Username Paypal.me: <b>saloniamatteo</b> &mdash; link:
+		<a class="button round small no-margin" href="https://paypal.me/saloniamatteo">
+			paypal.me/saloniamatteo <i>arrow_forward</i>
+		</a>
+		</p>
 	</article>
 	</div>
 	</div>
-
-	<div class="medium-space"></div>
 </body>
 </html>
