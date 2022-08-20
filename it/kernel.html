@@ -34,27 +34,27 @@
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/kernel.style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+
+	var modal_clicked = 0;
+
+	function modal(id) {
+		var overlay = document.getElementById(id + "_ovr");
+		var modal   = document.getElementById(id + "_mod");
+
+		if (overlay.classList.contains("active") && modal_clicked != 1) {
+			overlay.classList.remove("active");
+			modal.classList.remove("active");
+		} else if (modal_clicked != 1) {
+			overlay.classList.toggle("active");
+			modal.classList.toggle("active");
+		} else
+			modal_clicked = 0;
+	}
+	</script>
 </head>
-
-<script>
-document.onreadystatechange = () => remember_prefs();
-
-var modal_clicked = 0;
-
-function modal(id) {
-	var overlay = document.getElementById(id + "_ovr");
-	var modal   = document.getElementById(id + "_mod");
-
-	if (overlay.classList.contains("active") && modal_clicked != 1) {
-		overlay.classList.remove("active");
-		modal.classList.remove("active");
-	} else if (modal_clicked != 1) {
-		overlay.classList.toggle("active");
-		modal.classList.toggle("active");
-	} else
-		modal_clicked = 0;
-}
-</script>
 
 <body class="light">
 	<!-- Header -->
@@ -97,7 +97,7 @@ function modal(id) {
 		Vai a:<br>
 
 		<a class="button round border small-margin indigo white-text" href="#intro">Introduzione</a>
-		<a class="button round border small-margin indigo white-text" href="#support">Supporto configurazione default</a>
+		<a class="button round border small-margin indigo white-text" href="#defaults">Configurazione default</a>
 		<a class="button round border small-margin indigo white-text" href="#script">Uso script</a>
 		<a class="button round border small-margin indigo white-text" href="#perf">Performance</a>
 		<a class="button round border small-margin indigo white-text" href="#source">Codice sorgente</a>
@@ -128,11 +128,11 @@ function modal(id) {
 
 	<div class="medium-space"></div>
 
-	<!-- Supporto config. di default -->
+	<!-- Configurazione default -->
 	<div>
 	<article class="indigo no-padding">
-		<h5 id="support" class="white-text padding">
-		<a href="#support">Supporto configurazione di default</a>
+		<h5 id="defaults" class="white-text padding">
+		<a href="#defaults">Configurazione default</a>
 		</h5>
 	</article>
 
