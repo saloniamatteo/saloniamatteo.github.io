@@ -87,9 +87,7 @@
 		<h5>Kernel Personalizzato</h5>
 
 		<p class="large-text">
-		Se usate una distribuzione di GNU/Linux, e se siete in grado di compilare il vostro Kernel, in questa pagina troverete alcune
-		modifiche che ho apportato al mio Kernel, e uno script per facilitare le modifiche alla
-		configurazione del Kernel, e la compilazione.
+		Se usate una distribuzione di GNU/Linux, e se siete in grado di compilare il vostro Kernel, in questa pagina troverete alcune modifiche che ho apportato al mio Kernel, e uno script per facilitare le modifiche alla configurazione del Kernel, e la compilazione.
 		</p>
 
 		<p class="large-text">
@@ -115,7 +113,7 @@
 
 	<article>
 		<p>
-		Premetto col dire che io uso la distribuzione <a class="button round small no-margin" href="https://gentoo.org">Gentoo Linux <i>arrow_forward</i></a> &mdash; è una distribuzione di GNU/Linux in cui tutti i pacchetti <em>(programmi)</em> vanno compilati dal codice sorgente, piuttosto che usare pacchetti binari pre-compilati da terzi, che non possono essere configurati. Questo approccio permette all'utente di scegliere quali parti del proprio sistema compilare, e quali pacchetti specifici installare, in modo tale da rendere possibili configurazioni che usano pochissime risorse (anche <strong>meno di 100MB di RAM</strong>!), totalmente funzionanti e molto efficienti. Infatti, come avrete ben capito, è anche possibile configurare il proprio Kernel per poi compilarlo in un secondo momento. Sul mio laptop <strong>ThinkPad T440p</strong>, uso il Kernel <a class="button round small no-margin" href="https://packages.gentoo.org/packages/sys-kernel/pf-sources">pf-sources <i>arrow_forward</i></a>, che include le patch del Kernel Gentoo (genpatches), e molte altre patch che permettono al kernel di operare in maniera più rapida.
+		Premetto col dire che io uso la distribuzione <a class="button round small no-margin" href="https://gentoo.org">Gentoo Linux <i>arrow_forward</i></a> &mdash; è una distribuzione di GNU/Linux in cui tutti i pacchetti <em>(programmi)</em> vanno compilati dal codice sorgente, piuttosto che usare pacchetti binari pre-compilati da terzi, che non possono essere configurati. Questo approccio permette all&apos;utente di scegliere quali parti del proprio sistema compilare, e quali pacchetti specifici installare, in modo tale da rendere possibili configurazioni che usano pochissime risorse (anche <strong>meno di 100MB di RAM</strong>!), totalmente funzionanti e molto efficienti. Infatti, come avrete ben capito, è anche possibile configurare il proprio Kernel per poi compilarlo in un secondo momento. Sul mio laptop <strong>ThinkPad T440p</strong>, uso il Kernel <a class="button round small no-margin" href="https://packages.gentoo.org/packages/sys-kernel/pf-sources">pf-sources <i>arrow_forward</i></a>, che include le patch del Kernel Gentoo (genpatches), e molte altre patch che permettono al kernel di operare in maniera più rapida.
 		</p>
 
 		<div class="right-align">
@@ -137,12 +135,7 @@
 
 	<article>
 		<p>
-			Questo Kernel viene aggiornato costantemente, con supporto continuo per il mio laptop, <b>ThinkPad T440p</b>,
-			rimuovendo quindi funzionalit&agrave; non necessarie, come <b>NUMA</b>, <b>NVIDIA</b>, <b>AMD</b>, e cos&igrave; via.
-			In questa guida vedrete che <u>bisogna modificare alcune impostazioni</u>, come la cartella
-			che contiene gli script e le patch utilizzati, e cos&igrave; via. In pi&ugrave;, se usate configurazioni diverse
-			dalla mia (esempio: usate un computer diverso dal mio ThinkPad), <u>bisogner&agrave; rivedere la configurazione
-			del Kernel</u>, specialmente il numero massimo di CPU (impostato a 8), le GPU massime (impostato a 2), ecc.
+			Questo Kernel viene aggiornato regolarmente, con supporto continuo per il mio laptop, <b>ThinkPad T440p</b>, rimuovendo quindi funzionalit&agrave; non necessarie, come <b>NUMA</b>, <b>NVIDIA</b>, <b>AMD</b>, e cos&igrave; via. In questa guida vedrete che <u>bisogna modificare alcune impostazioni</u>, come la cartella in cui è contenuta la sorgente del Kernel, ecc. In pi&ugrave;, se usate configurazioni diverse dalla mia (esempio: usate un computer diverso dal mio ThinkPad), <u>bisogner&agrave; rivedere la configurazione del Kernel</u>, specialmente il numero massimo di CPU (impostato a 8), le GPU massime (impostato a 2), ecc.
 		</p>
 	</article>
 	</div>
@@ -203,7 +196,7 @@
 
 		<p class="small-space">
 		Anche se non avete questa versione precisa, &egrave; possibile modificare lo script per includere
-		la versione precisa; in questo caso uso l'editor di testo vim, ma potete usarne uno qualsiasi:
+		la versione precisa; in questo caso uso l&apos;editor di testo vim, ma potete usarne uno qualsiasi:
 		</p>
 
 		<article class="small-padding" style="background-color: #313033"><div class="margin">
@@ -215,25 +208,17 @@
 		</p>
 
 		<article class="small-padding" style="background-color: #313033"><div class="margin">
-			<span class="white-text">KVER=</span><span class="cyan-text">"5.17"</span>
+			<span class="white-text">KVER=</span><span class="cyan-text">"5.19"</span>
 			<br>
-			<span class="white-text">PVER=</span><span class="cyan-text">"_p2-pf"</span>
+			<span class="white-text">PVER=</span><span class="cyan-text">"_p1-pf"</span>
 		</div></article>
 
 		<p class="small-space">
-		<b>KVER</b> contiene la versione primaria del Kernel (5.17), mentre <b>PVER</b> contiene la
-		versione delle patch (_p2-pf). Insieme vanno a formare <b>KERNVER</b>, la versione completa
-		del Kernel (quindi 5.17_p2-pf).
-		</p>
-
-		<p class="small-space">
-		Ad esempio, se la vostra versione personalizzata avesse la stessa versione primaria del Kernel (5.17),
-		ma una versione di patch diversa, ad esempio "<em>_mykernel </em>", allora dovrete impostare le variabili
-		nel seguente modo:
+		<b>KVER</b> contiene la versione primaria del Kernel (5.19), mentre <b>PVER</b> contiene la versione delle patch (_p1-pf). Insieme vanno a formare <b>KERNVER</b>, la versione completa del Kernel (quindi 5.19_p1-pf). Ad esempio, se la vostra versione personalizzata avesse la stessa versione primaria del Kernel (5.19), ma una versione di patch diversa, ad esempio <b>_mykernel</b>, allora dovrete impostare le variabili nel seguente modo:
 		</p>
 
 		<article class="small-padding" style="background-color: #313033"><div class="margin">
-			<span class="white-text">KVER=</span><span class="cyan-text">"5.17"</span>
+			<span class="white-text">KVER=</span><span class="cyan-text">"5.19"</span>
 			<br>
 			<span class="white-text">PVER=</span><span class="cyan-text">"_mykernel"</span>
 		</div></article>
@@ -246,10 +231,7 @@
 		</article>
 
 		<p class="small-space">
-		Nello script, <u>build.sh</u>, &egrave; presente una variabile, <b>ARCHVER</b>.
-		Questa variabile contiene un numero da <b>1</b> a <b>41</b>; ogni numero rappresenta
-		un processore diverso. Sempre nello stesso file, &egrave; presente una lista che spiega
-		quale numero utilizzare, in base al processore che poi user&agrave; il Kernel.
+		Nello script, <u>build.sh</u>, &egrave; presente una variabile, <b>ARCHVER</b>. Questa variabile contiene un numero da <b>1</b> a <b>41</b>; ogni numero rappresenta una famiglia di processore diversa. Sempre nello stesso file, &egrave; presente una lista che spiega quale numero utilizzare, in base alla famiglia del processore.
 		</p>
 
 		<p class="small-space">
@@ -275,7 +257,7 @@
 		</div></article>
 
 		<p class="small-space">
-		Vi consiglio di cambiare questo numero, perch&egrave; l'impatto sulla performance &egrave; notevole.
+		Vi consiglio di cambiare questo numero, perch&egrave; l&apos;impatto sulla performance &egrave; notevole.
 		Ecco la lista completa:
 		</p>
 
@@ -334,17 +316,17 @@
 		&Egrave; una buona pratica controllare la configurazione del Kernel prima di compilarlo.
 		Per fare ci&ograve;, lo script <u>build.sh</u> rende possibile la modifica della configurazione,
 		eseguendo <u>make menuconfig</u> nella directory in cui &egrave; presente il Kernel,
-		con l'opzione di copiare quella di default, o senza copiarla, per usare il proprio file di configurazione.
+		con l&apos;opzione di copiare quella di default, o senza copiarla, per usare il proprio file di configurazione.
 		</p>
 
 		<p class="small-space">
 		Assicuratevi di avere i permessi di amministratore prima di eseguire questo comando;
-		se non siete amministratori, ponete all'inizio del comando <b>sudo</b> oppure <b>doas</b>,
+		se non siete amministratori, ponete all&apos;inizio del comando <b>sudo</b> oppure <b>doas</b>,
 		in base a quale usate.
 		</p>
 
 		<p class="card small-space small-padding red white-text">
-		Se non avete capito cosa c'&egrave; scritto qui sopra, <b><u>interrompete immediatamente la configurazione del Kernel</u></b>,
+		Se non avete capito cosa c&apos;&egrave; scritto qui sopra, <b><u>interrompete immediatamente la configurazione del Kernel</u></b>,
 		per non rischiare di rendere il vostro sistema inutilizzabile.
 		Anche se il rischio non &egrave; elevato, &egrave; meglio prevenire ulteriori problemi.
 		<b><u>Continuate a vostro rischio e pericolo.</u></b>
@@ -395,7 +377,7 @@
 			<!-- Ccache -->
 			<article class="s2 m2 fill no-margin"><strong>-e</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--ccache</strong></article>
-			<article class="s5 m8 fill no-margin">Usa <strong>ccache</strong> per velocizzare la compilazione. È consigliato usare quest'opzione se si compila il Kernel almeno due volte, per velocizzare le compilazioni successive. <a class="link" href="https://ccache.dev/performance.html"><u>(Vedi articolo)</u></a></article>
+			<article class="s5 m8 fill no-margin">Usa <strong>ccache</strong> per velocizzare la compilazione. È consigliato usare quest&apos;opzione se si compila il Kernel almeno due volte, per velocizzare le compilazioni successive. <a class="link" href="https://ccache.dev/performance.html"><u>(Vedi articolo)</u></a></article>
 
 			<!-- Fastmath -->
 			<article class="s2 m2 fill no-margin"><strong>-f</strong></article>
@@ -410,17 +392,17 @@
 			<!-- Graphite -->
 			<article class="s2 m2 fill no-margin"><strong>-g</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--graphite</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel usando <strong>Graphite</strong>. Tipicamente quest'opzione riduce leggermente la performance.</article>
+			<article class="s5 m8 fill no-margin">Compila il Kernel usando <strong>Graphite</strong>. Tipicamente quest&apos;opzione riduce leggermente la performance.</article>
 
 			<!-- Clear Patches -->
 			<article class="s2 m2 fill no-margin"><strong>-l</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--clearl-ps</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le <strong>patch di Clear Linux</strong>. Queste patch sono volte all'incremento ulteriore della performance, e vengono applicate direttamente dalla repository di Clear Linux. Molto consigliato per CPU Intel.</article>
+			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le <strong>patch di Clear Linux</strong>. Queste patch sono volte all&apos;incremento ulteriore della performance, e vengono applicate direttamente dalla repository di Clear Linux. Molto consigliato per CPU Intel.</article>
 
 			<!-- User Patches -->
 			<article class="s2 m2 fill no-margin"><strong>-p</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--patches</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le patch incluse. Anche queste patch sono volte all'incremento ulteriore della performance &mdash; la maggior parte di queste patch proviene da <a class="link" href="https://lkml.org"><u>LKML</u></a>.</article>
+			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le patch incluse. Anche queste patch sono volte all&apos;incremento ulteriore della performance &mdash; la maggior parte di queste patch proviene da <a class="link" href="https://lkml.org"><u>LKML</u></a>.</article>
 		</div>
 
 		<div class="space"></div>
@@ -468,7 +450,7 @@
 				Questi test sono stati eseguiti sul mio laptop, <b>ThinkPad T440p</b>, con CPU
 				<b>Intel Core i7-4700MQ</b>, 8GB RAM, Kernel Gentoo Linux <b>5.16.0-pf2</b>.
 				Per ottenere il Kernel pi&ugrave; performante, ho usato ogni singolo Kernel con il programma <b>XMRig</b>,
-				eseguendolo per 5 minuti, e vedendo l'hashrate massimo.
+				eseguendolo per 5 minuti, e vedendo l&apos;hashrate massimo.
 				Lista compilazioni, dalla pi&ugrave; performante alla meno performante:
 				</p>
 

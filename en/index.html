@@ -33,79 +33,59 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { load(); document.body.onresize = function() { load() }}
-
-function load() {
-	remember_prefs();
-	invert_img();
-}
-
-function invert_img() {
-	/* Change GitHub icon color */
-	var l = document.body.className;
-	var g1 = document.getElementById("github-1");
-	var g2 = document.getElementById("github-2");
-	let gp = "../pics/github-";
-	g1.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
-	g2.src = (l == "dark" ? gp + "light.png" : gp + "dark.png");
-}
-
-function toggle_light() {
-	/* Change body class */
-	var l = document.body.className;
-	document.body.className = (l == "dark" ? "light" : "dark");
-	l = document.body.className;
-
-	invert_img();
-	update_cookie();
-}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="../index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="../index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
-	
+
 	<div class="margin">
 	<div>
 		<h5>Welcome to Salonia Matteo's website!</h5>
 
 		<p class="large-text">
-		Here you'll find various resources that may help you,
-		such as Packages for Gentoo Linux, Software created
-		in C99, various Tools, how to contact me, and so on.
+		Here you'll find various resources that may be able
+		to help you, including Packages for Gentoo Linux,
+		Software created in C99, various Tools,
+		how to contact me, and so on.
 
-		The various sections have permanent links that
-		can be shared, to make navigation easier.
+		The various sections have permanent links
+		that can be shared, in order to facilitate navigation.
 		</p>
 
 		<p class="large-text">
 		Go to:<br>
 
-		<a class="button border small-margin indigo white-text" href="#linux-soft">Linux &amp; Software</a>
-		<a class="button border small-margin indigo white-text" href="#about">About Me</a>
-		<a class="button border small-margin indigo white-text" href="#tools-links">Tools &amp; Links</a>
+		<a class="button round border small-margin indigo white-text" href="#linux-soft">Linux &amp; Software</a>
+		<a class="button round border small-margin indigo white-text" href="#about">About Me</a>
+		<a class="button round border small-margin indigo white-text" href="#tools-links">Tools &amp; Links</a>
 		</p>
 	</div>
 
@@ -113,211 +93,227 @@ function toggle_light() {
 
 	<!-- Linux & Software -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="linux-soft" class="left-align medium-padding indigo white-text">
-		<a href="#linux-soft">Linux & Software</a>
-		</h5>
+	<article class="indigo no-padding">
+		<h5 id="linux-soft" class="white-text padding"><a href="#linux-soft">Linux &amp; Software</a></h5>
+	</article>
 
-		<!-- Arch Linux -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://salonia.it/Arch">
-			<div class="col min small-margin">
-					<img src="../pics/arch.png" class="small"></img>
-			</div>
+	<!-- Arch Linux -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/arch.png" alt="Arch Linux logo">
 
-			<div class="col small-margin">
-				<p><b>Arch Linux installation instructions</b></p>
-				<label class="grey-text medium-text">(external link)</label><br>
-				<i class="indigo-text">arrow_forward</i>
+			<div class="max">
+			<h6><a href="https://salonia.it/Arch">Arch Linux installation instructions</a></h6>
+			<p>Online tutorial that explains how to install Arch Linux.</p>
+			<p class="grey-text">Last tutorial update: 20 September 2021</p>
 			</div>
-			</a>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Dotfiles -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://salonia.it/dotfiles">
-			<div class="col min small-margin">
-					<img src="../pics/gnu.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>My dotfiles (My GNU/Linux config)</b></p>
-				<label class="grey-text medium-text">(external link)</label><br>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://salonia.it/Arch">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Dotfiles -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/gnu.png" alt="GNU logo">
+
+			<div class="max">
+			<h6><a href="https://salonia.it/dotfiles">My dotfiles (my GNU/Linux config)</a></h6>
+			<p>All the necessary files to copy my GNU/Linux config. Includes a script to copy configs, and more. (Available for distros based on Gentoo or Arch Linux)</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Kernel -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="kernel.html">
-			<div class="col min small-margin">
-					<img src="../pics/linux.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>My Kernel</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://salonia.it/dotfiles">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Kernel -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/linux.png" alt="Linux logo">
+
+			<div class="max">
+			<h6><a href="kernel.html">My Kernel</a></h6>
+			<p>All of the changes I made to the Kernel, based on <a class="link" href="https://codeberg.org/pf-kernel/linux/wiki/README">pf-sources</a>.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Packages -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="packages.html">
-			<div class="col min small-margin">
-					<img src="../pics/box.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>My packages for Gentoo Linux</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="kernel.html">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Packages -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/box.png" alt="Box">
+
+			<div class="max">
+			<h6><a href="packages.html">My packages</a></h6>
+			<p>The packages I made for Gentoo Linux.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-		
-		<!-- Software -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="software.html">
-			<div class="col min small-margin">
-					<img src="../pics/c.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>My software</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="packages.html">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Software -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/c.png" alt="C">
+
+			<div class="max">
+			<h6><a href="software.html">My software</a></h6>
+			<p>All of the programs I made in C, compatible with Linux, and more.</p>
+			</div>
 		</div>
+
+		<nav>
+			<a class="button round" href="software.html">
+				<i>arrow_forward</i> Go
+			</a>
+		</nav>
 	</article>
 	</div>
 
-	<div class="medium-space"></div>
+	<div class="space"></div>
 
 	<!-- About -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="about" class="left-align medium-padding indigo white-text">
-		<a href="#about">About Me</a>
-		</h5>
+	<article class="indigo no-padding">
+		<h5 id="about" class="white-text padding"><a href="#about">About Me</a></h5>
+	</article>
 
-		<!-- About -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="info.html">
-			<div class="col min small-margin">
-					<img src="../pics/about.png" class="small"></img>
-			</div>
+	<!-- About -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/about.png" alt="About">
 
-			<div class="col small-margin">
-				<p><b>About Me</b></p>
-				<i class="indigo-text">arrow_forward</i>
+			<div class="max">
+			<h6><a href="info.html">About Me</a></h6>
+			<p>Info about me and my skills.</p>
 			</div>
-			</a>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Contact -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="contact.html">
-			<div class="col min small-margin">
-					<img src="../pics/contact.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>Contact Me</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="info.html">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Contact -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/contact.png" alt="Contact">
+
+			<div class="max">
+			<h6><a href="contact.html">Contact Me</a></h6>
+			<p>Discover how to contact me.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Donate -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="donate.html">
-			<div class="col min small-margin">
-					<img src="../pics/cash.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>Donations</b></p>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="contact.html">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Donate -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/cash.png" alt="Donate">
+
+			<div class="max">
+			<h6><a href="donate.html">Donate</a></h6>
+			<p>If you want to support me as a way to show gratitude towards my work, on this page you'll discover how to send me a donation.</p>
+			</div>
 		</div>
+
+		<nav>
+			<a class="button round" href="donate.html">
+				<i>arrow_forward</i> Go
+			</a>
+		</nav>
 	</article>
 	</div>
 
-	<div class="medium-space"></div>
+	<div class="space"></div>
 
 	<!-- Tools & Links -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="tools-links" class="left-align medium-padding indigo white-text">
-		<a href="#tools-links">Tools & Links</a>
-		</h5>
+	<article class="indigo no-padding">
+		<h5 id="tools-links" class="white-text padding"><a href="#tools-links">Tools &amp; Links</a></h5>
+	</article>
 
-		<!-- OpenAlias -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://oa.salonia.it">
-			<div class="col min small-margin">
-					<img src="../pics/oa.png" class="small"></img>
-			</div>
+	<!-- OpenAlias -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/oa.png" alt="OpenAlias logo">
 
-			<div class="col small-margin">
-				<p><b>OpenAlias</b></p>
-				<label class="grey-text medium-text">(external link)</label><br>
-				<i class="indigo-text">arrow_forward</i>
+			<div class="max">
+			<h6><a href="https://oa.salonia.it">OpenAlias</a></h6>
+			<p>Get all <a class="link" href="https://openalias.org">OpenAlias</a> records of a domain, with an easy to use and intuitive user interface.</p>
 			</div>
-			</a>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- GitHub -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://github.com/saloniamatteo">
-			<div class="col min small-margin">
-					<img id="github-1" src="../pics/github-dark.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>GitHub profile</b></p>
-				<label class="grey-text medium-text">(external link)</label><br>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://oa.salonia.it">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Github profile -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/github.png" alt="Github logo" style="background-color: white!important">
+
+			<div class="max">
+			<h6><a href="https://github.com/saloniamatteo">Github profile</a></h6>
+			<p>Visit my Github profile, and discover all of the projects I published.</p>
+			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!-- Source code -->
-		<div class="small-margin row no-wrap middle-align">
-			<a href="https://github.com/saloniamatteo/saloniamatteo.github.io">
-			<div class="col min small-margin">
-					<img id="github-2" src="../pics/github-dark.png" class="small"></img>
-			</div>
-
-			<div class="col small-margin">
-				<p><b>Source code</b></p>
-				<label class="grey-text medium-text">(external link)</label><br>
-				<i class="indigo-text">arrow_forward</i>
-			</div>
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo">
+				<i>arrow_forward</i> Go
 			</a>
+		</nav>
+	</article>
+
+	<!-- Website source code -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/github.png" alt="Github logo" style="background-color: white!important">
+
+			<div class="max">
+			<h6><a href="https://github.com/saloniamatteo/saloniamatteo.github.io">Source code</a></h6>
+			<p>Are you interested in how this website is built? The source code is freely available on Github!</p>
+			</div>
 		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/saloniamatteo.github.io">
+				<i>arrow_forward</i> Go
+			</a>
+		</nav>
 	</article>
 	</div>
 	</div>
-
-	<div class="medium-space"></div>
 </body>
 </html>
