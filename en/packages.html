@@ -6,18 +6,18 @@
 	<!-- Optimize page loading on some devices -->
 	<meta charset="utf-8">
 	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="Salonia Matteo's packages for Gentoo Linux.">
+	<meta name="description" content="Packages for Gentoo Linux by Salonia Matteo.">
 
 	<!-- Social media preview -->
 	<meta property="og:title"	content="Salonia Matteo">
 	<meta property="og:url"		content="https://salonia.it/en/packages.html">
-	<meta property="og:description"	content="Salonia Matteo's packages for Gentoo Linux.">
+	<meta property="og:description"	content="Packages for Gentoo Linux by Salonia Matteo.">
 	<meta property="og:image"	content="https://salonia.it/favicon.png">
 
 	<!-- Twitter-specific -->
 	<meta property="twitter:title"		content="Salonia Matteo">
 	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="Salonia Matteo's packages for Gentoo Linux.">
+	<meta property="twitter:description"	content="Packages for Gentoo Linux by Salonia Matteo.">
 	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
 
 	<!--Favicon-->
@@ -33,41 +33,45 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a href="https://salonia.it" class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
-	
+
 	<div class="margin">
 	<div>
 		<h5>Packages for Gentoo Linux</h5>
 
 		<p class="large-text">
-		Here you'll find various packages created by Salonia Matteo for Gentoo Linux.
+		Here you can find various packages for Gentoo Linux created by Salonia Matteo.
 		</p>
 	</div>
 
@@ -75,51 +79,44 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- Packages -->
 	<div>
-	<article class="border no-padding">
-		<h5 class="left-align medium-padding indigo white-text">Packages</h5>
-
-		<!-- Ask package -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="contact.html"><i class="bold indigo-text">!</i></a>
-			</div>
-
-			<div class="col small-margin" style="margin-left: 1.3em !important">
-			If you want other packages for Gentoo, click the button below to open the page that contains my contact information, to contact me and to send me your request.<br>
-
-			<div class="right-align">
-				<a href="contact.html" class="button border indigo white-text small-margin">Contact information</a>
-			</div>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Librsvg -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-			<a href="https://github.com/saloniamatteo/librsvg-overlay">
-				<img class="small square" src="../pics/librsvg.png" style="min-width: 3em !important">
+	<article class="indigo no-padding">
+		<h5 id="packages" class="white-text padding">
+			<a href="#packages">
+			Packages
 			</a>
-			</div>
+		</h5>
+	</article>
 
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/librsvg-overlay"><b><u>Librsvg</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(external link)</label>
-			</div>
+	<article>
+		<p>
+			If you want more packages for Gentoo, click the button below to open a page with my contact details, to contact me and send me your requests.
+		</p>
 
-			<p>
-			Librsvg without rust dependency.
-			</p>
+		<nav class="right-align small-margin">
+			<a class="button round" href="contact.html">Contact Details <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Librsvg -->
+	<article>
+		<div class="row">
+			<a href="https://github.com/saloniamatteo/librsvg-overlay">
+				<img class="square small" src="../pics/librsvg.png" alt="Librsvg logo" style="width: 55rem!important">
+			</a>
+
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/librsvg-overlay">librsvg</a></h6>
+				<p>Librsvg without dependecies on rust &mdash; programmed entirely in C</p>
 			</div>
-		</a>
 		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/librsvg-overlay">
+				<i>arrow_forward</i> Go
+			</a>
+		</nav>
 	</article>
 	</div>
 	</div>
-
-	<div class="medium-space"></div>
 </body>
 </html>
