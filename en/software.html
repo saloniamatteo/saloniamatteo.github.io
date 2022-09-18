@@ -33,56 +33,45 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a href="https://salonia.it"
-			   class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
-	
+
 	<div class="margin">
 	<div>
 		<h5>Programs created by Salonia Matteo</h5>
 
 		<p class="large-text">
-		On this page you'll find some programs created exclusively
-		in C (C99) by me, with preferential support for GNU/Linux.
-		</p>
-
-		<p class="large-text">
-		Note: all of these programs use
-		<a href="https://en.wikipedia.org/wiki/GNU_Autotools"
-		   class="button border indigo white-text tiny">GNU AutoTools&nbsp;<i>arrow_forward</i></a>
-		for the configuring and compilation process, to extend portability.
-		</p>
-
-		<p class="large-text">
-		Also, all of these programs use one or more components of my library
-		<a href="https://github.com/saloniamatteo/smclib"
-		   class="button border indigo white-text tiny">SMClib&nbsp;<i>arrow_forward</i></a>
+		On this page you'll find some programs created exclusively in C (C99) by me, with preferential support for GNU/Linux. Note: All of these programs use <a class="button round small no-margin" href="https://en.wikipedia.org/wiki/GNU_Autotools">GNU AutoTools&nbsp;<i>arrow_forward</i></a> for configuration and compilation, to extend portability. Also, some of these programs use one or more components of my library<a class="button round small no-margin" href="https://github.com/saloniamatteo/smclib">SMClib&nbsp;<i>arrow_forward</i></a>
 		</p>
 	</div>
 
@@ -90,126 +79,80 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- Software -->
 	<div>
-	<article class="border no-padding">
-		<h5 class="left-align medium-padding indigo white-text">Software</h5>
-
-		<!-- Hire me -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="contact.html"><i class="bold indigo-text">!</i></a>
-			</div>
-
-			<div class="col small-margin">
-			If you're interested to hire me to create you a Website, or you're interested
-			in a PC or Android program, click the button below to open the page that contains
-			my contact information, to contact me and ask for a quotation.<br>
-
-			<div class="right-align">
-				<a href="contact.html" class="button border indigo white-text small-margin">Contact information</a>
-			</div>
-			</div>
-			</a>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- TP-XFan -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/tp-xfan"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/tp-xfan"><b><u>TP-XFan (ThinkPad XForms Fan)</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(external link)</label>
-			</div>
-
-			<p>
-			Program used to modify the fan speed of any ThinkPad.
-			It has a graphical user interface (created with
-			<a href="http://savannah.nongnu.org/projects/xforms"
-			class="button border tiny indigo white-text">XForms&nbsp;<i>arrow_forward</i></a>),
-			and the Automatic Fan Speed Management mode (AFSM).
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Csnake -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/csnake"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/csnake"><b><u>Csnake</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(external link)</label>
-			</div>
-
-			<p>
-			A Snake clone that has a terminal user interface made with
-			<a href="https://invisible-island.net/ncurses/announce.html"
-			class="button border tiny indigo white-text">ncurses&nbsp;<i>arrow_forward</i></a>.
-			You can save the game scores with a custom name, in any file;
-			also, you can modify the speed/difficulty, and you can show the screen borders.
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Quiz -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/quiz"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/quiz"><b><u>Quiz</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(external link)</label>
-			</div>
-
-			<p>
-			Program used to create small Quizzes and/or take a Quiz. It does not have a graphical user interface,
-			nor does it have a terminal user interface; it only has a text-based interface.
-			You can save the game scores with a custom name, in any file; also,
-			it contains a simple-to-use quiz creator.
-			</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Calc -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col min small-margin">
-				<a href="https://github.com/saloniamatteo/calc"><i class="bold indigo-text">arrow_forward</i></a>
-			</div>
-
-			<div class="col small-margin">
-			<div>
-				<a href="https://github.com/saloniamatteo/calc"><b><u>Calc</u></b></a>
-				<br>
-				<label class="grey-text medium-text">(external link)</label>
-			</div>
-
-			<p>
-			A simple calculator, with support for bit-shifting, Reverse Polish Notation (RPN),
-			and other special values. It has a text-based interface, like Quiz.
-			</p>
-			</div>
-		</div>
+	<article class="indigo no-padding">
+		<h5 id="software" class="left-align medium-padding indigo white-text">
+			<a href="#software">Software</a>
+		</h5>
 	</article>
-	</div>
-	</div>
 
-	<div class="medium-space"></div>
+	<article>
+		<p>If you are intrested in hiring me to create a Modern website, or maybe an App for PC or Android, click on the button below  to open a page that contains my contact details, to contact, Talk about your project, or to request a quotation.</p>
+
+		<nav class="right-align small-margin">
+			<a class="button round" href="contact.html">Contact Details<i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- TP-XFan -->
+	<article>
+		<div class="row">
+			<img class="round small" src="../pics/tp-xfan.png" alt="TP-XFan logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/tp-xfan">TP-XFan (ThinkPad XForms Fan)</a></h6>
+				<p>
+				Program to modify the speed of the fan of any Thinkpad. Presented with a graphical user interface (created with<a class="button round small no-margin" href="http://savannah.nongnu.org/projects/xforms">XForms&nbsp;<i>arrow_forward</i></a>), and with an Automatic Fan Speed Management mode (AFSM).
+				</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/tp-xfan">Go <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Csnake -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/csnake.png" alt="Csnake logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/csnake">Csnake</a></h6>
+				<p>A clone of the game "Snake" that uses a terminal a user interface made iwth<a class="button round small no-margin" href="https://invisible-island.net/ncurses/announce.html">ncurses <i>arrow_forward</i></a>. It&apos;s possible to save game scores with a custom name, in any file; Also, you an modify the speed/difficulty, and show the borders of the screen.</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/csnake">Go <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Quiz -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/quiz.png" alt="Quiz logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/quiz">Quiz</a></h6>
+			<p>Program used to create and/or take a Quiz. It doesn&apos;t have a graphical user interface, you need to use it in a terminal, following the text on the screen. It&apos;s possibile save game scores with a custom name, in any file; Also, A quiz is alredy included, and it&apos;s easy to use.</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/quiz">Go <i>arrow_forward</i></a>
+		</nav>
+	</article>
+
+	<!-- Calc -->
+	<article>
+		<div class="row">
+			<img class="circle small" src="../pics/calc.png" alt="Calc logo">
+			<div class="max">
+				<h6><a href="https://github.com/saloniamatteo/calc">Calc</a></h6>
+			<p>A simple calculator, with a bit-shifting program, Reverse Polish Notation (RPN), and other special values. Doesn&apos;t have a graphical user interface (like Quiz).</p>
+			</div>
+		</div>
+
+		<nav>
+			<a class="button round" href="https://github.com/saloniamatteo/calc">Go <i>arrow_forward</i></a>
+		</nav>
+	</article>
 </body>
 </html>
