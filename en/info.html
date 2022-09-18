@@ -6,18 +6,18 @@
 	<!-- Optimize page loading on some devices -->
 	<meta charset="utf-8">
 	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="About Salonia Matteo.">
+	<meta name="description" content="About Salonia Matteo">
 
 	<!-- Social media preview -->
 	<meta property="og:title"	content="Salonia Matteo">
 	<meta property="og:url"		content="https://salonia.it/en/info.html">
-	<meta property="og:description"	content="About Salonia Matteo.">
+	<meta property="og:description"	content="About Salonia Matteo">
 	<meta property="og:image"	content="https://salonia.it/favicon.png">
 
 	<!-- Twitter-specific -->
 	<meta property="twitter:title"		content="Salonia Matteo">
 	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="About Salonia Matteo.">
+	<meta property="twitter:description"	content="About Salonia Matteo">
 	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
 
 	<!--Favicon-->
@@ -33,44 +33,48 @@
 
 	<!-- CSS overrides -->
 	<link rel="stylesheet" href="../css/style.css">
+
+	<script>
+	document.onreadystatechange = () => remember_prefs();
+	</script>
 </head>
-
-<script>
-ui();
-
-document.onreadystatechange = function() { remember_prefs(); document.body.onresize = function() { remember_prefs() }}
-</script>
 
 <body class="light">
 	<!-- Header -->
-	<header class="fixed padding indigo white-text">
-	<div class="row no-wrap middle-align">
-		<div class="col min no-margin no-padding">
-			<a href="index.html" class="chip circle indigo-text white"><i>arrow_backward</i></a>
+	<header class="fixed small-padding indigo white-text">
+		<div class="grid middle-align">
+			<div class="s2">
+				<a class="button circle white indigo-text" href="index.html">
+					<i>arrow_backward</i>
+				</a>
+			</div>
+
+			<div class="s6 center-align">
+				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
+					<p class="large-text">Salonia Matteo</p>
+				</a>
+			</div>
+
+			<div class="s4 right-align">
+				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+			</div>
 		</div>
-		<div class="col center-align">
-			<a href="https://salonia.it" class="button center-align large-text no-margin indigo-text white">Salonia Matteo</a>
-		</div>
-		<div class="col min no-margin no-padding right-align" style="margin-right: 0.5em !important">
-			<img class="responsive" src="../pics/logo_rec.png" style="min-width: 100rem !important">
-		</div>
-	</div>
 	</header>
 
 	<!-- FAB -->
 	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i>light_mode</i>
+		<i class="fill">light_mode</i>
 	</button>
-	
+
 	<div class="margin">
 	<div>
-		<h5>About Me</h5>
+		<h5>About me</h5>
 
 		<p class="large-text">
 		Go to:<br>
 
-		<a class="button border small-margin indigo white-text" href="#tech">Technological Knowledge</a>
-		<a class="button border small-margin indigo white-text" href="#lang">Linguistical Knowledge</a>
+		<a class="button round border small-margin indigo white-text" href="#tech">Technological Knowledge</a>
+		<a class="button round border small-margin indigo white-text" href="#lang">Linguistical Knowledge</a>
 		</p>
 	</div>
 
@@ -78,99 +82,74 @@ document.onreadystatechange = function() { remember_prefs(); document.body.onres
 
 	<!-- Technological Knowledge -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="tech" class="left-align medium-padding indigo white-text">
+	<article class="indigo no-padding">
+		<h5 id="tech" class="white-text padding">
 		<a href="#tech">Technological Knowledge</a>
 		</h5>
+	</article>
 
-		<!-- Server -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Server Management</h6>
-				<p>
-				Remote and local <b>Linux server</b> Management, periodic Maintenance, Restricted Login with		<b>SSH keys</b> and Passwordless Login, <b>Intrusion</b> Security and <b>Brute-force attack</b> protection.
-				</p>
-			</div>
-		</div>
+	<!-- Server -->
+	<article>
+		<h6>Server Management</h6>
+		<p>Remote &amp; local <b>Linux server</b> management, regular Maintenance, restricted Login with <b>SSH keys</b> &amp; passwordless login, <b>Intrusion</b> security &amp; <b>brute-force attack</b> protection.</p>
+	</article>
 
-		<div class="divider"></div>
+	<!-- Software -->
+	<article>
+		<h6>Software Development</h6>
+		<p>
+		&mdash; Design and Development of applications for <b>Linux</b> in <b>C</b> e <b>C++</b>, with <u>Graphical User Interfaces</u> and <u>Terminal User Interfaces</u>
+		<br>
+		&mdash; Design and Development of applications for <b>Android</b> in <b>Java</b>
+		<br>
+		&mdash; Design and Development of applications for <b>Windows</b> in <b>Visual Basic</b> (<b>VB.NET</b>)
+		</p>
+	</article>
 
-		<!-- Software -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Software development</h6>
-				<p>
-				&mdash; Design and Development of applications for <b>Linux</b> in <b>C</b> and <b>C++</b>, with <u>Graphical Interfaces</u> and <u>Console Interfaces</u><br>
-				&mdash; Design and Development of applications for <b>Android</b> in <b>Java</b><br>
-				&mdash; Design and Development of applications for <b>Windows</b> in <b>Visual Basic</b>
-				(<b>VB.NET</b>) 
-				</p>
-			</div>
-		</div>
-
-		<div class="divider"></div>
-
-		<!-- Web -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Web</h6>
-				<p>
-				&mdash; Creation and Logical Structuring of <u>Back-End Web Servers</u> in <b>PHP</b>, with connections to <u>DataBases</u>, <u>Registration</u>/<u>Login</u>, etc.<br>
-				&mdash; Creation and Logical Structuring of <u>Complete Web Pages</u> in <b>HTML</b><br>
-				&mdash; Style Application to Web Pages with easy-to-use <b>CSS frameworks</b><br>
-				&mdash; Creation of <u>Client-side Web Logic</u> in <b>JavaScript</b>, to Control and Validate user-inserted data, while <u>respecting the user's privacy</u>.
-				</p>
-			</div>
-		</div>
+	<!-- Web -->
+	<article>
+		<h6>Web</h6>
+		<p>
+		&mdash; Creation and Logical Structuring of <u>Back-End Web Servers</u> in <b>PHP</b>, with <u>Database</u> connections, <u>Registration</u>/<u>Login</u>, ecc.
+		<br>
+		&mdash; Creation and Logical Structuring of <u>Complete Web Pages</u> in <b>HTML</b>
+		<br>
+		&mdash; Style Application to Web Pages with easy-to-use <b>CSS Frameworks</b>
+		<br>
+		&mdash; Creation of <u>Client-side Web Login</u> in <b>JavaScript</b>, to Control and Validate user-inserted data, while <u>respecting the user&apos;s privacy</u>.
+		</p>
 	</article>
 	</div>
 
-	<div class="medium-space"></div>
+	<div class="space"></div>
 
-	<!-- Conoscenze Linguistiche -->
+	<!-- Linguistical Knowledge -->
 	<div>
-	<article class="border no-padding">
-		<h5 id="lang" class="left-align medium-padding indigo white-text">
-		<a href="#lang">Conoscenze Linguistiche</a>
+	<article class="indigo no-padding">
+		<h5 id="lang" class="white-text padding">
+		<a href="#lang">Linguistical Knowledge</a>
 		</h5>
+	</article>
 
-		<!-- Italiano -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Italiano</h6>
-				<p>
-				L'Italiano &egrave; la lingua principale che uso parlando ogni giorno. Sono nato e vivo tutt'oggi in Italia.<br>
-				Livello lingua Italiana: <b>Madrelingua</b>
-				</p>
-			</div>
-		</div>
+	<!-- Italian -->
+	<article>
+		<h6>Italian</h6>
+		<p>Italian is the main language I use while speaking every day. I was born and live to this day in Italy.
+		<br>
+		Italian language level: <b>Mother tongue</b>
+		</p>
+	</article>
 
-		<div class="divider"></div>
-
-		<!-- Inglese -->
-		<div class="small-margin row no-wrap middle-align">
-			<div class="col small-margin">
-				<h6>Inglese</h6>
-				<p>
-				L'Inglese &egrave; la seconda lingua che parlo ogni giorno, usandolo nella programmazione, per comunicare con
-				i miei amici, per usare Internet in generale, e cos&igrave; via. Parlo Inglese sin dalla 1° Media, dopo aver imparato
-				piano piano la lingua su Internet, ascoltando varie persone parlare mentre giocavano; dopodich&egrave;, mi sono
-				iscritto alla scuola di Inglese Cambridge University, dalla quale ho ottenuto la certificazione B2 in 3° Media.
-				</p>
-
-				<p class="small-space">
-				Livello lingua Inglese: <b>B2</b> (Cambridge Certification, in 3° media), <b>C1</b>
-				<a href="https://learnenglish.britishcouncil.org/online-english-level-test"
-				class="button border tiny indigo white-text">
-				(British Council online test)&nbsp;<i>arrow_forward</i>
-				</a>
-				</p>
-			</div>
-		</div>
+	<!-- Englush -->
+	<article>
+		<h6>English</h6>
+		<p>
+		English is the secondary language I speak every day, using it while programming, to communicate with my friends, to use Internet generally, and so on. I speak English since 6th grade, after having slowly learned the language on the Internet, listening to various people speak while they were playing; after, I joined the Cambridge University English School, where I got the B2 certification, in 8th grade.
+		<br>
+		English language level: <b>B2</b> (Cambridge Certification, in 8th grade), <b>C1</b> <a class="link" href="https://learnenglish.britishcouncil.org/online-english-level-test"><u>(British Council online test)</u></a>
+		</p>
 	</article>
 	</div>
 	</div>
-
-	<div class="medium-space"></div>
 </body>
 </html>
