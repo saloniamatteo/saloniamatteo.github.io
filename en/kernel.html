@@ -306,10 +306,10 @@
 			<span class="grey-text">#  41. AMD-Native optimizations autodetected by GCC (MNATIVE_AMD)</span>
 		</div></article>
 
-		<!-- Configurazione Kernel -->
+		<!-- Kernel Configuration -->
 		<article class="indigo no-padding min">
 				<h6 id="script-3" class="white-text small-padding">
-				<a href="#script-3">3. Configurazione Kernel</a>
+				<a href="#script-3">3. Kernel Configuration</a>
 				</h6>
 		</article>
 
@@ -318,41 +318,34 @@
 		</p>
 
 		<p class="small-space">
-		Assicuratevi di avere i permessi di amministratore prima di eseguire questo comando;
-		se non siete amministratori, ponete all'inizio del comando <b>sudo</b> oppure <b>doas</b>,
-		in base a quale usate.
+		Make sure you have administator rights before executing this command; if you are not admins, put <b>sudo</b> or <b>doas</b> before the command, according to whichever you use.
 		</p>
 
 		<p class="card small-space small-padding red white-text">
-		Se non avete capito cosa c'&egrave; scritto qui sopra, <b><u>interrompete immediatamente la configurazione del Kernel</u></b>,
-		per non rischiare di rendere il vostro sistema inutilizzabile.
-		Anche se il rischio non &egrave; elevato, &egrave; meglio prevenire ulteriori problemi.
-		<b><u>Continuate a vostro rischio e pericolo.</u></b>
+		<i class="fill">dangerous</i> If you haven&apos;t undertood what&apos;s written above, <b><u>stop immediately the Kernel configuration</u></b>, to avoid making your system unusable. Even if the risk isn&apos;t high, it&apos;s better to prevent further problems. <b><u>Continue at your own risk.</u></b>
 		</p>
 
 		<p class="card small-space small-padding yellow black-text">
-		Ricordatevi di salvare/copiare il file <b>.config</b> al termine della configurazione!
+		<i>warning</i> Make sure to save/copy the <b>.config</b> file after configuration!
 		</p>
 
 		<article class="small-padding" style="background-color: #313033"><div class="margin">
-			<span class="grey-text"># Apri il menu di configurazione, copiando la configurazione di default</span><br>
+			<span class="grey-text"># Open the configuration menu, copying the included config</span><br>
 			<span class="orange-text">./build.sh</span> <span class="yellow-text">-m</span>
 			<br><br>
-			<span class="grey-text"># Apri il menu di configurazione, senza copiare la configurazione di default</span><br>
+			<span class="grey-text"># Open the configuration menu, without copying the included config
 			<span class="orange-text">./build.sh</span> <span class="yellow-text">-c -m</span>
 		</div></article>
 
-		<!-- Compilazione Kernel -->
+		<!-- Kernel Compilation -->
 		<article class="indigo no-padding min">
 				<h6 id="script-4" class="white-text small-padding">
-				<a href="#script-4">4. Compilazione Kernel</a>
+				<a href="#script-4">4. Kernel Compilation</a>
 				</h6>
 		</article>
 
 		<p class="small-space">
-		Dopo aver <a href="#script-2.2" class="indigo-text underline">applicato le ottimizzazioni CPU</a>
-		e aver rincontrollato la <a href="#script-3" class="indigo-text underline">configurazione del Kernel</a>,
-		&Egrave; tempo di scegliere le impostazioni per migliorare notevolmente la performance. Ecco la lista delle opzioni:
+		After <a href="#script-2.2" class="indigo-text underline">having applied CPU Optimisations</a> and having re-checked the <a href="#script-3" class="indigo-text underline">Kernel config</a>, it&apos;s time to choose the settings to notably improve performance. Here&apos;s the options list:
 		</p>
 
 		<div class="grid">
@@ -360,72 +353,71 @@
 			<article class="s2 m2 indigo no-padding no-margin">
 				<p class="white-text tiny-padding center-align">
 					<b class="s"><i>flag</i></b>
-					<b class="m l">Flag corta</b>
+					<b class="m l">Short flag</b>
 				</p>
 			</article>
 
 			<article class="s5 m2 indigo no-padding no-margin">
-				<p class="white-text tiny-padding center-align"><b>Flag lunga</b></p>
+				<p class="white-text tiny-padding center-align"><b>Long flag</b></p>
 			</article>
 
 			<article class="s5 m8 indigo no-padding no-margin">
-				<p class="white-text tiny-padding center-align"><b>Descrizione</b></p>
+				<p class="white-text tiny-padding center-align"><b>Description</b></p>
 			</article>
 
 			<!-- Ccache -->
 			<article class="s2 m2 fill no-margin"><strong>-e</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--ccache</strong></article>
-			<article class="s5 m8 fill no-margin">Usa <strong>ccache</strong> per velocizzare la compilazione. È consigliato usare quest'opzione se si compila il Kernel almeno due volte, per velocizzare le compilazioni successive. <a class="link" href="https://ccache.dev/performance.html"><u>(Vedi articolo)</u></a></article>
+			<article class="s5 m8 fill no-margin">Use <strong>ccache</strong> to speed-up compilation. It&apos;s recommended only when compiling the same Kernel more than two times, to speed-up further compilations. <a class="link" href="https://ccache.dev/performance.html"><u>(See article)</u></a></article>
 
 			<!-- Fastmath -->
 			<article class="s2 m2 fill no-margin"><strong>-f</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--fastmath</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel usando <strong>Matematica Veloce non sicura</strong>. Tipicamente non ha nessun effetto collaterale e la performance è migliore rispetto a Matematica Veloce sicura.</article>
+			<article class="s5 m8 fill no-margin">Compile Kernel using <strong>Unsafe Fast Math</strong>. Tipically, it does not have negative effects, and performance is better compared to Safe Fast Math.</article>
 
 			<!-- Safe Fastmath -->
 			<article class="s2 m2 fill no-margin"><strong>-F</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--fastmath-s</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel usando <strong>Matematica Veloce sicura</strong>. Da usare se Matematica Veloce non sicura non sicura riporta problemi, in casi rari.</article>
+			<article class="s5 m8 fill no-margin">Compile Kernel using <strong>Safe Fast Math</strong>. Use this is Unsafe Fast Math gives you problems, on rare occasions.</article>
 
 			<!-- Graphite -->
 			<article class="s2 m2 fill no-margin"><strong>-g</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--graphite</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel usando <strong>Graphite</strong>. Tipicamente quest'opzione riduce leggermente la performance.</article>
+			<article class="s5 m8 fill no-margin">Compile Kernel with <strong>Graphite</strong>. Tipically this option reduces performance.</article>
 
 			<!-- Clear Patches -->
 			<article class="s2 m2 fill no-margin"><strong>-l</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--clearl-ps</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le <strong>patch di Clear Linux</strong>. Queste patch sono volte all'incremento ulteriore della performance, e vengono applicate direttamente dalla repository di Clear Linux. Molto consigliato per CPU Intel.</article>
+			<article class="s5 m8 fill no-margin">Compile Kernel applying <strong>Clear Linux patches</strong>. These patches are catered towards further increasing performance, and are applied directly from the Clear Linux repository. Highly recommended for Intel CPUs.</article>
 
 			<!-- User Patches -->
 			<article class="s2 m2 fill no-margin"><strong>-p</strong></article>
 			<article class="s5 m2 fill no-margin"><strong>--patches</strong></article>
-			<article class="s5 m8 fill no-margin">Compila il Kernel applicando le patch incluse. Anche queste patch sono volte all'incremento ulteriore della performance &mdash; la maggior parte di queste patch proviene da <a class="link" href="https://lkml.org"><u>LKML</u></a>.</article>
+			<article class="s5 m8 fill no-margin">Compile Kernel applying the included patches. These patches too are catered towards further increasing performance &mdash; most of these patches comes from <a class="link" href="https://lkml.org"><u>LKML</u></a>.</article>
 		</div>
 
 		<div class="space"></div>
 
 		<p class="small-margin">
-		Dopo aver scelto le flag da applicare, e dopo aver scelto se copiare il file <b>.config</b>
-		con la flag "-c", siete pronti per compilare il Kernel.
+		After having chosen which flags to apply, and after having chosen whether to copy the included <b>.config</b> file with the flag "-c", you&apos;re ready to compile the Kernel.
 		</p>
 
 		<article class="small-padding" style="background-color: #313033"><div class="margin">
-			<span class="grey-text"># Esempio 1: compila il Kernel, copiando il file di configurazione di default,</span><br>
-			<span class="grey-text"># applicando le patch di Clear Linux e quelle incluse,</span><br>
-			<span class="grey-text"># migliorando la performance con le flag sopra indicate</span><br>
+			<span class="grey-text"># Example 1: compile Kernel, copying the included config,</span><br>
+			<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+			<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
 			<span class="orange-text">./build.sh</span> <span class="yellow-text">-f -l -p</span>
 			<br><br>
-			<span class="grey-text"># Esempio 2: compila il Kernel, copiando il file di configurazione di default,</span><br>
-			<span class="grey-text"># usando ccache per velocizzare la compilazione,</span><br>
-			<span class="grey-text"># applicando le patch di Clear Linux e quelle incluse,</span><br>
-			<span class="grey-text"># migliorando la performance con le flag sopra indicate</span><br>
+			<span class="grey-text"># Example 2: compile Kernel, copying the included config</span><br>
+			<span class="grey-text"># using ccache to make compilation faster,</span><br>
+			<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+			<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
 			<span class="orange-text">./build.sh</span> <span class="yellow-text">-e -f -l -p</span>
 			<br><br>
-			<span class="grey-text"># Esempio 3: compila il Kernel, senza copiare il file di configurazione</span><br>
-			<span class="grey-text"># dato che il file personalizzato &egrave; gi&agrave; presente in /usr/src/linux/.config,</span><br>
-			<span class="grey-text"># applicando le patch di Clear Linux e quelle incluse,</span><br>
-			<span class="grey-text"># migliorando la performance con le flag sopra indicate</span><br>
+			<span class="grey-text"># Example 3: compile Kernel, without copying the included config</span><br>
+			<span class="grey-text"># because the custom file is already in /usr/src/linux/.config,</span><br>
+			<span class="grey-text"># applying Clear Linux patches and included patches,</span><br>
+			<span class="grey-text"># increasing performance with the flags mentioned above</span><br>
 			<span class="orange-text">./build.sh</span> <span class="yellow-text">-c -f -l -p</span>
 		</div></article>
 	</article>
@@ -443,13 +435,7 @@
 
 		<article>
 				<p class="small-space">
-				Per stabilire quale fosse il kernel pi&ugrave; performante, ho eseguito <b>4 compilazioni</b> con
-				<u>flag diverse</u>, usando la <u>stessa configurazione</u> del Kernel.
-				Questi test sono stati eseguiti sul mio laptop, <b>ThinkPad T440p</b>, con CPU
-				<b>Intel Core i7-4700MQ</b>, 8GB RAM, Kernel Gentoo Linux <b>5.16.0-pf2</b>.
-				Per ottenere il Kernel pi&ugrave; performante, ho usato ogni singolo Kernel con il programma <b>XMRig</b>,
-				eseguendolo per 5 minuti, e vedendo l'hashrate massimo.
-				Lista compilazioni, dalla pi&ugrave; performante alla meno performante:
+				To establish which Kernel is the fastest, I ran <b>4 compilations</b> with <u>different flags</u>, using the <u>same Kernel configuration</u>. These tests were ran on my laptop, <b>ThinkPad T440p</b>, with CPU <b>Intel Core i7-4700MQ</b>, 8GB RAM, Kernel Gentoo Linux <b>5.16.0-pf2</b>. To find out which Kernel is the most performant (aka the fastest), I used every single Kernel with the <b>XMRig</b> program, running it for 5 minutes maximum, and looking at the max hashrate. Here&apos;s a list of the tested Kernels, from the most performing to the least:
 				</p>
 
 			<div class="grid">
@@ -457,14 +443,14 @@
 				<article class="s4 m7 indigo no-padding no-margin">
 					<p class="white-text tiny-padding center-align">
 						<b class="s"><i>settings</i></b>
-						<b class="m l">Impostazioni</b>
+						<b class="m l">Settings</b>
 					</p>
 				</article>
 
 				<article class="s4 m3 indigo no-padding no-margin">
 					<p class="white-text tiny-padding center-align">
 						<b class="s"><i>schedule</i></b>
-						<b class="m l">Tempo compilazione</b>
+						<b class="m l">Compile time</b>
 					</p>
 				</article>
 
@@ -480,10 +466,10 @@
 
 					<div id="comp1_ovr" class="overlay" onclick="modal('comp1')">
 					<div id="comp1_mod" class="modal bottom no-round top-round" onclick="modal_clicked = 1">
-						<h5>Impostazioni</h5>
-						<p>Matematica Veloce non sicura, Patch Clear Linux, Patch incluse</p>
+						<h5>Settings</h5>
+						<p>Unsafe Fast Math, Clear Linux patches, Included patches</p>
 
-						<h5>Riga di comando</h5>
+						<h5>Command line</h5>
 
 						<article class="small-padding" style="background-color: #313033"><div class="margin">
 							<span class="white-text"><b>./build.sh</b> -f -l -p</span>
@@ -494,13 +480,13 @@
 						<nav class="right-align small-margin">
 							<button class="round" onclick="modal('comp1')">
 								<i>close</i>
-								Chiudi
+								Close
 							</button>
 						</nav>
 					</div>
 					</div>
 
-					<p class="m l"><strong>Matematica Veloce non sicura, Patch Clear Linux, Patch incluse</strong></p>
+					<p class="m l"><strong>Unsafe Fast Math, Clear Linux patches, Included patches</strong></p>
 				</article>
 				<article class="s4 m3 fill no-margin"><p>7m, 7s</p></article>
 				<article class="s4 m2 fill no-margin"><p>1715</p></article>
@@ -513,10 +499,10 @@
 
 					<div id="comp2_ovr" class="overlay" onclick="modal('comp2')">
 					<div id="comp2_mod" class="modal bottom no-round top-round" onclick="modal_clicked = 1">
-						<h5>Impostazioni</h5>
-						<p>Matematica Veloce non sicura, Graphite, Patch Clear Linux, Patch incluse</p>
+						<h5>Settings</h5>
+						<p>Unsafe Fast Math, Graphite, Clear Linux patches, Included patches</p>
 
-						<h5>Riga di comando</h5>
+						<h5>Command line</h5>
 
 						<article class="small-padding" style="background-color: #313033"><div class="margin">
 							<span class="white-text"><b>./build.sh</b> -f -g -l -p</span>
@@ -527,13 +513,13 @@
 						<nav class="right-align small-margin">
 							<button class="round" onclick="modal('comp2')">
 								<i>close</i>
-								Chiudi
+								Close
 							</button>
 						</nav>
 					</div>
 					</div>
 
-					<p class="m l"><strong>Matematica Veloce non sicura, Graphite, Patch Clear Linux, Patch incluse</strong></p>
+					<p class="m l"><strong>Unsafe Fast Math, Graphite, Clear Linux patches, Included patches</strong></p>
 				</article>
 				<article class="s4 m3 fill no-margin"><p>7m, 3s</p></article>
 				<article class="s4 m2 fill no-margin"><p>1500</p></article>
@@ -546,10 +532,10 @@
 
 					<div id="comp3_ovr" class="overlay" onclick="modal('comp3')">
 					<div id="comp3_mod" class="modal bottom no-round top-round" onclick="modal_clicked = 1">
-						<h5>Impostazioni</h5>
-						<p>Patch Clear Linux, Patch incluse</p>
+						<h5>Settings</h5>
+						<p>Clear Linux patches, Included patches</p>
 
-						<h5>Riga di comando</h5>
+						<h5>Command line</h5>
 
 						<article class="small-padding" style="background-color: #313033"><div class="margin">
 							<span class="white-text"><b>./build.sh</b> -l -p</span>
@@ -560,13 +546,13 @@
 						<nav class="right-align small-margin">
 							<button class="round" onclick="modal('comp3')">
 								<i>close</i>
-								Chiudi
+								Close
 							</button>
 						</nav>
 					</div>
 					</div>
 
-					<p class="m l"><strong>Patch Clear Linux, Patch incluse</strong></p>
+					<p class="m l"><strong>Clear Linux patches, Included patches</strong></p>
 				</article>
 				<article class="s4 m3 fill no-margin"><p>7m</p></article>
 				<article class="s4 m2 fill no-margin"><p>1463</p></article>
@@ -579,10 +565,10 @@
 
 					<div id="comp4_ovr" class="overlay" onclick="modal('comp4')">
 					<div id="comp4_mod" class="modal bottom no-round top-round" onclick="modal_clicked = 1">
-						<h5>Impostazioni</h5>
-						<p>Patch incluse</p>
+						<h5>Settings</h5>
+						<p>Included patches</p>
 
-						<h5>Riga di comando</h5>
+						<h5>Command line</h5>
 
 						<article class="small-padding" style="background-color: #313033"><div class="margin">
 							<span class="white-text"><b>./build.sh</b> -p</span>
@@ -593,13 +579,13 @@
 						<nav class="right-align">
 							<button class="round" onclick="modal('comp4')">
 								<i>close</i>
-								Chiudi
+								Close
 							</button>
 						</nav>
 					</div>
 					</div>
 
-					<p class="m l"><strong>Patch incluse</strong></p>
+					<p class="m l"><strong>Included patches</strong></p>
 				</article>
 				<article class="s4 m3 fill no-margin"><p>7m</p></article>
 				<article class="s4 m2 fill no-margin"><p>1460</p></article>
@@ -609,18 +595,18 @@
 
 	<div class="medium-space"></div>
 
-	<!-- Codice sorgente -->
+	<!-- Source code -->
 	<div>
 	<article class="indigo no-padding">
 		<h5 id="source" class="white-text padding">
-		<a href="#source">Codice sorgente</a>
+		<a href="#source">Source Code</a>
 		</h5>
 	</article>
 
 	<article>
 			<p>
-			Il codice sorgente di questo Kernel &egrave; disponibile sulla repository
-			<a class="button round small no-margin" href="https://github.com/saloniamatteo/kernel">Github&nbsp;<i>arrow_forward</i></a>
+			This Kernel&apos;s source code is available on the
+			<a class="button round small no-margin" href="https://github.com/saloniamatteo/kernel">Github repo&nbsp;<i>arrow_forward</i></a>
 			</p>
 	</article>
 	</div>
