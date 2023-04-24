@@ -1,339 +1,323 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-	<title>Salonia Matteo</title>
+	<title>Matteo Salonia</title>
 
-	<!-- Optimize page loading on some devices -->
+	<!-- Optimize page loading -->
 	<meta charset="utf-8">
-	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="Benvenuto sul sito di Salonia Matteo!">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Social media preview -->
-	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://salonia.it/it/index.html">
-	<meta property="og:description"	content="Benvenuto sul sito di Salonia Matteo!">
-	<meta property="og:image"	content="https://salonia.it/favicon.png">
+	<!-- SEO -->
+	<meta name="description"				content="Benvenuto sul sito di Matteo Salonia.">
+	<meta property="og:description"			content="Benvenuto sul sito di Matteo Salonia.">
+	<meta property="twitter:description"	content="Benvenuto sul sito di Matteo Salonia.">
+	<meta property="og:title"				content="Matteo Salonia">
+	<meta property="twitter:title"			content="Matteo Salonia">
+	<meta property="og:url"					content="https://salonia.it/it/index.html">
+	<meta property="og:image"				content="https://salonia.it/favicon.png">
+	<meta property="twitter:image"			content="https://salonia.it/favicon.png">
 
-	<!-- Twitter-specific -->
-	<meta property="twitter:title"		content="Salonia Matteo">
-	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="Benvenuto sul sito di Salonia Matteo!">
-	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
-
-	<!--Favicon-->
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="../favicon.png">
 
-	<!-- Beer CSS -->
-	<link rel="stylesheet" href="../css/beer.min.css">
-	<script src="../js/beer.min.js" type="text/javascript"></script>
-	<script src="../js/light.js" type="text/javascript"></script>
-
-	<!-- Montserrat font -->
-	<link rel="stylesheet" href="../css/montserrat.css">
-
-	<!-- CSS overrides -->
-	<link rel="stylesheet" href="../css/style.css">
-
-	<script>
-	document.onreadystatechange = () => remember_prefs();
-	</script>
+	<!-- CSS & Fonts -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 </head>
 
-<body class="light">
+<body>
 	<!-- Header -->
-	<header class="fixed small-padding indigo white-text">
-		<div class="grid middle-align">
-			<div class="s2">
-				<a class="button circle white indigo-text" href="../index.html">
-					<i>arrow_backward</i>
-				</a>
-			</div>
-
-			<div class="s6 center-align">
-				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
-					<p class="large-text">Salonia Matteo</p>
-				</a>
-			</div>
-
-			<div class="s4 right-align">
-				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+	<div class="header header-fixed unselectable">
+		<div class="header-brand">
+			<div class="nav-item no-hover">
+				<h6 class="title">
+					<a class="text-dark u u-LR" href="https://salonia.it">
+						Matteo Salonia
+					</a>
+				</h6>
 			</div>
 		</div>
-	</header>
-
-	<!-- FAB -->
-	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i class="fill">light_mode</i>
-	</button>
-	
-	<div class="margin">
-	<div>
-		<h5>Benvenuto nel sito di Salonia Matteo!</h5>
-
-		<p class="large-text">
-		Qui puoi trovare varie risorse che ti potrebbero
-		aiutare, tra cui Pacchetti per Gentoo Linux,
-		Software creato in C99, vari Strumenti,
-		come contattarmi, e cos&igrave; via.
-
-		Le varie sezioni hanno dei link permanenti
-		che possono essere condivisi, in modo tale
-		da facilitare la navigazione.
-		</p>
-
-		<p class="large-text">
-		Vai a:<br>
-
-		<a class="button round border small-margin indigo white-text" href="#linux-soft">Linux &amp; Software</a>
-		<a class="button round border small-margin indigo white-text" href="#about">Su di Me</a>
-		<a class="button round border small-margin indigo white-text" href="#tools-links">Strumenti &amp; Link</a>
-		</p>
 	</div>
 
-	<div class="small-space"></div>
+	<!-- Welcome -->
+	<div class="hero mt-2 bg-indigo-200">
+		<div class="hero-body m-2-sm">
+			<div class="content">
+				<h2 class="title">Benvenuto!</h2>
+				<h5 class="subtitle text-gray-700">
+					Qui puoi trovare alcune risorse che ti potrebbero interessare, tra cui il mio Kernel,
+					le mie configurazioni, i miei programmi, i miei recapiti, vari strumenti, e molto altro ancora.
+				</h5>
+			</div>
+		</div>
+	</div>
 
 	<!-- Linux & Software -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="linux-soft" class="white-text padding"><a href="#linux-soft">Linux &amp; Software</a></h5>
-	</article>
+	<div class="hero u-text-center" id="linux-soft">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4"><a class="text-gray-900" href="#linux-soft">Linux e Software</a></h2>
+				<p class="lead">
+					Scopri la guida che ti aiuta ad installare Arch Linux, le mie configurazioni (i miei dotfiles),
+					il mio Kernel, modificato per ottenere prestazioni elevate ed un'ottima efficienza,
+					i programmi che ho creato, ed i miei pacchetti per Gentoo Linux.
+				</p>
 
-	<!-- Arch Linux -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/arch.png" alt="Arch Linux logo">
+				<div class="content u-text-left w-90p-md">
+				<div class="card mb-8">
+					<div class="m-3">
+						<!-- Arch Linux -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/arch.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://salonia.it/Arch" class="font-bold text-link-dark text-md u u-LR">
+									Istruzioni per installare Arch Linux
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Guida estensiva per installare Arch Linux</p>
+								<p class="tile__subtitle">Ultimo aggiornamento tutorial: 20 Settembre 2021 — Pagina in Inglese</p>
+							</div>
+						</div>
 
-			<div class="max">
-			<h6><a href="https://salonia.it/Arch">Istruzioni per installare Arch Linux</a></h6>
-			<p>Tutorial online che spiega come installare Arch Linux.</p>
-			<p class="grey-text">Ultimo aggiornamento tutorial: 20 Settembre 2021 &mdash; Pagina in Inglese</p>
+						<div class="divider"></div>
+
+						<!-- Dotfiles -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/gnu.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://salonia.it/dotfiles" class="font-bold text-link-dark text-md u u-LR">
+									I miei dotfiles (le mie configurazioni GNU/Linux)
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Le mie configurazioni per GNU/Linux &mdash; include uno script per distro basate su Arch o Gentoo Linux</p>
+								<p class="tile__subtitle">Pagina in Inglese</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Kernel -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/linux.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="kernel.html" class="font-bold text-link-dark text-md u u-LR">
+									Il mio Kernel
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Tutte le modifiche che ho apportato al Kernel per renderlo più performante e più efficiente.</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Packages -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/box.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="packages.html" class="font-bold text-link-dark text-md u u-LR">
+									I miei pacchetti
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">I miei pacchetti per Gentoo Linux.</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Software -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/c.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="software.html" class="font-bold text-link-dark text-md u u-LR">
+									I miei programmi
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Tutti i programmi che ho creato in C, compatibili con Linux e non solo.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
 			</div>
 		</div>
-
-		<nav>
-			<a class="button round" href="https://salonia.it/Arch">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Dotfiles -->
-	<article>
-		<div class="row">
-			<img class="round small" src="../pics/gnu.png" alt="GNU logo">
-
-			<div class="max">
-			<h6><a href="https://salonia.it/dotfiles">I miei dotfiles (la mia configurazione GNU/Linux)</a></h6>
-			<p>Tutti i file necessari per replicare la mia configurazione GNU/Linux. Include uno script per copiare la configurazione, e non solo. (Disponibile per distro basate su Gentoo o Arch Linux)</p>
-			<p class="grey-text">Pagina in Inglese</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://salonia.it/dotfiles">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Kernel -->
-	<article>
-		<div class="row">
-			<img class="round small" src="../pics/linux.png" alt="Linux logo">
-
-			<div class="max">
-			<h6><a href="kernel.html">Il mio Kernel</a></h6>
-			<p>Tutte le modifiche che ho apportato al Kernel, basato su <a class="link" href="https://codeberg.org/pf-kernel/linux/wiki/README">pf-sources</a>.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="kernel.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Packages -->
-	<article>
-		<div class="row">
-			<img class="round small" src="../pics/box.png" alt="Box">
-
-			<div class="max">
-			<h6><a href="packages.html">I miei pacchetti</a></h6>
-			<p>I miei pacchetti per Gentoo Linux.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="packages.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Software -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/c.png" alt="C">
-
-			<div class="max">
-			<h6><a href="software.html">Il mio software</a></h6>
-			<p>Tutti i programmi che ho creato in C, compatibili con Linux, e non solo.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="software.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
 	</div>
 
-	<div class="space"></div>
+	<!-- Su di me -->
+	<div class="hero u-text-center bg-teal-100" id="about">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4"><a class="text-gray-900" href="#about">Su di me</a></h2>
+				<p class="lead">
+					Scopri chi sono, le mie competenze, i miei recapiti, come puoi aiutarmi.
+				</p>
 
-	<!-- About -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="about" class="white-text padding"><a href="#about">Su di me</a></h5>
-	</article>
+				<div class="content u-text-left w-90p-md">
+				<div class="card mb-8">
+					<div class="m-3">
+						<!-- About me -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/about.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="about.html" class="font-bold text-link-dark text-md u u-LR">
+									Chi sono
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Informazioni su di me e sulle mie competenze.</p>
+							</div>
+						</div>
 
-	<!-- About -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/about.png" alt="About">
+						<div class="divider"></div>
 
-			<div class="max">
-			<h6><a href="info.html">Chi sono</a></h6>
-			<p>Informazioni su di me e sulle mie competenze.</p>
+						<!-- Contact me -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/contact.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="contact.html" class="font-bold text-link-dark text-md u u-LR">
+									Contattami
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Scopri come contattarmi.</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Donate -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/cash.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="contact.html" class="font-bold text-link-dark text-md u u-LR">
+										Donazioni
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Scopri come inviarmi una donazione, per sostenere me ed il mio lavoro.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
 			</div>
 		</div>
-
-		<nav>
-			<a class="button round" href="info.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Contact -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/contact.png" alt="Contact">
-
-			<div class="max">
-			<h6><a href="contact.html">Contattami</a></h6>
-			<p>Scopri come contattarmi.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="contact.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Donate -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/cash.png" alt="Donate">
-
-			<div class="max">
-			<h6><a href="donate.html">Donazioni</a></h6>
-			<p>Se vuoi sostenermi come un modo per mostrare gratitudine verso il mio lavoro, in questa pagina puoi scoprire come inviarmi una donazione.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="donate.html">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
 	</div>
-
-	<div class="space"></div>
 
 	<!-- Tools & Links -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="tools-links" class="white-text padding"><a href="#tools-links">Strumenti &amp; Link</a></h5>
-	</article>
+	<div class="hero u-text-center" id="tools-links">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4"><a class="text-gray-900" href="#tools-links">Strumenti e Software</a></h1>
+				<p class="lead">
+					Scopri strumenti e link utili, tra cui SearXNG, il portale OpenAlias, ed il mio profilo GitHub.
+				</p>
 
-	<!-- OpenAlias -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/oa.png" alt="OpenAlias logo">
+				<div class="content u-text-left w-90p-md">
+				<div class="card mb-8">
+					<div class="m-3">
+						<!-- SearXNG -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/searxng.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://s.salonia.it" class="font-bold text-link-dark text-md u u-LR">
+									SearXNG
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Istanza self-hosted del meta-motore di ricerca che protegge la privacy dei propri utenti.</p>
+							</div>
+						</div>
 
-			<div class="max">
-			<h6><a href="https://oa.salonia.it">OpenAlias</a></h6>
-			<p>Ottieni tutti i record <a class="link" href="https://openalias.org">OpenAlias</a> di un dominio, con un'interfaccia utente facile da usare ed intuitiva.</p>
+						<div class="divider"></div>
+
+						<!-- OpenAlias -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6 avatar" style="background: black"><img src="../pics/oa.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://oa.salonia.it" class="font-bold text-link-dark text-md u u-LR">
+									OpenAlias
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Ottieni tutti i record OpenAlias di un dominio, con un'interfaccia utente facile da usare ed intuitiva.</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- GitHub profile -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/github.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo" class="font-bold text-link-dark text-md u u-LR">
+									Profilo GitHub
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Visita il mio profilo Github, e scopri tutti i progetti a cui ho contribuito.</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Source code -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/github.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo/saloniamatteo.github.io" class="font-bold text-link-dark text-md u u-LR">
+									Codice sorgente
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">Ottieni il codice sorgente di questo sito.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
 			</div>
 		</div>
-
-		<nav>
-			<a class="button round" href="https://oa.salonia.it">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- SearXNG -->
-	<article>
-		<div class="row">
-			<img class="round small" src="../pics/searxng.png" alt="SearXNG logo">
-
-			<div class="max">
-			<h6><a href="https://s.salonia.it">SearXNG</a></h6>
-			<p>Istanza self-hosted del meta-motore di ricerca che protegge la privacy dei propri utenti.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://s.salonia.it">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Github profile -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/github.png" alt="Github logo" style="background-color: white!important">
-
-			<div class="max">
-			<h6><a href="https://github.com/saloniamatteo">Profilo Github</a></h6>
-			<p>Visita il mio profilo Github, e scopri tutti i progetti che ho pubblicato.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
-
-	<!-- Website source code -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/github.png" alt="Github logo" style="background-color: white!important">
-
-			<div class="max">
-			<h6><a href="https://github.com/saloniamatteo/saloniamatteo.github.io">Codice sorgente</a></h6>
-			<p>Ti interessa sapere com'è costruito questo sito? Il codice sorgente sito è disponibile gratuitamente su Github!</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo/saloniamatteo.github.io">
-				<i>arrow_forward</i> Vai
-			</a>
-		</nav>
-	</article>
 	</div>
-	</div>
+
+	<footer class="footer bg-blue-500 px-4 pb-4">
+		<h5 class="title text-white">Matteo Salonia</h5>
+
+		<div class="divider"></div>
+
+		<a class="font-bold text-white" href="https://salonia.it/it/">IT</a><br>
+		<a class="font-bold text-white" href="https://salonia.it/en/">EN</a>
+
+		<p class="text-white mt-4 mb-0">&copy; 2023 Matteo Salonia</p>
+	</footer>
 </body>
 </html>
