@@ -1,162 +1,161 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<title>Software - Salonia Matteo</title>
+	<title>Programmi &mdash; Matteo Salonia</title>
 
-	<!-- Optimize page loading on some devices -->
+	<!-- Optimize page loading -->
 	<meta charset="utf-8">
-	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="Programmi creati da Salonia Matteo.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Social media preview -->
-	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://salonia.it/it/software.html">
-	<meta property="og:description"	content="Programmi creati da Salonia Matteo.">
-	<meta property="og:image"	content="https://salonia.it/favicon.png">
+	<!-- SEO -->
+	<meta name="description"				content="I programmi di Matteo Salonia.">
+	<meta property="og:description"			content="I programmi di Matteo Salonia.">
+	<meta property="twitter:description"	content="I programmi di Matteo Salonia.">
+	<meta property="og:title"				content="Programmi &mdash; Matteo Salonia">
+	<meta property="twitter:title"			content="Programmi &mdash; Matteo Salonia">
+	<meta property="og:url"					content="https://salonia.it/it/index.html">
+	<meta property="og:image"				content="https://salonia.it/favicon.png">
+	<meta property="twitter:image"			content="https://salonia.it/favicon.png">
 
-	<!-- Twitter-specific -->
-	<meta property="twitter:title"		content="Salonia Matteo">
-	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="Programmi creati da Salonia Matteo.">
-	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
-
-	<!--Favicon-->
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="../favicon.png">
 
-	<!-- Beer CSS -->
-	<link rel="stylesheet" href="../css/beer.min.css">
-	<script src="../js/beer.min.js" type="text/javascript"></script>
-	<script src="../js/light.js" type="text/javascript"></script>
-
-	<!-- Montserrat font -->
-	<link rel="stylesheet" href="../css/montserrat.css">
-
-	<!-- CSS overrides -->
-	<link rel="stylesheet" href="../css/style.css">
-
-	<script>
-	document.onreadystatechange = () => remember_prefs();
-	</script>
+	<!-- CSS & Fonts -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700">
 </head>
 
-<body class="light">
+<body>
 	<!-- Header -->
-	<header class="fixed small-padding indigo white-text">
-		<div class="grid middle-align">
-			<div class="s2">
-				<a class="button circle white indigo-text" href="index.html">
-					<i>arrow_backward</i>
-				</a>
-			</div>
-
-			<div class="s6 center-align">
-				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
-					<p class="large-text">Salonia Matteo</p>
-				</a>
-			</div>
-
-			<div class="s4 right-align">
-				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+	<div class="header header-fixed unselectable">
+		<div class="header-brand">
+			<div class="nav-item no-hover">
+				<h6 class="title">
+					<a class="text-dark u u-LR" href="index.html">
+						Matteo Salonia
+					</a>
+				</h6>
 			</div>
 		</div>
-	</header>
-
-	<!-- FAB -->
-	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i class="fill">light_mode</i>
-	</button>
-
-	<div class="margin">
-	<div>
-		<h5>Programmi creati da Salonia Matteo</h5>
-
-		<p class="large-text">
-		In questa pagina potete trovare alcuni programmi creati esclusivamente in C (C99) da me, con supporto preferenziale per GNU/Linux. Nota: tutti questi programmi usano <a class="button round small no-margin" href="https://en.wikipedia.org/wiki/GNU_Autotools">GNU AutoTools&nbsp;<i>arrow_forward</i></a> per il processo di configurazione e compilazione, in modo tale da estendere la portabilit&agrave;. Inoltre, tutti questi programmi usano una o pi&ugrave; parti della mia libreria <a class="button round small no-margin" href="https://github.com/saloniamatteo/smclib">SMClib&nbsp;<i>arrow_forward</i></a>
-		</p>
 	</div>
 
-	<div class="space"></div>
-
 	<!-- Software -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="software" class="left-align medium-padding indigo white-text">
-			<a href="#software">Software</a>
-		</h5>
-	</article>
-
-	<article>
-		<p>Se siete interessati ad assumermi per crearvi un Sito Web moderno, o vi interessa un&apos;Applicazione per PC o Android, cliccate il pulsante sotto per aprire la pagina contanente i miei recapiti, per contattarmi, discutere del vostro progetto, e richiedere un preventivo.</p>
-
-		<nav class="right-align small-margin">
-			<a class="button round" href="contact.html">Recapiti <i>arrow_forward</i></a>
-		</nav>
-	</article>
-
-	<!-- TP-XFan -->
-	<article>
-		<div class="row">
-			<img class="round small" src="../pics/tp-xfan.png" alt="TP-XFan logo">
-			<div class="max">
-				<h6><a href="https://github.com/saloniamatteo/tp-xfan">TP-XFan (ThinkPad XForms Fan)</a></h6>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-				<p>
-				Programma per modificare la velocit&agrave; della ventola di qualsiasi ThinkPad. Presenta un' interfaccia grafica (creata con <a class="button round small no-margin" href="http://savannah.nongnu.org/projects/xforms">XForms&nbsp;<i>arrow_forward</i></a>), e la modalit&agrave; di controllo temperatura automatica (AFSM).
+	<div class="hero u-text-center u-shadow-inset pt-8">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4"><a class="text-gray-900">Programmi</a></h2>
+				<p class="lead">
+					Scopri tutti i programmi che ho creato in C (C99).
 				</p>
+
+				<div class="content u-text-left w-90p-md">
+				<div class="card">
+					<div class="m-3">
+						<!-- TP-XFan -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/tp-xfan.png" alt="TP-XFan logo"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo/tp-xfan" class="font-bold text-link-dark text-md u u-LR">
+									TP-XFan (ThinkPad XForms Fan)
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">
+									Programma per modificare la velocità della ventola di qualsiasi ThinkPad.
+									Presenta un' interfaccia grafica (creata con XForms), e la modalità di controllo temperatura automatica (AFSM)
+								</p>
+								<p class="tile__subtitle">Pagina in Inglese</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Csnake -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="avatar w-6" style="background: black"><img src="../pics/csnake.png" alt="Csnake logo"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo/csnake" class="font-bold text-link-dark text-md u u-LR">
+									Csnake
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">
+									Un clone di Snake che presenta una preudo-interfaccia grafica da terminale usando ncurses.
+									È possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi;
+									inoltre, è possibile modificare la velocità/difficoltà, e di mostrare i bordi dello schermo.
+								</p>
+								<p class="tile__subtitle">Pagina in Inglese</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Quiz -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-6" style="background: white"><img src="../pics/quiz.png" alt="Quiz logo"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo/quiz" class="font-bold text-link-dark text-md u u-LR">
+									Csnake
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">
+									Programma con cui si possono creare dei piccoli Quiz e/o risolvere Quiz.
+									Non presenta un'interfaccia grafica; va usato da terminale, seguendo il testo sullo schermo.
+									È possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi;
+									inoltre, un creatore di quiz, facile da usare, è incluso.
+								</p>
+								<p class="tile__subtitle">Pagina in Inglese</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- Calc -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="avatar w-6" style="background: #607d8b"><img src="../pics/calc.png" alt="Calc logo"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title">
+									<a href="https://github.com/saloniamatteo/calc" class="font-bold text-link-dark text-md u u-LR">
+									Calc
+									</a>
+								</p>
+								<p class="tile__subtitle text-black">
+									Una semplice calcolatrice, con supporto per bit-shifting,
+									Notazione Polacca Inversa (Reverse Polish Notation; RPN), e altri valori speciali.
+									Non presenta un'interfaccia grafica (come Quiz).
+								</p>
+								<p class="tile__subtitle">Pagina in Inglese</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<div class="mt-8">
+					<a href="index.html">&larr; Torna alla pagina principale</a>
+				</div>
 			</div>
 		</div>
+	</div>
 
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo/tp-xfan">Vai <i>arrow_forward</i></a>
-		</nav>
-	</article>
+	<!-- Footer -->
+	<footer class="footer bg-blue-500 px-4 pb-4 u-shadow-inset">
+		<h5 class="title text-black">Matteo Salonia</h5>
 
-	<!-- Csnake -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/csnake.png" alt="Csnake logo">
-			<div class="max">
-				<h6><a href="https://github.com/saloniamatteo/csnake">Csnake</a></h6>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-				<p>Un clone di Snake che presenta una preudo-interfaccia grafica da terminale usando <a class="button round small no-margin" href="https://invisible-island.net/ncurses/announce.html">ncurses <i>arrow_forward</i></a>. &Egrave; possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi; inoltre, &egrave; possibile modificare la velocit&agrave;/difficolt&agrave;, e di mostrare i bordi dello schermo.</p>
-			</div>
-		</div>
+		<a class="font-bold text-black p-2" href="https://salonia.it/it/">IT</a>
+		<a class="font-bold text-black p-2" href="https://salonia.it/en/">EN</a>
 
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo/csnake">Vai <i>arrow_forward</i></a>
-		</nav>
-	</article>
-
-	<!-- Quiz -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/quiz.png" alt="Quiz logo">
-			<div class="max">
-				<h6><a href="https://github.com/saloniamatteo/quiz">Quiz</a></h6>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			<p>Programma con cui si possono creare dei piccoli Quiz e/o risolvere Quiz. Non presenta un interfaccia grafica; va usato da terminale, seguendo il testo sullo schermo. &Egrave; possibile salvare i punteggi con un nome personalizzato, in un file qualsiasi; inoltre, un creatore di quiz &egrave; incluso, ed &egrave; facile da usare.</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo/quiz">Vai <i>arrow_forward</i></a>
-		</nav>
-	</article>
-
-	<!-- Calc -->
-	<article>
-		<div class="row">
-			<img class="circle small" src="../pics/calc.png" alt="Calc logo">
-			<div class="max">
-				<h6><a href="https://github.com/saloniamatteo/calc">Calc</a></h6>
-				<label class="grey-text medium-text">(in Inglese; link esterno)</label>
-			<p>Una semplice calcolatrice, con supporto per bit-shifting, Notazione Polacca Inversa (Reverse Polish Notation; RPN), e altri valori speciali. Non presenta un'interfaccia grafica (come Quiz).</p>
-			</div>
-		</div>
-
-		<nav>
-			<a class="button round" href="https://github.com/saloniamatteo/calc">Vai <i>arrow_forward</i></a>
-		</nav>
-	</article>
+		<p class="text-black mt-4 mb-0">&copy; 2023</p>
+	</footer>
 </body>
 </html>
