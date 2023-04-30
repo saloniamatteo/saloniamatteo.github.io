@@ -1,17 +1,1 @@
-Redesign TODO
-
-- it:
-	- [x] index.html
-	- [x] info.html
-	- [x] packages.html
-	- [x] software.html
-	- [ ] contact.html
-	- [ ] kernel.html
-
-- en:
-	- [x] index.html
-	- [x] info.html
-	- [x] software.html
-	- [x] packages.html
-	- [ ] contact.html
-	- [ ] kernel.html
+Missing: {it,en}/kernel.html
