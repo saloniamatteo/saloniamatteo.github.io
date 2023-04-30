@@ -1,155 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Info - Salonia Matteo</title>
+	<title>Info &mdash; Matteo Salonia</title>
 
-	<!-- Optimize page loading on some devices -->
+	<!-- Optimize page loading -->
 	<meta charset="utf-8">
-	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="About Salonia Matteo">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Social media preview -->
-	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://salonia.it/en/info.html">
-	<meta property="og:description"	content="About Salonia Matteo">
-	<meta property="og:image"	content="https://salonia.it/favicon.png">
+	<!-- SEO -->
+	<meta name="description"				content="Info about Matteo Salonia.">
+	<meta property="og:description"			content="Info about Matteo Salonia.">
+	<meta property="twitter:description"	content="Info about Matteo Salonia.">
+	<meta property="og:title"				content="Info &mdash; Matteo Salonia">
+	<meta property="twitter:title"			content="Info &mdash; Matteo Salonia">
+	<meta property="og:url"					content="https://salonia.it/en/index.html">
+	<meta property="og:image"				content="https://salonia.it/favicon.png">
+	<meta property="twitter:image"			content="https://salonia.it/favicon.png">
 
-	<!-- Twitter-specific -->
-	<meta property="twitter:title"		content="Salonia Matteo">
-	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="About Salonia Matteo">
-	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
-
-	<!--Favicon-->
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="../favicon.png">
 
-	<!-- Beer CSS -->
-	<link rel="stylesheet" href="../css/beer.min.css">
-	<script src="../js/beer.min.js" type="text/javascript"></script>
-	<script src="../js/light.js" type="text/javascript"></script>
-
-	<!-- Montserrat font -->
-	<link rel="stylesheet" href="../css/montserrat.css">
-
-	<!-- CSS overrides -->
-	<link rel="stylesheet" href="../css/style.css">
-
-	<script>
-	document.onreadystatechange = () => remember_prefs();
-	</script>
+	<!-- CSS & Fonts -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 </head>
 
-<body class="light">
+<body>
 	<!-- Header -->
-	<header class="fixed small-padding indigo white-text">
-		<div class="grid middle-align">
-			<div class="s2">
-				<a class="button circle white indigo-text" href="index.html">
-					<i>arrow_backward</i>
-				</a>
-			</div>
-
-			<div class="s6 center-align">
-				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
-					<p class="large-text">Salonia Matteo</p>
-				</a>
-			</div>
-
-			<div class="s4 right-align">
-				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+	<div class="header header-fixed unselectable">
+		<div class="header-brand">
+			<div class="nav-item no-hover">
+				<h6 class="title">
+					<a class="text-dark u u-LR" href="index.html">
+						Matteo Salonia
+					</a>
+				</h6>
 			</div>
 		</div>
-	</header>
-
-	<!-- FAB -->
-	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i class="fill">light_mode</i>
-	</button>
-
-	<div class="margin">
-	<div>
-		<h5>About me</h5>
-
-		<p class="large-text">
-		Go to:<br>
-
-		<a class="button round border small-margin indigo white-text" href="#tech">Technological Knowledge</a>
-		<a class="button round border small-margin indigo white-text" href="#lang">Linguistical Knowledge</a>
-		</p>
 	</div>
 
-	<div class="small-space"></div>
-
-	<!-- Technological Knowledge -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="tech" class="white-text padding">
-		<a href="#tech">Technological Knowledge</a>
-		</h5>
-	</article>
-
-	<!-- Server -->
-	<article>
-		<h6>Server Management</h6>
-		<p>Remote &amp; local <b>Linux server</b> management, regular Maintenance, restricted Login with <b>SSH keys</b> &amp; passwordless login, <b>Intrusion</b> security &amp; <b>brute-force attack</b> protection.</p>
-	</article>
-
-	<!-- Software -->
-	<article>
-		<h6>Software Development</h6>
-		<p>
-		&mdash; Design and Development of applications for <b>Linux</b> in <b>C</b> e <b>C++</b>, with <u>Graphical User Interfaces</u> and <u>Terminal User Interfaces</u>
-		<br>
-		&mdash; Design and Development of applications for <b>Android</b> in <b>Java</b>
-		<br>
-		&mdash; Design and Development of applications for <b>Windows</b> in <b>Visual Basic</b> (<b>VB.NET</b>)
-		</p>
-	</article>
-
-	<!-- Web -->
-	<article>
-		<h6>Web</h6>
-		<p>
-		&mdash; Creation and Logical Structuring of <u>Back-End Web Servers</u> in <b>PHP</b>, with <u>Database</u> connections, <u>Registration</u>/<u>Login</u>, ecc.
-		<br>
-		&mdash; Creation and Logical Structuring of <u>Complete Web Pages</u> in <b>HTML</b>
-		<br>
-		&mdash; Style Application to Web Pages with easy-to-use <b>CSS Frameworks</b>
-		<br>
-		&mdash; Creation of <u>Client-side Web Login</u> in <b>JavaScript</b>, to Control and Validate user-inserted data, while <u>respecting the user&apos;s privacy</u>.
-		</p>
-	</article>
+	<!-- Info -->
+	<div class="hero u-text-center u-shadow-inset pt-8">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4"><a class="text-gray-900">Info</a></h2>
+				<p class="lead">
+					Discover who I am, my skills, and my knowledge.
+				</p>
+			</div>
+		</div>
 	</div>
 
-	<div class="space"></div>
+	<!-- About me -->
+	<div class="hero u-text-center bg-blue-200 u-shadow-inset">
+		<div class="hero-body m-2-sm">
+			<div class="content">
+			<div class="grid-sm u-gap-2 u-text-left">
+				<div class="grid-c-4 grid-r-3">
+					<img class="img-stretch mb-2 u-round-lg" src="../pics/me.jpeg">
+				</div>
 
-	<!-- Linguistical Knowledge -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="lang" class="white-text padding">
-		<a href="#lang">Linguistical Knowledge</a>
-		</h5>
-	</article>
+				<div class="grid-c-8-md">
+					<h1 class="my-0">Matteo Salonia</h1>
+				</div>
 
-	<!-- Italian -->
-	<article>
-		<h6>Italian</h6>
-		<p>Italian is the main language I use while speaking every day. I was born and live to this day in Italy.
-		<br>
-		Italian language level: <b>Mother tongue</b>
-		</p>
-	</article>
+				<div class="grid-c-8 mr-4-lg">
+					<p>
+						I'm an Italian teen originally from Sicily, from the province of Ragusa.
+						Currently I attend the "<strong>Archimede</strong>" Accounting School in Modica,
+						where I attend the programmer course, in short <strong>SIA</strong> (<em>Sistemi Informativi Aziendali</em>, <em>Corporate Information Systems </em>).
+						I am proficient in various subjects, such as:
+					</p>
 
-	<!-- Englush -->
-	<article>
-		<h6>English</h6>
-		<p>
-		English is the secondary language I speak every day, using it while programming, to communicate with my friends, to use Internet generally, and so on. I speak English since 6th grade, after having slowly learned the language on the Internet, listening to various people speak while they were playing; after, I joined the Cambridge University English School, where I got the B2 certification, in 8th grade.
-		<br>
-		English language level: <b>B2</b> (Cambridge Certification, in 8th grade), <b>C1</b> <a class="link" href="https://learnenglish.britishcouncil.org/online-english-level-test"><u>(British Council online test)</u></a>
-		</p>
-	</article>
+					<ul>
+						<li><abbr title="Information Technology">IT</abbr> (<strong>HTML+CSS+JS</strong>, <strong>PHP</strong>, <strong>C</strong>, <strong>Visual Basic .NET</strong>, <strong>SQL</strong>)</li>
+						<li>English (<strong>Speaking</strong>, <strong>Listening</strong>, <strong>Writing</strong>)</li>
+						<li>Business Economics (<strong>Economic Balance Sheet</strong>, <strong>Budget</strong>, <strong>Cost analysis</strong>)</li>
+						<li>Mathematics (<strong>Algebra</strong>, <strong>Mathematical Analysis</strong>, <strong>Financial Mathematics</strong>)</li>
+					</ul>
+
+					<p>
+						I'm passionate about bodybuilding, and more: every day you must become better, even slightly,
+						both mentally, and physically, to then become the best version of yourself.
+					</p>
+
+					<p class="font-bold u-text-center">
+						Molti nemici, molto onore &mdash; Memento audere semper &mdash; Deus, Patria, Familia
+					</p>
+				</div>
+
+				<!-- Study timeline -->
+				<div class="grid-c-12 mr-4-lg">
+					<div class="card">
+						<div class="m-3">
+							<div class="tile level">
+								<div class="tile__container">
+									<p class="tile__title text-lg">Study timeline</p>
+
+									<ul class="menu">
+										<li class="menu-item">
+											<strong>2018 &mdash; 9th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													B2 English certification
+												</li>
+
+												<li class="menu-item">
+													First experience with Linux, with Raspbian on a Raspberry Pi 0 W (1° gen),
+													and Ubuntu 16 on a Sony Vaio VGN-N11M
+												</li>
+
+												<li class="menu-item">
+													First programming experience with Python
+												</li>
+
+												<li class="menu-item">
+													Development of small programs with Visual Basic .NET
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<strong>2019 &mdash; 9th-10th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													Improved experience with Ubuntu
+												</li>
+
+												<li class="menu-item">
+													Frequent development of websites with various tools and various styles
+												</li>
+
+												<li class="menu-item">
+													Advanced study of programming theories
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<strong>2020 &mdash; 10th-11th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													Move from Ubuntu to Arch Linux
+												</li>
+
+												<li class="menu-item">
+													Advanced study of Linux key concepts and theories
+												</li>
+
+												<li class="menu-item">
+													Wrote Arch Linux installation guide
+												</li>
+
+												<li class="menu-item">
+													Move from Arch Linux to Artix Linux
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<strong>2021 &mdash; 11th-12th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													Move from Artix Linux to Gentoo Linux
+												</li>
+
+												<li class="menu-item">
+													Advanced improvement of Linux knowledge
+												</li>
+
+												<li class="menu-item">
+													Advanced study of the C programming language
+												</li>
+
+												<li class="menu-item">
+													Development of various programs in C
+												</li>
+
+												<li class="menu-item">
+													Development of small Android apps
+												</li>
+
+												<li class="menu-item">
+													First steps with Kernel personalization to
+													increase performance and efficiency
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<strong>2022 &mdash; 12th-13th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													Advanced study of programming theories
+												</li>
+
+												<li class="menu-item">
+													Advanced study of design theories
+												</li>
+
+												<li class="menu-item">
+													Knowledge improvement regarding electrical systems, local network systems, and video surveillance systems
+												</li>
+
+												<li class="menu-item">
+													Built performant workstation with Gentoo Linux
+												</li>
+
+												<li class="menu-item">
+													Built and improved local network, with IPV6 connectivity
+												</li>
+											</ul>
+										</li>
+
+										<li class="menu-item">
+											<strong>2023 &mdash; 13th grade</strong>
+
+											<ul class="menu">
+												<li class="menu-item">
+													Improvement of custom Kernel performance
+												</li>
+
+												<li class="menu-item">
+													Improvement of workstation performance and efficiency, with periodic maintenance
+												</li>
+
+												<li class="menu-item">
+													Improvement of local network
+												</li>
+
+												<li class="menu-item">
+													Advanced study of databases, with PHP connection
+												</li>
+
+												<li class="menu-item">
+													Personal website redesign
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
 	</div>
+
+	<div class="u-center mt-8">
+		<a href="index.html">&larr; Go back to the main page</a>
 	</div>
+
+	<!-- Footer -->
+	<footer class="footer bg-blue-500 px-4 pb-4 u-shadow-inset">
+		<h5 class="title text-black">Matteo Salonia</h5>
+
+		<a class="font-bold text-black p-2" href="https://salonia.it/it/">IT</a>
+		<a class="font-bold text-black p-2" href="https://salonia.it/en/">EN</a>
+
+		<p class="text-black mt-4 mb-0">&copy; 2023</p>
+	</footer>
 </body>
 </html>
