@@ -12,6 +12,6 @@ Redesign TODO
 	- [x] index.html
 	- [x] info.html
 	- [x] software.html
-	- [ ] packages.html
+	- [x] packages.html
 	- [ ] contact.html
 	- [ ] kernel.html
