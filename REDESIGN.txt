@@ -1,0 +1,17 @@
+Redesign TODO
+
+- it:
+	- [x] index.html
+	- [x] info.html
+	- [x] packages.html
+	- [x] software.html
+	- [ ] contact.html
+	- [ ] kernel.html
+
+- en:
+	- [x] index.html
+	- [x] info.html
+	- [ ] packages.html
+	- [ ] software.html
+	- [ ] contact.html
+	- [ ] kernel.html
