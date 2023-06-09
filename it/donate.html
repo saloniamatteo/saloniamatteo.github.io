@@ -1,131 +1,136 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<title>Donazioni - Salonia Matteo</title>
+	<title>Donazioni &mdash; Matteo Salonia</title>
 
-	<!-- Optimize page loading on some devices -->
+	<!-- Optimize page loading -->
 	<meta charset="utf-8">
-	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="Interessato nei miei progetti? Inviami una donazione.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Social media preview -->
-	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://salonia.it/it/donate.html">
-	<meta property="og:description"	content="Interessato nei miei progetti? Inviami una donazione.">
-	<meta property="og:image"	content="https://salonia.it/favicon.png">
+	<!-- SEO -->
+	<meta name="description"				content="Invia una donazione a Matteo Salonia.">
+	<meta property="og:description"			content="Invia una donazione a Matteo Salonia.">
+	<meta property="twitter:description"	content="Invia una donazione a Matteo Salonia.">
+	<meta property="og:title"				content="Donazioni &mdash; Matteo Salonia">
+	<meta property="twitter:title"			content="Donazioni &mdash; Matteo Salonia">
+	<meta property="og:url"					content="https://salonia.it/it/donate.html">
+	<meta property="og:image"				content="https://salonia.it/favicon.png">
+	<meta property="twitter:image"			content="https://salonia.it/favicon.png">
 
-	<!-- Twitter-specific -->
-	<meta property="twitter:title"		content="Salonia Matteo">
-	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="Interessato nei miei progetti? Inviami una donazione.">
-	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
-
-	<!--Favicon-->
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="../favicon.png">
 
-	<!-- Beer CSS -->
-	<link rel="stylesheet" href="../css/beer.min.css">
-	<script src="../js/beer.min.js" type="text/javascript"></script>
-	<script src="../js/light.js" type="text/javascript"></script>
-
-	<!-- Montserrat font -->
-	<link rel="stylesheet" href="../css/montserrat.css">
-
-	<!-- CSS overrides -->
-	<link rel="stylesheet" href="../css/style.css">
-
-	<script>
-	document.onreadystatechange = () => remember_prefs();
-	</script>
+	<!-- CSS & Fonts -->
+	<link rel="stylesheet" href="../css/cirrus.min.css">
+	<link rel="stylesheet" href="../css/fonts/nunito-sans.css">
+	<link rel="stylesheet" href="../css/fonts/montserrat.css">
 </head>
 
-<body class="light">
+<body>
 	<!-- Header -->
-	<header class="fixed small-padding indigo white-text">
-		<div class="grid middle-align">
-			<div class="s2">
-				<a class="button circle white indigo-text" href="index.html">
-					<i>arrow_backward</i>
-				</a>
-			</div>
-
-			<div class="s6 center-align">
-				<a class="button center-align large-text no-margin indigo-text white" href="https://salonia.it">
-					<p class="large-text">Salonia Matteo</p>
-				</a>
-			</div>
-
-			<div class="s4 right-align">
-				<img class="responsive" src="../pics/logo_rec.png" style="max-width: 100px!important" alt="Logo Matteo Salonia">
+	<div class="header header-fixed unselectable">
+		<div class="header-brand">
+			<div class="nav-item no-hover">
+				<h6 class="title">
+					<a class="text-dark u u-LR" href="index.html">
+						Matteo Salonia
+					</a>
+				</h6>
 			</div>
 		</div>
-	</header>
-
-	<!-- FAB -->
-	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i class="fill">light_mode</i>
-	</button>
-
-	<div class="margin">
-	<div>
-		<h5>Donazioni</h5>
-
-		<p class="large-text">
-		Se volete supportare me e/o il mio lavoro, potete aiutarmi inviandomi una donazione;
-		in questa pagina sono elencati alcuni modi per inviarmi donazioni.
-		</p>
-
-		<p class="large-text">
-		Vai a:<br>
-
-		<a class="button round border small-margin indigo white-text" href="#crypto">Crypto</a>
-		<a class="button round border small-margin indigo white-text" href="#paypal">Paypal</a>
-		</p>
 	</div>
 
-	<div class="small-space"></div>
+	<!-- Donate -->
+	<div class="hero u-text-center u-shadow-inset pt-8">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h2 class="headline-4 text-gray-900">Donazioni</h2>
+				<p class="lead">
+					Vuoi sostenere me e/o il mio lavoro? Aiutami inviandomi una donazione.
+				</p>
 
-	<!-- Crypto -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="crypto" class="white-text padding">
-		<a href="#crypto">Criptovalute</a>
-		</h5>
-	</article>
+				<div class="content u-text-left w-90p-md">
+				<div class="card">
+					<div class="m-3">
+						<!-- Monero -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-5" style="background: white"><img src="../pics/xmr.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title font-bold text-md">
+									Monero
+								</p>
 
-	<!-- Monero -->
-	<article>
-		<h6>Monero</h6>
-		<p style="word-break: break-all">
-		Indirizzo:
-		<b>43cgqumPkUAXhL4cx5bn24aZQkg7dUGQtaugoCxNEg1c2kbUY14y5jJMBwju2vqqZDeCJvSsn3SC7cDLuv5ZSeth4CV71cz</b>
-		</p>
+								<p class="tile__subtitle text-black">
+									Indirizzi
+									<a href="https://oa.salonia.it" class="font-bold text-link-dark u u-LR">OpenAlias</a>:
+								</p>
 
-		<p>
-		In alternativa all'indirizzo, &egrave; possibile usare <a class="button round small no-margin" href="https://openalias.org">OpenAlias <i>arrow_forward</i></a> &mdash; Al momento di invio dei fondi, &egrave; possibile scrivere <b><u>salonia.it</u></b> al posto dell'indirizzo, in modo tale che il vostro client/wallet vada a sostituire automaticamente il testo con l'indirizzo Monero sopra indicato. Inoltre, potete anche usare questo strumento open source per controllare tutti i record OpenAlias di un dominio: <a class="button round small no-margin" href="https://oa.salonia.it">OpenAlias API Web Form <i>arrow_forward</i></a><br>(<a class="link" href="https://github.com/saloniamatteo/openalias">codice sorgente strumento</a>)
-		</p>
-	</article>
+								<p class="tile__subtitle">
+									<span class="font-bold text-black">salonia.it</span>
+									<span class="text-gray-600">|</span>
+									<span class="font-bold text-black">matteo.salonia.it</span>
+									<span class="text-gray-600">|</span>
+									<span class="font-bold text-black">matteo@salonia.it</span>
+								</p>
+
+								<div class="divider" data-content="OPPURE"></div>
+
+								<p class="tile__subtitle text-black">Indirizzo:</p>
+
+								<p class="tile__subtitle text-black font-bold" style="word-break: break-all">
+									43cgqumPkUAXhL4cx5bn24aZQkg7dUGQtaugoCxNEg1c2kbUY14y5jJMBwju2vqqZDeCJvSsn3SC7cDLuv5ZSeth4CV71cz
+								</p>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<!-- PayPal -->
+						<div class="tile level">
+							<div class="tile__icon">
+								<figure class="w-5" style="background: white"><img src="../pics/paypal.png"></figure>
+							</div>
+							<div class="tile__container">
+								<p class="tile__title font-bold text-md">
+									PayPal
+								</p>
+
+								<p class="tile__subtitle text-black">Username:</p>
+
+								<p class="tile__subtitle">
+									<span class="font-bold text-black">saloniamatteo</span>
+								</p>
+
+								<div class="divider" data-content="OPPURE"></div>
+
+								<p class="tile__subtitle text-black">Link:</p>
+
+								<p class="tile__subtitle text-black font-bold">
+									<a href="https://paypal.me/saloniamatteo" class="font-bold text-link-dark u u-LR">https://paypal.me/saloniamatteo</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<div class="mt-8">
+					<a href="index.html">&larr; Torna alla pagina principale</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<div class="medium-space"></div>
+	<!-- Footer -->
+	<footer class="footer bg-blue-700 px-4 pb-4 u-shadow-inset">
+		<h5 class="title text-white">Matteo Salonia</h5>
 
-	<!-- PayPal -->
-	<div>
-	<article class="indigo no-padding">
-		<h5 id="paypal" class="white-text padding">
-		<a href="#paypal">PayPal</a>
-		</h5>
-	</article>
+		<a class="font-bold text-white p-2" href="https://salonia.it/it/">IT</a>
+		<a class="font-bold text-white p-2" href="https://salonia.it/en/">EN</a>
 
-	<article>
-		<p>
-		Username Paypal.me: <b>saloniamatteo</b> &mdash; link:
-		<a class="button round small no-margin" href="https://paypal.me/saloniamatteo">
-			paypal.me/saloniamatteo <i>arrow_forward</i>
-		</a>
-		</p>
-	</article>
-	</div>
-	</div>
+		<p class="text-white mt-4 mb-0">&copy; 2023</p>
+	</footer>
 </body>
 </html>
