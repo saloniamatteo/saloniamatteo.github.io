@@ -1,134 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Software - Salonia Matteo</title>
+	<title>Matteo Salonia</title>
 
-	<!-- Tell browser to redirect to Italian & English pages -->
-	<link rel="alternate" href="https://salonia.it/it/software.html" hreflang="it" />
-	<link rel="alternate" href="https://salonia.it/en/software.html" hreflang="en" />
-
-	<!-- Optimize page loading on some devices -->
+	<!-- Optimize page loading -->
 	<meta charset="utf-8">
-	<meta content='width=device-width, initial-scale=1' name='viewport'>
-	<meta name="description" content="Software">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Social media preview -->
-	<meta property="og:title"	content="Salonia Matteo">
-	<meta property="og:url"		content="https://salonia.it/software.html">
-	<meta property="og:description"	content="Software">
-	<meta property="og:image"	content="https://salonia.it/favicon.png">
+	<!-- SEO -->
+	<meta name="description"				content="Matteo Salonia">
+	<meta property="og:description"			content="Matteo Salonia">
+	<meta property="twitter:description"	content="Matteo Salonia">
+	<meta property="og:title"				content="Matteo Salonia">
+	<meta property="twitter:title"			content="Matteo Salonia">
+	<meta property="og:url"					content="https://salonia.it/software.html">
+	<meta property="og:image"				content="https://salonia.it/favicon.png">
+	<meta property="twitter:image"			content="https://salonia.it/favicon.png">
 
-	<!-- Twitter-specific -->
-	<meta property="twitter:title"		content="Salonia Matteo">
-	<meta property="twitter:card"		content="summary_large_image">
-	<meta property="twitter:description"	content="Software">
-	<meta property="twitter:image"		content="https://salonia.it/favicon.png">
-
-	<!--Favicon-->
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.png">
 
-	<!-- Beer CSS -->
-	<link rel="stylesheet" href="css/beer.min.css">
-	<script src="js/beer.min.js" type="text/javascript"></script>
-	<script src="js/light.js" type="text/javascript"></script>
-
-	<!-- Montserrat font -->
-	<link rel="stylesheet" href="css/montserrat.css">
-
-	<!-- CSS overrides -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Load theme preferences -->
-	<script>
-	document.onreadystatechange = () => remember_prefs();
-	</script>
+	<!-- CSS & Fonts -->
+	<link rel="stylesheet" href="css/cirrus.min.css">
+	<link rel="stylesheet" href="css/fonts/montserrat.css">
 </head>
 
-<body class="light">
-	<!-- FAB -->
-	<button class="fixed bottom right square round extra large-margin" style="z-index: 10" onclick="toggle_light()">
-		<i class="fill">light_mode</i>
-	</button>
-
-	<article class="margin">
-		<article class="indigo no-padding no-margin">
-			<h5 class="center-align white-text small-padding">Scegli una lingua &mdash; Choose a language</h5>
-		</article>
-
-		<!-- Small screens -->
-		<div class="s">
-		<div class="grid">
-			<div class="s12 center-align">
-				<a href="it/index.html">
-					<img class="responsive square medium" src="pics/it.png" alt="Bandiera Italiana">
-				</a>
-
-				<a class="button mtop-small" href="it/software.html">
-					<p class="large-text">Italiano</p>
-				</a>
-			</div>
-
-			<div class="s12 center-align">
-				<a href="en/index.html">
-					<img class="responsive square medium" src="pics/en.png" alt="English Flag">
-				</a>
-
-				<a class="button mtop-small" href="en/software.html">
-					<p class="large-text">English</p>
-				</a>
-			</div>
+<body>
+	<!-- Header -->
+	<div class="header header-fixed unselectable">
+		<div class="header-brand u-center">
+			<a href="https://salonia.it">
+				<img class="w-24" src="pics/salonia.png">
+			</a>
 		</div>
-		</div>
+	</div>
 
-		<!-- Medium screens -->
-		<div class="m">
-		<div class="grid">
-			<div class="s6 small-margin center-align">
-				<a href="it/index.html">
-					<img class="responsive square medium" src="pics/it.png" alt="Bandiera Italiana">
-				</a>
+	<!-- Choose lang -->
+	<div class="hero u-text-center u-shadow-inset pt-4">
+		<div class="hero-body m-2-sm">
+			<div class="content w-90p w-80p-md">
+			<h3 class="text-gray-900">Scegli una lingua &mdash; Choose a language</h3>
 
-				<a class="button mtop-small" href="it/software.html">
-					<p class="large-text">Italiano</p>
-				</a>
-			</div>
+				<div class="content u-text-left w-90p-md">
+					<div class="grid-sm grid-cols-2 m-4">
+						<div class="m-2 mx-4 u-text-center">
+							<a class="p-0" href="it/software.html">
+								<img class="img-stretch u-round-sm u-center hover-grow u-duration-200 u-shadow-lg" src="pics/it.png" alt="Italian flag">
+							</a>
 
-			<div class="s6 small-margin center-align">
-				<a href="en/index.html">
-					<img class="responsive square medium" src="pics/en.png" alt="English Flag">
-				</a>
+							<button class="btn-animated bg-blue-700 btn--lg mt-2 px-4 py-1 u-shadow-lg">
+								<a class="text-white" href="it/software.html">Italiano</a>
+							</button>
+						</div>
 
-				<a class="button mtop-small" href="en/software.html">
-					<p class="large-text">English</p>
-				</a>
+						<div class="m-2 mx-4 u-text-center">
+							<a class="p-0" href="en/software.html">
+								<img class="img-stretch u-round-sm u-center hover-grow u-duration-200 u-shadow-lg" src="pics/en.png" alt="English flag">
+							</a>
+
+							<button class="btn-animated bg-blue-700 btn--lg mt-2 px-4 py-1 u-shadow-lg">
+								<a class="text-white" href="en/software.html">English</a>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-
-		<!-- Large screens -->
-		<div class="l">
-		<div class="grid">
-			<div class="s6 small-margin center-align">
-				<a href="it/index.html">
-					<img class="responsive square large" src="pics/it.png" alt="Bandiera Italiana">
-				</a>
-				<br>
-				<a class="button mtop-small" href="it/software.html">
-					<p class="large-text">Italiano</p>
-				</a>
-			</div>
-
-			<div class="s6 small-margin center-align">
-				<a href="en/index.html">
-					<img class="responsive square large" src="pics/en.png" alt="English Flag">
-				</a>
-				<br>
-				<a class="button mtop-small" href="en/software.html">
-					<p class="large-text">English</p>
-				</a>
-			</div>
-		</div>
-		</div>
-	</article>
+	</div>
 </body>
 </html>
