@@ -423,6 +423,12 @@ cd /usr/src/usr-kernel</code></pre>
 							È bene specificare che lo script ci mostrerà tutti gli eventuali errori di compilazione e non solo,
 							in aggiunta al calcolo del tempo effettivo di compilazione, non considerando quindi patch ed altro.
 							</p>
+
+							<p>
+							Al termine dell'esecuzione, lo script installerà il Kernel, eseguendo in automatico
+							<code>dracut</code> per generare l'initramfs, ed aggiornerà <code>grub</code>,
+							grazie al sistema automatizzato in-kernel eseguibile tramite <code>make install</code>.
+							</p>
 						</div>
 					</div>
 
@@ -434,7 +440,8 @@ cd /usr/src/usr-kernel</code></pre>
 
 							<p>
 							Questa sezione specifica gli eventuali passaggi da effettuare dopo aver terminato la compilazione
-							del Kernel, che non dipendono dallo script.
+							del Kernel, che non dipendono dallo script. Usando lo script, non sarà necessario eseguire
+							nè <code>dracut</code> nè <code>grub</code> manualmente, perchè verranno eseguiti in automatico.
 							</p>
 
 							<div class="divider"></div>
