@@ -113,7 +113,7 @@
 							Ad esempio, componenti relativi ad AMD, Nvidia, NUMA, ecc. sono stati disabilitati.
 							<br>
 							Se non sapete dove partire, usate una configurazione già esistente che sapete funzioni sul vostro hardware,
-							se disponibile, altrimenti usate la configurazione di default di un qualsiasi Kernel di default,
+							se disponibile, altrimenti usate la configurazione di default di un qualsiasi Kernel,
 							come quella fornita dalla vostra distro, o la configurazione di default del Kernel.
 							</p>
 						</div>
@@ -396,8 +396,8 @@ cd /usr/src/usr-kernel</code></pre>
 							</p>
 
 							<p>
-							Dopo aver verificato le eventuali differenze, sostituiamo il file <code>config.new</code>
-							al nostro file config, e passiamo alla vera e propria compilazione del Kernel.
+							Dopo aver verificato le eventuali differenze, sostituiamo il nostro file config
+							con il file <code>config.new</code>, e passiamo alla vera e propria compilazione del Kernel.
 							</p>
 
 							<div class="divider"></div>
@@ -427,7 +427,10 @@ cd /usr/src/usr-kernel</code></pre>
 							<p>
 							Al termine dell'esecuzione, lo script installerà il Kernel, eseguendo in automatico
 							<code>dracut</code> per generare l'initramfs, ed aggiornerà <code>grub</code>,
-							grazie al sistema automatizzato in-kernel eseguibile tramite <code>make install</code>.
+							grazie ad <code>installkernel</code>, che tipicamente tutte le distro hanno.
+							Se la vostra configurazione non prevede l'uso di dracut o di grub,
+							verificate la configurazione di installkernel, sarà già impostato
+							per usare quello che state usando attualmente.
 							</p>
 						</div>
 					</div>
@@ -464,7 +467,7 @@ cd /usr/src/usr-kernel</code></pre>
 
 							Qui potete modificare <code>card_label</code> per impostare il nome del dispositivo,
 							qualora fosse necessario, ad esempio se si volesse mascherare il fatto che questo è
-							un dispositivo virtuale, o se semplicemente volete identificare meglio il dispositivo virtuale.
+							un dispositivo virtuale, o se semplicemente volete un nome migliore.
 							</p>
 
 							<div class="divider"></div>
@@ -477,7 +480,7 @@ cd /usr/src/usr-kernel</code></pre>
 							Per avviare il Kernel è necessario un initramfs. Per generarlo, userò dracut.
 							
 							Prima di tutto, accertatevi di aver configurato dracut.
-							Ad esempio, ecco la mia configurazione <code>/etc/dracut.conf</code>:
+							Ad esempio, ecco il mio <code>/etc/dracut.conf</code>:
 
 							<pre><code># Equivalent to -H
 hostonly="yes"
